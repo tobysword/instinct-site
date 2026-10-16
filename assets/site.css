@@ -143,3 +143,6 @@ footer p{margin:6px 0 0}
 .legal th{background:var(--card);font-family:var(--font)}
 .legal tr:last-child td{border-bottom:0}
 .legal .back{display:inline-block;margin-bottom:24px;color:var(--mute);text-decoration:none;font-size:14px}
+.band-cta{display:flex;flex-direction:column;align-items:center;gap:12px}
+.beta-link{font:500 13px var(--mono);color:var(--mute);text-decoration:none;text-align:center;margin-top:12px}.band-cta .beta-link{margin-top:0}
+.beta-link:hover{color:var(--ink);text-decoration:underline}

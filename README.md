@@ -1,6 +1,6 @@
 # Instinct website (formerly LiveRLCoach)
 
-Static marketing site for [LiveRLCoach](https://github.com/tobysword/LiveRLCoach), hosted on GitHub Pages. No build step: plain HTML/CSS.
+Static marketing site for Instinct (downloads: [InstinctRL releases](https://github.com/tobysword/InstinctRL/releases/latest)), hosted on GitHub Pages. No build step: plain HTML/CSS.
 
 Live: https://tobysword.github.io/instinct-site/
 
