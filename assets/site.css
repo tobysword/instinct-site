@@ -148,3 +148,18 @@ footer p{margin:6px 0 0}
 .beta-link:hover{color:var(--ink);text-decoration:underline}
 .dl-alt{margin:12px 0 0;font:500 13px var(--mono);color:var(--mute)}.dl-alt a,.band-cta .beta-link a{color:inherit;text-decoration:none}.dl-alt a:hover,.band-cta .beta-link a:hover{color:var(--ink);text-decoration:underline}
 .smartscreen{margin:0;max-width:280px;font-size:12px;line-height:1.5;color:var(--dim);text-align:center}
+/* Live-first hero */
+.hero.live .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;gap:44px}
+.hero.live .lead{margin-left:auto;margin-right:auto;max-width:680px}
+.hero.live .ctas,.hero.live .meta{justify-content:center}
+.hero.live h1{max-width:900px;margin-left:auto;margin-right:auto}
+.hero.live .mock{width:min(100%,1000px);aspect-ratio:16/9}
+.live-pill{position:absolute;top:30px;left:50%;transform:translateX(-50%);z-index:3;font:600 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(17,17,17,.8);border:1px solid rgba(255,92,0,.5);padding:5px 12px 5px 24px;border-radius:99px}
+.live-pill::before{content:"";position:absolute;left:10px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--or);box-shadow:0 0 10px var(--or);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.tag-live{display:inline-block;vertical-align:middle;margin-right:8px;font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--or);border:1px solid rgba(255,92,0,.4);border-radius:6px;padding:2px 6px}
+.media-frame{margin:0;border-radius:20px;overflow:hidden;border:1px solid var(--line2);background:#0f0f11}
+.media-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0f0f11}
+.media-frame figcaption{padding:12px 18px;font-size:13px;color:var(--dim);border-top:1px solid var(--line)}
+@media (max-width:620px){.live-pill{top:24px;font-size:9px}.hero.live .mock .hud.rank{display:none}}
+.hero.live .mock{text-align:left}@media (max-width:620px){.hero.live .mock .hud.stats{display:none}}

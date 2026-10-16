@@ -9,11 +9,11 @@
 <a class="btn accent sm" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe">Download</a>
 </div></header>
 <main id="main">
-<section class="hero" aria-labelledby="hero-h"><div class="wrap">
+<section class="hero live" aria-labelledby="hero-h"><div class="wrap">
 <div>
-<span class="eyebrow"><i aria-hidden="true"></i>Free during beta · Windows 10/11</span>
-<h1 id="hero-h">Your live <em>Rocket League</em> coach.</h1>
-<p class="lead">{{PRODUCT_NAME}} watches your matches through Rocket League's official Stats API and gives you clear, real-time tips, a playing-like rank and post-match insights, so every game teaches you something.</p>
+<span class="eyebrow"><i aria-hidden="true"></i>Live in-match coaching · Free during beta · Windows 10/11</span>
+<h1 id="hero-h">Coaching that happens <em>while you play</em>.</h1>
+<p class="lead">{{PRODUCT_NAME}} sits on your screen during every Rocket League match and calls the next read in real time: rotation, boost, challenges and positioning, the moment they matter. No alt-tab, no waiting for the replay. Built on the game's official Stats API.</p>
 <div class="ctas">
 <a class="btn accent" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for Windows</a>
 <a class="btn discord" href="https://discord.gg/B4bnmfWtzA"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>Join the Discord</a>
@@ -21,7 +21,8 @@
 <p class="dl-alt"><a href="https://github.com/tobysword/InstinctRL/releases">All releases</a> · <a href="https://github.com/tobysword/InstinctRL/releases/tag/beta">Beta build</a></p>
 <div class="meta"><span>Official Stats API</span><span>No memory reading or injection</span><span>Free during beta</span><span>No ads, no tracking</span></div>
 </div>
-<div class="mock" role="img" aria-label="Illustration of the {{PRODUCT_NAME}} overlay during a match: a coaching tip, a rank estimate and live stats">
+<div class="mock" role="img"> aria-label="Illustration of the {{PRODUCT_NAME}} overlay during a match: a coaching tip, a rank estimate and live stats">
+<span class="live-pill" aria-hidden="true">Live · in match</span>
 <div class="field" aria-hidden="true"><span class="ball"></span><span class="car o"></span><span class="car b"></span></div>
 <div class="hud rank" aria-hidden="true"><div class="cap">Playing like</div><strong>Diamond II</strong><span class="chip pos">▲ trending up</span></div>
 <div class="hud tip" aria-hidden="true"><div class="cap">Live tip</div><b>Rotate back post: your teammate is challenging.</b></div>
@@ -29,14 +30,27 @@
 </div>
 </div></section>
 
+<section id="see-it-live" class="media" aria-labelledby="v-h"><div class="wrap">
+<div class="sec-head"><span class="kick">See it live</span><h2 id="v-h">Real tips, mid-match, on your screen.</h2><p>A recording of {{PRODUCT_NAME}} coaching a real match. Tips appear over the game and fade before they get in the way.</p></div>
+<figure class="media-frame">
+<!-- MEDIA SLOT: screen recording. To swap in: add assets/media/live-coaching.mp4 (H.264, 1920x1080, muted, ~20-40 s)
+     and optionally .webm, then uncomment the <source> lines. Replace the poster at assets/media/live-coaching-poster.png. See README. -->
+<video id="live-video" controls muted playsinline loop preload="none" poster="assets/media/live-coaching-poster.png" width="1920" height="1080" aria-label="Screen recording of {{PRODUCT_NAME}} live coaching during a Rocket League match">
+<!-- <source src="assets/media/live-coaching.webm" type="video/webm"> -->
+<!-- <source src="assets/media/live-coaching.mp4" type="video/mp4"> -->
+</video>
+<figcaption>Screen recording coming soon. Until then, grab the app and see it in your own match.</figcaption>
+</figure>
+</div></section>
+
 <section id="features" aria-labelledby="f-h"><div class="wrap">
-<div class="sec-head"><span class="kick">Features</span><h2 id="f-h">Coaching that keeps up with the game.</h2><p>Everything runs on your PC. No account needed to start.</p></div>
+<div class="sec-head"><span class="kick">Features</span><h2 id="f-h">Live first. Everything else backs it up.</h2><p>Everything runs on your PC. No account needed to start.</p></div>
 <div class="grid g3">
-<article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Live coaching overlay</h3><p>Short, timely tips while you play: rotation, boost, challenges and positioning, shown in a clean overlay that stays out of the way.</p></article>
-<article class="card"><div class="ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3>Playing-like rank</h3><p>See the rank you are actually playing at, plus the specific drivers pulling it up or down, match by match.</p></article>
-<article class="card"><div class="ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Phone companion</h3><p>Pair your phone over your own Wi-Fi with a 6-character code and keep stats on a second screen.</p></article>
-<article class="card"><div class="ico v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Replay analysis</h3><p>Deep-dive the replays you saved: key moments, mistakes and patterns, analysed locally.</p></article>
+<article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3><span class="tag-live">Live</span>Live coaching overlay</h3><p>Short, timely tips while you play: rotation, boost, challenges and positioning, shown in a clean overlay that stays out of the way.</p></article>
+<article class="card"><div class="ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3><span class="tag-live">Live</span>Phone companion</h3><p>Pair your phone over your own Wi-Fi with a 6-character code and keep stats on a second screen.</p></article>
+<article class="card"><div class="ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3><span class="tag-live">Live</span>Playing-like rank</h3><p>See the rank you are actually playing at, plus the specific drivers pulling it up or down, match by match.</p></article>
 <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M17 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-4-6.3"/></svg></div><h3>Player profiles</h3><p>Remember teammates and opponents you have met, with their tendencies and how you did together.</p></article>
+<article class="card"><div class="ico v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Replay analysis</h3><p>Deep-dive the replays you saved: key moments, mistakes and patterns, analysed locally.</p></article>
 <article class="card"><div class="ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div><h3>Accessible by design</h3><p>Colour-blind palette, high-contrast mode, reduced motion and adjustable text size built in.</p></article>
 </div></div></section>
 
