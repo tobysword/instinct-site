@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
-<title>Features · Instinct</title><meta name="description" content="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; beta replay and screen analysis.">
+<title>Features · Instinct</title><meta name="description" content="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; experimental replay and screen analysis.">
 <link rel="canonical" href="https://tobysword.github.io/instinct-site/features">
-<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Features · Instinct"><meta property="og:description" content="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; beta replay and screen analysis."><meta property="og:url" content="https://tobysword.github.io/instinct-site/features"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Features · Instinct"><meta property="og:description" content="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; experimental replay and screen analysis."><meta property="og:url" content="https://tobysword.github.io/instinct-site/features"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
 <link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
@@ -28,7 +28,7 @@
 <section class="phero"><div class="wrap">
 <span class="kick">Features</span>
 <h1>Everything in Instinct 1.0.</h1>
-<p>A live overlay built on facts the game actually sends. Beta items are marked <span class="pill beta">Beta, off by default</span>. Everything runs on your PC.</p>
+<p>A live overlay built on facts the game actually sends. Experimental items are marked <span class="pill exp">Experimental, off by default</span>. Everything runs on your PC.</p>
 </div></section>
 
 <section aria-label="Feature list"><div class="wrap">
@@ -92,12 +92,12 @@
 </div></div></div>
 
 <div class="group" id="phone">
-<div><span class="kick">Second screen</span><h2>Phone companion</h2><p class="gsub">On your Wi-Fi, never through our servers.</p></div>
+<div><span class="kick">Second screen</span><h2>Phone companion <span class="pro-badge">PRO</span></h2><p class="gsub">On your Wi-Fi, never through our servers.</p></div>
 <div><ul class="specs">
 <li class="wide"><b>Pair with a 6-character code</b>Same Wi-Fi as your PC. Live view, breakdown and history in your phone's browser.</li>
 </ul>
 <figure class="shot" style="margin-top:20px"><!-- SCREENSHOT: assets/shots/phone-companion.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/phone-companion.png</code><p class="ph-what">Phone companion: live view and history.</p><span class="ph-spec">1920×1080 canvas · synthetic names</span></div></figure>
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/phone-companion.png</code><p class="ph-what">Phone companion (Pro): live view and history.</p><span class="ph-spec">1920×1080 canvas · synthetic names</span></div></figure>
 </div></div>
 
 <div class="group" id="streamer">
@@ -115,11 +115,11 @@
 <li class="wide"><b>Overlay scale and opacity</b>Make it as big, small or see-through as you like.</li>
 </ul></div></div>
 
-<div class="group" id="beta">
-<div><span class="kick">Optional</span><h2>Beta, off by default, on your PC only</h2><p class="gsub">Nothing here is uploaded.</p></div>
+<div class="group" id="experimental">
+<div><span class="kick">Optional</span><h2>Experimental, off by default, on your PC only</h2><p class="gsub">Nothing here is uploaded.</p></div>
 <div><ul class="specs">
-<li><b>Replay analysis <span class="pill beta">Beta</span></b>From replays you saved: heatmaps, rotation, boost, kickoffs, and a Deep dive with xG, possession and 50/50s.</li>
-<li><b>Screen analysis <span class="pill beta">Beta</span></b>Reads the game window in memory, never saved. Enables the minimap "last back" cue.</li>
+<li><b>Replay analysis <span class="pill exp">Experimental</span></b>From replays you saved: heatmaps, rotation, boost, kickoffs, and a Deep dive with xG, possession and 50/50s.</li>
+<li><b>Screen analysis <span class="pill exp">Experimental</span></b>Reads the game window in memory, never saved. Enables the minimap "last back" cue.</li>
 </ul></div></div>
 
 <div class="group" id="hotkeys">
@@ -130,7 +130,7 @@
 <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd></td><td>Show / hide the overlay</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd></td><td>Edit layout</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td><td>Reset layout</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td><td>Pair phone</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td><td>Pair phone (Pro)</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd></td><td>Mark moment</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd> / <kbd>2</kbd></td><td>Coach panel / Match panel</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>0</kbd></td><td>All panels</td></tr>
@@ -142,7 +142,7 @@
 
 <div class="group" id="limits">
 <div><span class="kick">Honest limits</span><h2>What it can't see</h2></div>
-<div><p style="color:#C4C4CC;margin-top:0">The live Stats API has no passes, possession, boost pads or boost steals, car positions or rotation, or whiffs, and no car state for opponents: opponents are events and scoreboard only. The live overlay never claims those. Possession, passes and positions appear only in the replay Deep dive <span class="pill beta">Beta</span>.</p>
+<div><p style="color:#C4C4CC;margin-top:0">The live Stats API has no passes, possession, boost pads or boost steals, car positions or rotation, or whiffs, and no car state for opponents: opponents are events and scoreboard only. The live overlay never claims those. Possession, passes and positions appear only in the replay Deep dive <span class="pill exp">Experimental</span>.</p>
 <div class="note"><span>No BakkesMod, no memory reading, no injection. Instinct <strong>never presses keys</strong> and sends nothing to game chat.</span></div></div></div>
 </div></section>
 
