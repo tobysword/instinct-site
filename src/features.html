@@ -1,5 +1,5 @@
 <!--@set TITLE="Features · Instinct"-->
-<!--@set DESC="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; experimental replay and screen analysis."-->
+<!--@set DESC="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; experimental replay analysis."-->
 <!--@set CANON="features"-->
 <!doctype html><html lang="en"><head>
 <!--@include head-->
@@ -28,10 +28,9 @@
 <li><b>End-of-match summary</b>The post-match view right on the overlay.</li>
 </ul>
 <div class="grid g2" style="margin-top:20px">
-<figure class="shot"><!-- SCREENSHOT: assets/shots/overlay-2v2-hero.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/overlay-2v2-hero.png</code><p class="ph-what">Overlay in a 2v2 match.</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
-<figure class="shot"><!-- MEDIA: assets/media/goal-break-reads.mp4 (optional) -->
-<div class="shot-ph" role="img" aria-label="Video placeholder"><span class="ph-tag">Recording needed</span><code class="ph-file">assets/media/goal-break-reads.mp4</code><p class="ph-what">Optional 20-40 s screen recording of a goal break showing Reads.</p><span class="ph-spec">1920×1080 · H.264 · muted · synthetic names</span></div></figure>
+<figure class="shot">
+<img src="assets/shots/overlay-2v2-hero.webp" alt="Instinct overlay in a 2v2 match: Coach panel with Playing like, left glance stats, lobby strip and minimap" width="1920" height="1080" loading="lazy" decoding="async"></figure>
+<figure class="shot"><img src="assets/shots/reads-card-goal-replay.webp" alt="The Reads card during a goal replay, showing two reads" width="1920" height="1080" loading="lazy" decoding="async"></figure>
 </div>
 </div></div>
 
@@ -47,10 +46,10 @@
 <li class="wide"><b>Share card</b>A PNG saved to <code>Pictures\Instinct</code> and copied to the clipboard, in one key.</li>
 </ul>
 <div class="grid g2" style="margin-top:20px">
-<figure class="shot"><!-- SCREENSHOT: assets/shots/post-match-summary.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/post-match-summary.png</code><p class="ph-what">Post-match: Played like, Reads this game, vs your usual.</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
-<figure class="shot"><!-- SCREENSHOT: assets/shots/share-card.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/share-card.png</code><p class="ph-what">The share card PNG.</p><span class="ph-spec">As exported · synthetic names</span></div></figure>
+<figure class="shot">
+<img src="assets/shots/post-match-summary.webp" alt="Post-match summary: Played like, Reads this game and vs your usual" width="1920" height="1080" loading="lazy" decoding="async"></figure>
+<figure class="shot">
+<img src="assets/shots/share-card.webp" alt="The post-match share card" width="1200" height="675" loading="lazy" decoding="async"></figure>
 </div></div></div>
 
 <div class="group" id="control">
@@ -66,10 +65,11 @@
 <li><b>Feedback</b>Send a report from the app, with optional scrubbed logs.</li>
 </ul>
 <div class="grid g2" style="margin-top:20px">
-<figure class="shot"><!-- SCREENSHOT: assets/shots/control-history.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/control-history.png</code><p class="ph-what">Control window: History page (session + weekly trend, both Pro).</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
-<figure class="shot"><!-- SCREENSHOT: assets/shots/setup-check.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/setup-check.png</code><p class="ph-what">Setup check with all steps ticked.</p><span class="ph-spec">1920×1080</span></div></figure>
+<figure class="shot">
+<img src="assets/shots/control-history-sessions.webp" alt="Control window history: today's session (Pro)" width="1920" height="1080" loading="lazy" decoding="async"></figure>
+<figure class="shot"><img src="assets/shots/control-history.webp" alt="Control window history: weekly trends (Pro)" width="1920" height="1080" loading="lazy" decoding="async"></figure>
+<figure class="shot">
+<img src="assets/shots/setup-check.webp" alt="Setup check: ready and live" width="1920" height="1080" loading="lazy" decoding="async"></figure>
 </div></div></div>
 
 <div class="group" id="phone">
@@ -77,8 +77,8 @@
 <div><ul class="specs">
 <li class="wide"><b>Pair with a 6-character code</b>Same Wi-Fi as your PC. Live view, breakdown and history in your phone's browser.</li>
 </ul>
-<figure class="shot" style="margin-top:20px"><!-- SCREENSHOT: assets/shots/phone-companion.png -->
-<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/phone-companion.png</code><p class="ph-what">Phone companion (Pro): live view and history.</p><span class="ph-spec">1920×1080 canvas · synthetic names</span></div></figure>
+<figure class="shot" style="margin-top:20px">
+<img src="assets/shots/phone-companion.webp" alt="Phone companion (Pro): live view" width="1920" height="1080" loading="lazy" decoding="async"></figure>
 </div></div>
 
 <div class="group" id="streamer">
@@ -100,7 +100,6 @@
 <div><span class="kick">Optional</span><h2>Experimental, off by default, on your PC only</h2><p class="gsub">Nothing here is uploaded.</p></div>
 <div><ul class="specs">
 <li><b>Replay analysis <span class="pill exp">Experimental</span></b>From replays you saved: heatmaps, rotation, boost, kickoffs, and a Deep dive with xG, possession and 50/50s.</li>
-<li><b>Screen analysis <span class="pill exp">Experimental</span></b>Reads the game window in memory, never saved. Enables the minimap "last back" cue.</li>
 </ul></div></div>
 
 <div class="group" id="hotkeys">
