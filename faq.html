@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
+<title>FAQ · Instinct</title><meta name="description" content="Answers about Instinct: bans and anti-cheat, pricing, rotation coaching, what the ~ next to a rank means, data, streaming and refunds.">
+<link rel="canonical" href="https://tobysword.github.io/instinct-site/faq">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="FAQ · Instinct"><meta property="og:description" content="Answers about Instinct: bans and anti-cheat, pricing, rotation coaching, what the ~ next to a rank means, data, streaming and refunds."><meta property="og:url" content="https://tobysword.github.io/instinct-site/faq"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
+
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
+<nav aria-label="Primary"><ul>
+<li><a href="features.html">Features</a></li>
+<li><a href="toxic.html">Toxic mode</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="download.html">Install</a></li>
+<li><a href="faq.html" aria-current="page">FAQ</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></nav>
+<a class="btn accent sm nav-dl" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
+<details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
+<div class="menu-panel"><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">FAQ</span><h1>Questions, answered.</h1><p>Something missing? Ask us on <a href="https://discord.gg/B4bnmfWtzA">Discord</a>.</p>
+</div></section>
+<section aria-label="Questions"><div class="wrap">
+<div class="faq">
+<details open><summary>Can I get banned for using Instinct?</summary><p>Instinct only uses Rocket League's official local Stats API, optional capture of the game window and replay files you saved. It never reads game memory, injects code or hooks the game. It never presses keys, and nothing goes to chat. We can't speak for Psyonix or Epic, so please follow their terms and any tournament rules.</p></details>
+<details><summary>Is it free?</summary><p>Yes, everything on your PC is free, including local history. Pro adds Toxic mode and account features. Pricing at launch. See <a href="pricing.html">Pricing</a>.</p></details>
+<details><summary>Does it coach rotation?</summary><p>Not live. The Stats API doesn't send positions, so the live overlay shows facts it can see. Replay analysis (beta) adds positions from replays you saved. More in <a href="index.html#limits">What it can't see</a>.</p></details>
+<details><summary>What does <code>~</code> next to a rank mean?</summary><p>That estimate uses scoreboard events only (no car data), so it's low confidence.</p></details>
+<details><summary>What platforms are supported?</summary><p>Windows 10 and 11, for Rocket League on Steam or Epic Games. The optional phone companion works in your phone's browser on the same Wi-Fi.</p></details>
+<details><summary>Why can't I see the overlay?</summary><p>Play in Borderless or Windowed mode. In exclusive Fullscreen, Windows can't draw anything on top of the game. Then run the Setup check in the app to make sure the Stats API is on.</p></details>
+<details><summary>Does it slow down my game?</summary><p>The app is a lightweight native Windows app built with Tauri. It reads data the game already publishes locally, so the impact is minimal.</p></details>
+<details><summary>Do I need an account?</summary><p>No. Coaching works fully on your PC. An account is only needed for Instinct Pro cloud features like sync across PCs and Teams.</p></details>
+<details><summary>Can I stream with it?</summary><p>Yes. Turn on <strong>Hide player names</strong> in Settings and lobby rows and post-match show Teammate n / Opponent n. If you use Toxic mode on stream, you're responsible for what your overlay shows; Instinct warns you once.</p></details>
+<details><summary>What data do you collect?</summary><p>Game data stays on your PC; the Stats API is local-only. Phone traffic stays on your Wi-Fi. No ads, no analytics, no data selling. Data leaves your PC only if you choose: an account and cloud sync, opt-in crash reports (off by default; asked once) or feedback you send. Update checks go to GitHub. Read the <a href="privacy.html">Privacy Policy</a>.</p></details>
+<details><summary>How do refunds work?</summary><p>Once paid plans launch, you can request a full refund within 14 days of your first payment, and cancel any time. See the <a href="terms.html#refunds">Terms</a>.</p></details>
+<details><summary>Is Instinct affiliated with Psyonix or Epic Games?</summary><p>No. It is an independent project and is not endorsed by Psyonix or Epic Games.</p></details>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
+<p class="f-tag">Live, and honest. A live Rocket League overlay for Windows 10/11, made by Toby Sword.</p>
+<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC / Epic Games, Inc. Instinct is an independent project, not endorsed by them.</p>
+<p class="f-legal">© 2026 Toby Sword</p></div>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Download &amp; install</a><a href="changelog.html">Changelog</a></nav>
+<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="contact.html">Contact &amp; support</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a><a href="index.html#limits">What it can't see</a></nav>
+<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refund policy</a><a href="terms.html#toxic">Toxic mode terms</a></nav>
+</div></footer>
+
+</body></html>

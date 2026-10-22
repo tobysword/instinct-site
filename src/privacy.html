@@ -1,29 +1,32 @@
+<!--@set TITLE="Privacy and data · Instinct"-->
+<!--@set DESC="How Instinct handles your data: game data stays on your PC, no ads, no analytics, no data selling. Data leaves your PC only if you choose."-->
+<!--@set CANON="privacy"-->
 <!doctype html><html lang="en"><head>
-<title>Privacy Policy · {{PRODUCT_NAME}}</title><meta name="description" content="How {{PRODUCT_NAME}} handles your data: local-first, no ads, no analytics.">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#111111"><meta property="og:site_name" content="{{PRODUCT_NAME}}"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
-
+<!--@include head-->
 </head><body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="nav"><div class="wrap">
-<a class="brand" href="index.html" aria-label="{{PRODUCT_NAME}} home"><img src="assets/mark.svg" alt="" width="30" height="30"><span>{{PRODUCT_BRAND_HTML}}</span></a>
-<nav aria-label="Primary"><ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#how">How it works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav>
-<a class="btn accent sm" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe">Download</a>
-</div></header>
-
+<!--@include header-->
 <main id="main" class="legal"><a class="back" href="index.html">← Back to {{PRODUCT_NAME}}</a>
+<span class="kick">Privacy and data</span>
 <h1>Privacy Policy</h1>
-<p><strong>Effective date:</strong> 2026-10-16 (beta)
-<strong>Last updated:</strong> 2026-10-16</p>
-<p>{{PRODUCT_NAME}} ("the app", "we", "us") is a free Windows desktop app for Rocket League coaching, made by an individual developer in the United States. Installers and updates are downloaded from GitHub Releases.</p>
+<div class="summary-box" id="summary"><h2>The short version</h2>
+<ul>
+<li><strong>Game data stays on your PC.</strong> The Stats API is local-only (<code>127.0.0.1</code>). Phone traffic stays on your Wi-Fi.</li>
+<li><strong>No ads, no analytics, no data selling.</strong></li>
+<li><strong>Leaves your PC only if you choose:</strong> an account and cloud sync (your match summaries and the lobby observations, rank sightings and names of players you met), opt-in crash reports (off by default; asked once; sent to Sentry, scrubbed of names, paths and IPs) and feedback you send. Update checks go to GitHub.</li>
+<li><strong>Your files:</strong> <code>%APPDATA%\rl-companion</code> (settings, profiles, history, diagnostics). Open it from Settings → Privacy → Open data folder; delete it any time.</li>
+<li><strong>Cloud retention is being finalised.</strong> Deletion removes data from the live database right away; Supabase backups may hold it until they expire.</li>
+<li><strong>Delete my cloud lobby data:</strong> not in 1.0 yet. Until it ships, <a href="{{DISCORD}}">ask us on Discord</a>.</li>
+<li><strong>Toxic mode</strong> is never logged, synced or sent. Lines never contain anyone's name.</li>
+</ul></div>
+<p class="meta">Full policy below.</p>
+<ul class="toc" aria-label="Contents"><li><a href="#s1">1. Who is responsible for your data</a></li><li><a href="#s2">2. What the app collects and where it goes</a></li><li><a href="#s3">3. Phone companion (local network)</a></li><li><a href="#s4">4. Third parties</a></li><li><a href="#s5">5. Account and cloud sync (optional)</a></li><li><a href="#s6">6. Feedback and bug reports</a></li><li><a href="#s7">7. Payments ({{PRO_NAME}} subscription)</a></li><li><a href="#s8">8. Changes to Rocket League config files</a></li><li><a href="#s9">9. Legal bases (EEA/UK users)</a></li><li><a href="#s10">10. Retention</a></li><li><a href="#s11">11. Your rights and controls</a></li><li><a href="#s12">12. Children</a></li><li><a href="#s12a">12a. Health data (Washington My Health My Data Act)</a></li><li><a href="#s13">13. Security</a></li><li><a href="#s14">14. International transfers</a></li><li><a href="#s15">15. Changes</a></li><li><a href="#s16">16. Contact</a></li></ul><p><strong>Effective date:</strong> with Instinct 1.0.0 · <strong>Last updated:</strong> 2026-10-22</p>
+<p>Instinct (formerly RL Coach Companion; "the app", "we", "us") is a proprietary Windows desktop app for Rocket League coaching, licensed not sold, free to use with an optional paid tier, {{PRO_NAME}} (pricing announced at launch). Website: <a href="https://tobysword.github.io/instinct-site/">https://tobysword.github.io/instinct-site/</a>. It is made and operated by Toby Sword, an individual developer in Washington State, United States. Downloads: <a href="https://github.com/tobysword/InstinctRL">https://github.com/tobysword/InstinctRL</a></p>
 <p><strong>Short version:</strong> Coaching runs on your PC. Without an account, your match data stays on your computer. There are no ads, no analytics and no selling of data. Data leaves your PC only when you choose to: an optional account (cloud sync, teams, {{PRO_NAME}}), opt-in crash reports, or a feedback report you send.</p>
 <h2 id="s1">1. Who is responsible for your data</h2>
 <ul>
-<li>Controller / operator: Toby Sword, an individual developer in the United States.</li>
-<li>Contact: contact us via <a href="https://discord.gg/B4bnmfWtzA">Discord</a> or in-app Feedback.</li>
-<li>EU/UK representative (GDPR Art. 27): not appointed during the free beta, because the app is not targeted at the EU/UK as a paid service. To be reviewed before paid plans launch.</li>
+<li>Controller / owner and operator: <strong>Toby Sword</strong>, Washington State, United States</li>
+<li>Contact: contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback. We do not offer email support.</li>
+<li>EU/UK representative (GDPR Art. 27): not appointed yet; this will be reviewed before paid plans launch.</li>
 </ul>
 <h2 id="s2">2. What the app collects and where it goes</h2>
 <div class="tbl"><table>
@@ -49,10 +52,22 @@
 <td>Only with cloud sync</td>
 </tr>
 <tr>
-<td>Player profiles (you and players you've played with or against)</td>
+<td>Player profiles (you and players you've played with or against, incl. the last 20 rank estimates per player)</td>
 <td>Derived from match data</td>
 <td>Locally</td>
 <td>Only with cloud sync (see §5)</td>
+</tr>
+<tr>
+<td><strong>Lobby observations</strong> (platform ID, in-game name, playlist, the rank estimate and coaching stats we computed for players in your lobbies, name changes we saw, rank sightings)</td>
+<td>Derived from match data</td>
+<td>Locally; in your cloud account only with cloud sync</td>
+<td>Only with cloud sync (see §5)</td>
+</tr>
+<tr>
+<td>Toxic mode memory (which line ids you were shown, last 400 or 14 days)</td>
+<td>The app</td>
+<td>Locally (app storage)</td>
+<td>No. Toxic text is never logged, synced or sent (see Toxic mode below)</td>
 </tr>
 <tr>
 <td>Diagnostics logs</td>
@@ -79,10 +94,16 @@
 <td>Yes, only when you send one</td>
 </tr>
 <tr>
+<td>Beta tester records</td>
+<td>When you redeem a tester code</td>
+<td>Supabase: which code (stored only as a hash) your account redeemed and when, plus a log of redeem attempts (account ID and time) used for rate limiting</td>
+<td>Yes, only if you redeem a code</td>
+</tr>
+<tr>
 <td>Crash reports (<strong>opt-in, off by default</strong>)</td>
 <td>The app</td>
-<td>Sentry (crash-reporting provider), only once a destination is configured</td>
-<td>Only if you opt in</td>
+<td>Sentry (crash-reporting provider)</td>
+<td>Only if you said yes on the first-run consent screen or in Settings → Privacy, and the build has a destination configured</td>
 </tr>
 <tr>
 <td>IP address during update checks</td>
@@ -91,7 +112,7 @@
 <td>GitHub (see §4)</td>
 </tr>
 <tr>
-<td>Payment details (planned {{PRO_NAME}})</td>
+<td>Payment details ({{PRO_NAME}})</td>
 <td>You</td>
 <td>Held by the payment provider, not us</td>
 <td>Payment provider (see §7)</td>
@@ -103,10 +124,14 @@
 <li><strong>Screen analysis</strong> (off by default): reads the Rocket League window in memory to recognise the ball and cars. Frames are never saved or uploaded. A separate <strong>Record training frames</strong> switch (off by default) saves small game frames to <code>%APPDATA%\rl-companion\training</code> on your PC, capped at 2 GB. Frames can show on-screen names and chat. They are never uploaded; delete the folder any time. There is currently no way to contribute frames or replays to us; if we add one, it will be a separate opt-in with its own consent screen.</li>
 <li><strong>Replay analysis</strong> (off by default): reads replays you saved in your Rocket League Demos folder and keeps the newest 20 analyses locally. Nothing is uploaded.</li>
 </ul>
+<h3>Toxic mode ({{PRO_NAME}}, off by default)</h3>
+<p>Toxic lines are picked and shown on your PC only. They are never sent to game chat, never read aloud, and never included in logs,
+diagnostics, feedback reports, match summaries or cloud sync; only anonymous line ids are kept locally so lines don't repeat. Lines
+never contain anyone's name. Your Toxic settings (including the 18+ confirmation) are stored only in your local settings.</p>
 <h3>What we don't do</h3>
 <ul>
 <li>No analytics or usage tracking, no advertising, no selling or "sharing" of personal information (as defined by CCPA/CPRA).</li>
-<li>No reading of game memory, no code injection, no hooks into the game process, no automated key presses.</li>
+<li>No reading of game memory, no code injection, no hooks into the game process, no automated key presses, and no BakkesMod.</li>
 </ul>
 <h2 id="s3">3. Phone companion (local network)</h2>
 <p>The app can serve a companion page to your phone over your <strong>local network</strong>. All data routes need the 6-character pairing code; repeated wrong codes from one device are blocked. Traffic is plain HTTP on your LAN and does not pass through our servers, so someone already on your Wi-Fi with packet-capture tools could read it: pair on networks you trust. The pairing code stays the same until you reset it (delete <code>token</code> from <code>config.json</code> and restart).</p>
@@ -115,17 +140,17 @@
 <li><strong>GitHub</strong>: update checks and downloads. GitHub sees your IP address and basic request info.</li>
 <li><strong>Supabase</strong> (database and authentication, region <strong>us-east-1</strong>): only if you create an account or send feedback.</li>
 <li><strong>Airtable</strong>: our private issue tracker. Feedback reports are copied there so we can triage them (your account email is included so we can reply).</li>
-<li><strong>Sentry</strong>: only if you opt in to crash reports and once a crash-report destination is configured. Reports are scrubbed of tokens, Windows user names in file paths, your player name and IP addresses, and include app version, OS version and stack traces. Sentry stores them in the US for up to 90 days.</li>
+<li><strong>Sentry</strong>: crash reporting is built into stable 1.0 builds but is <strong>opt-in and off by default</strong>: the first-run consent screen asks once, and you can change it any time in Settings → Privacy. Nothing is sent unless you said yes (and the build has a destination configured). Before sending, reports are scrubbed of tokens and codes, the Windows user name in file paths and IP addresses (default PII sending is off), and include the app version (<code>instinct@1.0.0</code>), OS version and stack traces. Sentry stores them in the US for up to 90 days.</li>
 <li><strong>Email delivery provider</strong> (planned, e.g. Resend): sends account emails such as confirmation and password reset.</li>
 <li><strong>Rocket League Tracker and other links</strong>: opened only when you click them; their own policies apply.</li>
 <li><strong>Psyonix / Epic Games</strong>: the app reads data the game exposes locally. We are not affiliated with them and send them nothing.</li>
 </ul>
 <h2 id="s5">5. Account and cloud sync (optional)</h2>
-<p>Coaching works without an account. If you create one: we store your email, a hashed password (we never see your password), a display name and your plan. With <strong>cloud sync</strong> ({{PRO_NAME}} or beta tester), the app uploads match summaries, play sessions, growth snapshots and player-profile observations (platform IDs, in-game names, ranks and coaching stats of players you met) so they follow you across PCs. Teams share aggregate metrics between members you invite. Row-level security means each account can only read its own data (and team aggregates of teams it belongs to).</p>
+<p>Coaching works without an account. If you create one: we store your email, a hashed password (we never see your password), a display name and your plan. With <strong>cloud sync</strong> ({{PRO_NAME}} or beta tester), the app uploads match summaries, play sessions, growth snapshots and <strong>lobby observations</strong>: the platform IDs, in-game names (and name changes we saw), playlist, rank estimates, rank sightings and coaching stats of players you met, so they follow you across PCs. Opponents are recorded from scoreboard and events only; the live data has no car state for them. Teams share aggregate metrics between members you invite. Row-level security means each account can only read its own data (and team aggregates of teams it belongs to).</p>
 <h2 id="s6">6. Feedback and bug reports</h2>
-<p>The in-app <strong>Send feedback</strong> form sends what you type, the kind of report, the game mode you choose, the app version and update channel, and a one-line platform summary (Windows version, screen resolution, Stats API setting, Steam/Epic). Logs are attached <strong>only if you tick the box</strong>: the event and performance logs from your last two app sessions, with your player name, Windows user name, IP addresses and tokens removed. Raw match streams, replays and screenshots are never attached, and you can preview exactly what is attached before sending. Reports and log files are deleted <strong>30 days</strong> after they are sent. You can also save a report to a file instead and share it however you like.</p>
-<h2 id="s7">7. Payments (planned {{PRO_NAME}} subscription)</h2>
-<p>Payments are not live yet. When they are, they will be handled by a merchant of record (planned: <strong>Lemon Squeezy</strong>), which processes your payment, billing address and tax information under its own privacy policy. We will receive your email, country, subscription status and a customer/subscription ID. We never see your full card number. Beta tester access is granted with a code and involves no payment.</p>
+<p>The in-app <strong>Send feedback</strong> form sends what you type, the kind of report, the game mode you choose, the app version and update channel, and a one-line platform summary (Windows version, screen resolution, Stats API setting, Steam/Epic). Logs are attached <strong>only if you tick the box</strong>: the event and performance logs from your last two app sessions, with your player name, Windows user name, IP addresses and tokens removed. Raw match streams, replays and screenshots are never attached, and you can preview exactly what is attached before sending. Reports and log files are deleted <strong>30 days</strong> after they are sent: the report itself and attached logs are deleted from Supabase, and the copy in our tracker has its text, your email and the log link removed (only the report type, status and app version are kept for triage history). You can also save a report to a file instead and share it however you like.</p>
+<h2 id="s7">7. Payments ({{PRO_NAME}} subscription)</h2>
+<p>Payments are not live yet. {{PRO_NAME}} pricing will be announced at launch and shown at checkout before you pay. Payments will be handled by a merchant of record (planned: <strong>Lemon Squeezy</strong>), which processes your payment, billing address and tax information under its own privacy policy. We will receive your email, country, subscription status and a customer/subscription ID. We never see your full card number. Beta tester access is granted with a code and involves no payment. When you redeem a code we record which code (as a one-way hash) your account used and when, and we log redeem attempts (account ID and time) to stop code guessing.</p>
 <h2 id="s8">8. Changes to Rocket League config files</h2>
 <p>At your request, the app edits Rocket League's <code>DefaultStatsAPI.ini</code> to enable the Stats API. It makes a backup first and changes nothing else.</p>
 <h2 id="s9">9. Legal bases (EEA/UK users)</h2>
@@ -140,23 +165,29 @@
 <li>Local match rollups: 90 days; daily aggregates: 2 years (deleted automatically).</li>
 <li>Local diagnostics: 14 days per session folder, 3 GB cap.</li>
 <li>Local player profiles and self profile: until you delete them or the app's data folder.</li>
-<li>Account data and cloud sync data: while your account exists; deleted within 30 days of an account-deletion request.</li>
-<li>Feedback reports and attached logs: 30 days (deleted automatically).</li>
+<li><strong>Cloud data retention is being finalised.</strong> We have not yet set final windows for lobby observations, other players' names, rank sightings and match summaries in the cloud; this section will state each window once it is decided. Until then, account data and cloud sync data are kept while your account exists, and deleted when you ask us to delete your account.</li>
+<li>Deleting data removes it from our live database right away. Supabase backups may still hold it until they expire under the backup retention period.</li>
+<li>Feedback reports and attached logs: 30 days (report rows and log files deleted automatically; the tracker copy is anonymised at the same time).</li>
+<li>Beta tester redemption records: while your account exists (needed to keep or end your tester access); deleted with your account.</li>
+<li>Redeem-attempt logs: used only for rate limiting; deleted automatically after 30 days.</li>
 <li>Crash reports at Sentry: up to 90 days.</li>
 <li>Billing records: as the merchant of record and tax law require.</li>
 </ul>
 <h2 id="s11">11. Your rights and controls</h2>
 <ul>
 <li><strong>Delete local data:</strong> delete the folder <code>%APPDATA%\rl-companion</code> (Settings → Privacy → Open data folder). Uninstalling does not remove it automatically.</li>
-<li><strong>Account:</strong> sign out any time; to delete your account and all cloud data, contact us via <a href="https://discord.gg/B4bnmfWtzA">Discord</a> or in-app Feedback, confirming the account's email address (an in-app delete button is planned).</li>
+<li><strong>Account:</strong> sign out any time; to delete your account and all cloud data, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback from your signed-in account.</li>
+<li><strong>Delete my cloud lobby data:</strong> a "Delete my cloud lobby data" button is not in 1.0 yet. Until it ships, ask us on Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or via in-app Feedback, and we will delete the lobby observations, rank sightings, names and match summaries you uploaded.</li>
 <li><strong>Crash reports:</strong> turn them off any time in Settings → Privacy.</li>
 <li><strong>GDPR (EEA/UK):</strong> rights to access, rectify, erase, restrict, object, data portability, withdraw consent, and complain to your supervisory authority.</li>
 <li><strong>CCPA/CPRA (California):</strong> rights to know, delete and correct, and to not be discriminated against. We do not sell or share personal information.</li>
 </ul>
-<p>To exercise your rights, contact us via <a href="https://discord.gg/B4bnmfWtzA">Discord</a> or in-app Feedback. We reply within <strong>30 days</strong>. We may need to verify that you own the account.</p>
-<p><strong>Other players:</strong> profiles of people you played with live on your PC, and in your cloud account only if you use cloud sync. If you believe your data is in our cloud database, contact us via <a href="https://discord.gg/B4bnmfWtzA">Discord</a> or in-app Feedback and we will help.</p>
+<p>To exercise your rights, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback. We reply within <strong>30 days</strong>. We may need to verify that you own the account.</p>
+<p><strong>Other players:</strong> profiles of people you played with live on your PC, and in your cloud account only if you use cloud sync. If you believe your data is in our cloud database, contact us and we will help.</p>
 <h2 id="s12">12. Children</h2>
-<p>The app is not directed to children under 13, and we do not knowingly collect personal information from children under 13 (16 in the EEA/UK, or the applicable age in your country). Accounts and purchases require the minimum ages in the Terms. If you believe a child created an account or sent us data, contact us via <a href="https://discord.gg/B4bnmfWtzA">Discord</a> or in-app Feedback and we will delete it.</p>
+<p>The app is not directed to children under 13, and we do not knowingly collect personal information from children under 13 (16 in the EEA/UK, or the applicable age in your country). Accounts and purchases require the minimum ages in the Terms. If you believe a child created an account or sent us data, contact us and we will delete it.</p>
+<h2 id="s12a">12a. Health data (Washington My Health My Data Act)</h2>
+<p>The app does not collect, process or share consumer health data as defined by Washington's My Health My Data Act (RCW 19.373). Gameplay statistics, coaching reads and rank estimates are not health data, so that Act does not apply. If this ever changes, we will publish a separate Consumer Health Data Privacy Policy first.</p>
 <h2 id="s13">13. Security</h2>
 <p>Local data is stored unencrypted in your Windows user profile and protected by your PC's account security. Cloud data is encrypted in transit (HTTPS) and at rest by Supabase, and protected by row-level security. No system is perfectly secure; keep your PC and network protected.</p>
 <h2 id="s14">14. International transfers</h2>
@@ -164,14 +195,7 @@
 <h2 id="s15">15. Changes</h2>
 <p>We post updates here and in the repository, update the date above, and tell you in the app about material changes.</p>
 <h2 id="s16">16. Contact</h2>
-<p>{{PRODUCT_NAME}} is owned and operated by Toby Sword. Contact us via <a href="https://discord.gg/B4bnmfWtzA">Discord</a> or in-app Feedback.</p>
+<p><strong>Toby Sword</strong> (owner and operator, Washington State, USA). To reach us, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback.</p>
 </main>
-<footer><div class="wrap">
-<div><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>{{PRODUCT_BRAND_HTML}}</span></a>
-<p>Free live coaching for Rocket League on Windows. Made by Toby Sword.</p>
-<p>Rocket League is a trademark of Psyonix LLC / Epic Games, Inc. {{PRODUCT_NAME}} is an independent project, not affiliated with or endorsed by Psyonix or Epic Games.</p>
-<p>© 2026 {{PRODUCT_NAME}}</p></div>
-<nav aria-label="Footer"><a href="index.html#pricing">Pricing</a><a href="terms.html#refunds">Refund policy</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="index.html#contact">Support</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
-</div></footer>
-
+<!--@include footer-->
 </body></html>

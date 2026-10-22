@@ -1,0 +1,64 @@
+<!--@set TITLE="Download and install · Instinct for Windows"-->
+<!--@set DESC="Download Instinct for Windows 10/11: installer or portable zip, verify with SHA256SUMS.txt, turn on the Rocket League Stats API, and upgrade from RL Coach Companion."-->
+<!--@set CANON="download"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+</head><body>
+<!--@include header-->
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">Download</span>
+<h1>Install {{PRODUCT_NAME}}.</h1>
+<p>Windows 10 or 11 (64-bit). No administrator rights needed. Downloads come from our <a href="{{RELEASES}}">GitHub releases</a>.</p>
+</div></section>
+
+<section aria-labelledby="dl-h"><div class="wrap">
+<h2 id="dl-h" class="sr" style="position:absolute;left:-999px">Downloads</h2>
+<div class="dl-cards">
+<div class="dl rec"><h3>Instinct-Setup.exe <span class="pill" style="color:var(--or);border-color:rgba(255,92,0,.4)">Recommended</span></h3><p>Per-user installer. Installs to <code>%LOCALAPPDATA%\Instinct</code>, adds a Start menu entry and lives in the system tray.</p><a class="btn accent lg" href="{{DL_SETUP}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download Instinct-Setup.exe</a></div>
+<div class="dl"><h3>Instinct-portable.zip</h3><p>No install: unzip it anywhere and run <code>Instinct.exe</code>.</p><a class="btn" href="{{DL_PORTABLE}}">Download portable zip</a></div>
+</div>
+<div class="note warn"><span><strong>Windows SmartScreen.</strong> The build isn't code-signed, so Windows may show "Windows protected your PC". Click <strong>More info</strong>, then <strong>Run anyway</strong>.</span></div>
+
+<h3 style="margin-top:44px;font-size:20px">Verify your download</h3>
+<p style="color:var(--mute);max-width:760px">Every release has a <a href="{{DL_SUMS}}" style="color:var(--ink)">SHA256SUMS.txt</a>. In PowerShell, compare the hash of your file with the line for it:</p>
+<pre><code>Get-FileHash .\Instinct-Setup.exe -Algorithm SHA256</code></pre>
+</div></section>
+
+<section class="alt" aria-labelledby="st-h"><div class="wrap">
+<div class="sec-head"><span class="kick">Set up</span><h2 id="st-h">Three steps, then play.</h2></div>
+<ol class="steps">
+<li><h3>Download</h3><p>Get <code>Instinct-Setup.exe</code> above.</p></li>
+<li><h3>Run</h3><p>No admin rights. If SmartScreen appears: <strong>More info</strong> → <strong>Run anyway</strong>.</p></li>
+<li><h3>Setup check</h3><p>Turns on the Stats API in one click (backup first). Restart Rocket League.</p></li>
+</ol>
+<div class="note"><span>Play in <strong>Borderless</strong> or <strong>Windowed</strong> mode. In exclusive Fullscreen, Windows can't draw anything over the game.</span></div>
+<figure class="shot" style="margin-top:32px;max-width:900px"><!-- SCREENSHOT: assets/shots/setup-check.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: Setup check"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/setup-check.png</code><p class="ph-what">Setup check with all steps ticked.</p><span class="ph-spec">1920×1080</span></div></figure>
+</div></section>
+
+<section aria-labelledby="man-h"><div class="wrap">
+<div class="grid g2" style="gap:40px">
+<div><span class="kick">Prefer to do it yourself?</span><h2 id="man-h" style="font-size:28px;margin-top:10px">Turn on the Stats API by hand</h2>
+<ol style="color:#D4D4D8;padding-left:20px">
+<li>Quit Rocket League.</li>
+<li>Open <code>Documents\My Games\Rocket League\TAGame\Config\</code> and edit <code>DefaultStatsAPI.ini</code> in Notepad.</li>
+<li>Under <code>[TAGame.MatchStatsExporter_TA]</code> set:</li>
+</ol>
+<pre><code>[TAGame.MatchStatsExporter_TA]
+PacketSendRate=30
+Port=49123</code></pre>
+<ol start="4" style="color:#D4D4D8;padding-left:20px"><li>Save and start Rocket League again (it reads this file only at startup).</li></ol>
+<p style="color:var(--mute);font-size:14.5px"><code>PacketSendRate</code> is updates per second; <code>0</code> (the default) means off.</p></div>
+<div>
+<span class="kick">Upgrading</span><h2 style="font-size:28px;margin-top:10px">From RL Coach Companion</h2>
+<p style="color:#D4D4D8">The installer removes the old program and keeps your data in <code>%APPDATA%\rl-companion</code>. Your history, players and settings carry over.</p>
+<span class="kick" style="margin-top:20px">Updates</span><h2 style="font-size:28px;margin-top:10px">Signed, in the app</h2>
+<p style="color:#D4D4D8">Updates are signed and offered in the app. Stable channel only.</p>
+<span class="kick" style="margin-top:20px">Uninstall</span><h2 style="font-size:28px;margin-top:10px">Any time</h2>
+<p style="color:#D4D4D8"><strong>Settings → Apps → Installed apps → {{PRODUCT_NAME}} → Uninstall</strong>. Your data stays in <code>%APPDATA%\rl-companion</code> until you delete it.</p>
+</div></div>
+</div></section>
+</main>
+<!--@include footer-->
+</body></html>

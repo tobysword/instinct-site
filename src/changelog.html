@@ -1,0 +1,45 @@
+<!--@set TITLE="Changelog · Instinct"-->
+<!--@set DESC="What's new in Instinct. 1.0.0 rebuilds the overlay around short, honest reads."-->
+<!--@set CANON="changelog"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+</head><body>
+<!--@include header-->
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">Changelog</span><h1>What's new.</h1><p>Release notes for every version are also on <a href="{{RELEASES}}">GitHub releases</a>.</p>
+</div></section>
+<section aria-label="Releases"><div class="wrap">
+<!-- STUB: finalise the 1.0.0 date and notes at publish (target Mon 23 Nov 2026). Source: CHANGELOG.md in the app repo. -->
+<article class="release" id="v1.0.0">
+<div><div class="ver">1.0.0</div><div class="date">Stable · release date TBA</div></div>
+<div>
+<p class="summary">The overlay is rebuilt around short, honest reads instead of tips and sliders.</p>
+<h3>Added</h3>
+<ul>
+<li><strong>Reads card:</strong> after a goal, two short facts from this match against the lobby, your teammate or your usual. Never advice.</li>
+<li><strong>Left glance stats + minimap:</strong> up to 6 stat tiles per mode (pick from 18) with a lobby strip showing a rank pill per player, and our own minimap.</li>
+<li><strong>Rank estimates per player, per playlist.</strong> <code>~</code> marks a low-confidence estimate from scoreboard events only. Your own Playing like shows confidence (x/4), trend and the reasons up and down.</li>
+<li><strong>Post-match "Reads this game" and "vs your usual".</strong></li>
+<li><strong>Toxic mode</strong> <span class="pro-badge">PRO</span>: off by default, on your overlay only, never sent to the game. Swearing is a separate 18+ toggle.</li>
+<li><strong>Hide player names</strong> for streamers.</li>
+<li>Opt-in crash reports (off by default).</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Renamed to {{PRODUCT_NAME}}. Settings and history stay in <code>%APPDATA%\rl-companion</code>.</li>
+<li>Downloads are now <code>Instinct-Setup.exe</code> and <code>Instinct-portable.zip</code>. The old RL Coach Companion program is removed on install and your data is kept.</li>
+<li>One stable update channel.</li>
+<li>Local history is free.</li>
+</ul>
+<h3>Removed</h3>
+<ul><li>Text tips, playstyle sliders and the rotation arrow. The live data can't support them honestly: it has no passes, possession, boost pads or positions, and only events for opponents.</li></ul>
+</div></article>
+<article class="release" id="older">
+<div><div class="ver">0.x</div><div class="date">RL Coach Companion</div></div>
+<div><p class="summary">Earlier versions shipped as RL Coach Companion.</p><p style="color:var(--mute)">See <a href="{{RELEASES}}" style="color:var(--ink)">all releases on GitHub</a>.</p></div>
+</article>
+</div></section>
+</main>
+<!--@include footer-->
+</body></html>

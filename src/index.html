@@ -1,116 +1,115 @@
-<!doctype html><html lang="en"><head><title>{{PRODUCT_NAME}}: live Rocket League coach for Windows</title><meta name="description" content="{{PRODUCT_NAME}} is a free live coach for Rocket League on Windows: real-time tips, playing-like rank and replay analysis using the official Stats API. Anti-cheat safe."><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#111111">
-<link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
-<meta property="og:title" content="{{PRODUCT_NAME}}: your live Rocket League coach"><meta property="og:description" content="Real-time coaching tips, playing-like rank and replay analysis for Rocket League on Windows. Uses the official Stats API."><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:type" content="website"><link rel="canonical" href="https://tobysword.github.io/instinct-site/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{{PRODUCT_NAME}}","operatingSystem":"Windows 10, Windows 11","applicationCategory":"GameApplication","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"{{PRO_NAME}}","price":"2.99","priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":"2.99","priceCurrency":"USD","billingDuration":"P1M","unitText":"MONTH"}}],"downloadUrl":"https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"}</script></head><body><a class="skip" href="#main">Skip to content</a>
-<header class="nav"><div class="wrap">
-<a class="brand" href="index.html" aria-label="{{PRODUCT_NAME}} home"><img src="assets/mark.svg" alt="" width="30" height="30"><span>{{PRODUCT_BRAND_HTML}}</span></a>
-<nav aria-label="Primary"><ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#how">How it works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav>
-<a class="btn accent sm" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe">Download</a>
-</div></header>
+<!--@set TITLE="Instinct: live, and honest. A live Rocket League overlay for Windows"-->
+<!--@set DESC="Instinct is a live Rocket League overlay for Windows 10/11 that tells you what is actually happening in your match, from the game's official Stats API. No BakkesMod, never presses keys."-->
+<!--@set CANON=""-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{{PRODUCT_NAME}}","operatingSystem":"Windows 10, Windows 11","applicationCategory":"GameApplication","softwareVersion":"1.0.0","downloadUrl":"{{DL_SETUP}}","url":"{{SITE_URL}}"}</script>
+</head><body>
+<!--@include header-->
 <main id="main">
-<section class="hero live" aria-labelledby="hero-h"><div class="wrap">
-<div>
-<span class="eyebrow"><i aria-hidden="true"></i>Live in-match coaching · Free during beta · Windows 10/11</span>
-<h1 id="hero-h">Coaching that happens <em>while you play</em>.</h1>
-<p class="lead">{{PRODUCT_NAME}} sits on your screen during every Rocket League match and calls the next read in real time: rotation, boost, challenges and positioning, the moment they matter. No alt-tab, no waiting for the replay. Built on the game's official Stats API.</p>
+<section class="hero" aria-labelledby="hero-h"><div class="wrap">
+<span class="eyebrow"><i aria-hidden="true"></i>{{PRODUCT_NAME}} 1.0 · Windows 10/11</span>
+<h1 id="hero-h">{{PRODUCT_NAME}}.<br><span class="hl">Live, and honest.</span></h1>
+<p class="lead">A live Rocket League overlay that tells you what is actually happening in your match, from the game's official Stats API. Windows 10/11.</p>
 <div class="ctas">
-<a class="btn accent" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for Windows</a>
-<a class="btn discord" href="https://discord.gg/B4bnmfWtzA"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>Join the Discord</a>
+<!--@include download-cta-->
+<a class="btn ghost lg" href="#limits">See what it can't see</a>
 </div>
-<p class="dl-alt"><a href="https://github.com/tobysword/InstinctRL/releases">All releases</a> · <a href="https://github.com/tobysword/InstinctRL/releases/tag/beta">Beta build</a></p>
-<div class="meta"><span>Official Stats API</span><span>No memory reading or injection</span><span>Free during beta</span><span>No ads, no tracking</span></div>
-</div>
-<div class="mock" role="img"> aria-label="Illustration of the {{PRODUCT_NAME}} overlay during a match: a coaching tip, a rank estimate and live stats">
-<span class="live-pill" aria-hidden="true">Live · in match</span>
-<div class="field" aria-hidden="true"><span class="ball"></span><span class="car o"></span><span class="car b"></span></div>
-<div class="hud rank" aria-hidden="true"><div class="cap">Playing like</div><strong>Diamond II</strong><span class="chip pos">▲ trending up</span></div>
-<div class="hud tip" aria-hidden="true"><div class="cap">Live tip</div><b>Rotate back post: your teammate is challenging.</b></div>
-<div class="hud stats" aria-hidden="true"><div><b>412</b><span>Score</span></div><div><b>71%</b><span>Boost eff.</span></div><div><b>3</b><span>Saves</span></div></div>
+<p class="fineprint">Instinct-Setup.exe · No admin rights · <a href="download.html">Portable zip and checksums</a></p>
+<div class="hero-shot">
+<figure class="shot"><!-- SCREENSHOT: assets/shots/overlay-2v2-hero.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: overlay in a 2v2 match"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/overlay-2v2-hero.png</code><p class="ph-what">Overlay in a 2v2 match: Coach panel with Playing like, left glance stats, lobby strip and minimap.</p><span class="ph-spec">1920×1080 · Borderless · synthetic names</span></div>
+<figcaption>The overlay in a 2v2 match. Click-through, so it never gets in the way.</figcaption></figure>
 </div>
 </div></section>
 
-<section id="see-it-live" class="media" aria-labelledby="v-h"><div class="wrap">
-<div class="sec-head"><span class="kick">See it live</span><h2 id="v-h">Real tips, mid-match, on your screen.</h2><p>A recording of {{PRODUCT_NAME}} coaching a real match. Tips appear over the game and fade before they get in the way.</p></div>
-<figure class="media-frame">
-<!-- MEDIA SLOT: screen recording. To swap in: add assets/media/live-coaching.mp4 (H.264, 1920x1080, muted, ~20-40 s)
-     and optionally .webm, then uncomment the <source> lines. Replace the poster at assets/media/live-coaching-poster.png. See README. -->
-<video id="live-video" controls muted playsinline loop preload="none" poster="assets/media/live-coaching-poster.png" width="1920" height="1080" aria-label="Screen recording of {{PRODUCT_NAME}} live coaching during a Rocket League match">
-<!-- <source src="assets/media/live-coaching.webm" type="video/webm"> -->
-<!-- <source src="assets/media/live-coaching.mp4" type="video/mp4"> -->
-</video>
-<figcaption>Screen recording coming soon. Until then, grab the app and see it in your own match.</figcaption>
-</figure>
-</div></section>
+<div class="trust" aria-label="Trust"><ul>
+<li>Official Stats API</li><li>No BakkesMod</li><li>Never presses keys</li><li>Free local history</li><li>No ads, no analytics</li>
+</ul></div>
 
 <section id="features" aria-labelledby="f-h"><div class="wrap">
-<div class="sec-head"><span class="kick">Features</span><h2 id="f-h">Live first. Everything else backs it up.</h2><p>Everything runs on your PC. No account needed to start.</p></div>
-<div class="grid g3">
-<article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3><span class="tag-live">Live</span>Live coaching overlay</h3><p>Short, timely tips while you play: rotation, boost, challenges and positioning, shown in a clean overlay that stays out of the way.</p></article>
-<article class="card"><div class="ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3><span class="tag-live">Live</span>Phone companion</h3><p>Pair your phone over your own Wi-Fi with a 6-character code and keep stats on a second screen.</p></article>
-<article class="card"><div class="ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3><span class="tag-live">Live</span>Playing-like rank</h3><p>See the rank you are actually playing at, plus the specific drivers pulling it up or down, match by match.</p></article>
-<article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M17 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-4-6.3"/></svg></div><h3>Player profiles</h3><p>Remember teammates and opponents you have met, with their tendencies and how you did together.</p></article>
-<article class="card"><div class="ico v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Replay analysis</h3><p>Deep-dive the replays you saved: key moments, mistakes and patterns, analysed locally.</p></article>
-<article class="card"><div class="ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div><h3>Accessible by design</h3><p>Colour-blind palette, high-contrast mode, reduced motion and adjustable text size built in.</p></article>
-</div></div></section>
+<div class="sec-head"><span class="kick">What you see</span><h2 id="f-h">Facts from your match. Never advice.</h2><p>Everything the overlay shows comes from data the game actually sends. If it can't see it, it doesn't say it.</p></div>
 
-<section id="how" class="alt" aria-labelledby="h-h"><div class="wrap">
-<div class="sec-head"><span class="kick">How it works</span><h2 id="h-h">Built on Rocket League's official Stats API.</h2><p>Psyonix ships a local Stats API with the game. {{PRODUCT_NAME}} reads it, nothing more.</p></div>
-<ol class="steps">
-<li><h3>Install</h3><p>Download the Windows installer from GitHub Releases and launch {{PRODUCT_NAME}}.</p></li>
-<li><h3>Enable the Stats API</h3><p>One click turns it on in Rocket League's <code>DefaultStatsAPI.ini</code>. A backup is made first.</p></li>
-<li><h3>Play</h3><p>Live match data streams to the app on your PC and the overlay starts coaching.</p></li>
-<li><h3>Improve</h3><p>Review post-match summaries, your rank drivers and trends over time.</p></li>
-</ol>
-<div class="safe"><div class="ico g" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-<div><h3>Anti-cheat friendly</h3><p>{{PRODUCT_NAME}} is a coaching tool, not a cheat or automation tool.</p>
-<ul><li>No reading of game memory, no code injection, no hooks into the game process.</li><li>No automated key presses or inputs.</li><li>Does not use or require BakkesMod.</li></ul></div></div>
+<div class="feat">
+<div class="feat-copy"><span class="num">01 · READS</span><h3>Two facts, every goal break.</h3><p>After a goal, two short facts from this match: you vs your usual, the lobby or your teammate. Never advice.</p><p class="sub">The Reads card sits on the right and clears when play restarts.</p></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/reads-card-goal-replay.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: Reads card"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/reads-card-goal-replay.png</code><p class="ph-what">Reads card during a goal replay, showing two reads.</p><span class="ph-spec">1920×1080 · synthetic names</span></div>
+<figcaption>Reads card during a goal replay.</figcaption></figure>
+</div>
+
+<div class="feat flip">
+<div class="feat-copy"><span class="num">02 · GLANCE STATS + MINIMAP</span><h3>The numbers you pick, in context.</h3><p>Up to 6 tiles you choose from 18, each compared with the lobby, your usual or your team. A lobby strip with a rank pill for every player.</p><p>Our own minimap: last ball hit, a shadow-defence spot, boost where the game sends it.</p></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/settings-overlay-tile-picker.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: stat tile picker"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/settings-overlay-tile-picker.png</code><p class="ph-what">Settings → Overlay: the stat tile picker (18 options, max 6).</p><span class="ph-spec">1920×1080 · synthetic names</span></div>
+<figcaption>Pick up to 6 of 18 tiles per mode.</figcaption></figure>
+</div>
+
+<div class="feat">
+<div class="feat-copy"><span class="num">03 · PLAYING LIKE</span><h3>The rank you're playing at. Right now.</h3><p>The rank you're playing at in this playlist, with confidence (x/4), trend and the reason up and the reason down.</p></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/playing-like-confidence.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: Playing like"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/playing-like-confidence.png</code><p class="ph-what">Playing like with confidence x/4, trend and the up/down reasons.</p><span class="ph-spec">1920×1080 · synthetic names</span></div>
+<figcaption>Playing like, with its reason up and reason down.</figcaption></figure>
+</div>
+
+<div class="feat flip">
+<div class="feat-copy"><span class="num">04 · EVERY PLAYER, EVERY PLAYLIST</span><h3>A read on the whole lobby.</h3><p>A playing-like estimate for each player in the lobby for the current playlist. <code>~</code> means it's from scoreboard events only, so low confidence.</p><p class="sub">Names show only in 1v1 and 2v2. Streaming? Turn on <strong>Hide player names</strong>.</p></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/left-stats-events-only.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: left stats with events-only rank pill"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/left-stats-events-only.png</code><p class="ph-what">Left stats close-up: lobby strip with a <code>~</code> events-only rank pill and the <code>50/50s ~</code> tile.</p><span class="ph-spec">1920×1080 · synthetic names</span></div>
+<figcaption>Rank pills for every player in the lobby.</figcaption></figure>
+</div>
+
+<div class="feat">
+<div class="feat-copy"><span class="num">05 · POST-MATCH</span><h3>The match, in one screen.</h3><p>Played like, Reads this game (up to 6), vs your usual in this playlist (after 3 matches), why your estimate moved, best plays, one focus for next match.</p><p class="sub">Share card in one key: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>6</kbd>.</p></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/post-match-summary.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: post-match summary"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/post-match-summary.png</code><p class="ph-what">Post-match summary: Played like, Reads this game, vs your usual.</p><span class="ph-spec">1920×1080 · synthetic names</span></div>
+<figcaption>Post-match: Reads this game and vs your usual.</figcaption></figure>
+</div>
+
+<div class="feat flip">
+<div class="feat-copy"><span class="num">06 · PHONE</span><h3>A second screen in your pocket.</h3><p>Pair your phone on the same Wi-Fi with a 6-character code: live view, breakdown, history.</p><p class="sub">Phone traffic stays on your Wi-Fi.</p></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/phone-companion.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: phone companion"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/phone-companion.png</code><p class="ph-what">Phone companion: live view and history, side by side.</p><span class="ph-spec">1920×1080 canvas · synthetic names</span></div>
+<figcaption>Phone companion: live view and history.</figcaption></figure>
+</div>
+
+<div class="toxic-teaser" style="margin-top:40px">
+<div><span class="kick">07 · Toxic mode</span> <span class="pro-badge">PRO</span><h3>Roasts you, not chat.</h3><p>Optional roasts aimed at you, on your screen only. Off by default. 18+ for swearing.</p><a class="link-arrow" href="toxic.html">How Toxic mode works</a></div>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/toxic-line-overlay.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder: Toxic line on the overlay"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/toxic-line-overlay.png</code><p class="ph-what">A Toxic line under the Reads (Marketing-approved, clean wording, severity 1-2).</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
+</div>
+<p style="margin-top:28px"><a class="link-arrow" href="features.html">See every feature</a></p>
 </div></section>
 
-<section id="pricing" aria-labelledby="p-h"><div class="wrap">
-<div class="sec-head"><span class="kick">Pricing</span><h2 id="p-h">Free to coach. Pro to go further.</h2><p>The core coach is free forever. {{PRO_NAME}} adds account-based extras, free for everyone during the beta, then US $2.99/month.</p></div>
-<div class="plans">
-<div class="plan"><h3>Free</h3><div class="price">$0 <small>forever</small></div><p class="note">Everything you need to improve, on your PC.</p>
-<ul><li>Live coaching overlay and tips</li><li>Playing-like rank and rank drivers</li><li>Phone companion on your Wi-Fi</li><li>Replay analysis and Deep dive</li><li>No account required</li></ul>
-<a class="btn" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe">Download free</a></div>
-<div class="plan pro"><h3>{{PRO_NAME}} <span class="pro-badge">PRO</span></h3><div class="price">Free <small>during beta</small></div><p class="note">Then <strong>US $2.99/month</strong> after the beta, plus applicable taxes. You will see the price before you are ever charged, with at least 30 days' notice.</p>
-<ul><li>Everything in Free</li><li>Player profiles synced to your account</li><li>Session tracking and growth trends across PCs</li><li>Teams: shared metrics with your duo or trio</li><li>Advanced scouting, unlimited history and export</li></ul>
-<a class="btn pro" href="https://discord.gg/B4bnmfWtzA">Get beta access on Discord</a><a class="beta-link" href="https://github.com/tobysword/InstinctRL/releases/tag/beta">or grab the Beta build →</a></div>
+<section id="limits" class="alt" aria-labelledby="l-h"><div class="wrap">
+<div class="limits">
+<div><span class="kick">Honest limits</span><h2 id="l-h">What it can't see.</h2>
+<p>The live Stats API has no passes, possession, boost pads or boost steals, car positions or rotation, or whiffs, and no car state for opponents: <strong>opponents are events and scoreboard only</strong>.</p>
+<p>So the live overlay never claims those. It doesn't coach rotation, positioning or boost management. Possession, passes and positions appear only in the replay Deep dive <span class="pill beta">Beta</span>, from replays you saved.</p></div>
+<ul class="nolist" aria-label="Not in the live data">
+<li>Passes and possession</li><li>Boost pads and boost steals</li><li>Car positions and rotation</li><li>Whiffs</li><li>Opponents' boost and speed (no car state for them)</li>
+</ul>
 </div>
-<p class="fine">Paid subscriptions are not live yet. When they launch, they will be sold through our merchant of record, Lemon Squeezy, which handles payment and taxes. Subscriptions renew automatically until cancelled and can be cancelled any time. <strong>Refund policy:</strong> request a full refund within 14 days of your first payment; EU/UK consumers keep statutory withdrawal rights. See the <a href="terms.html#refunds">Terms</a> for details.</p>
+</div></section>
+
+<section id="install" aria-labelledby="i-h"><div class="wrap">
+<div class="sec-head"><span class="kick">Install in 3 steps</span><h2 id="i-h">From download to your next match.</h2></div>
+<ol class="steps">
+<li><h3>Download</h3><p>Get <code>Instinct-Setup.exe</code> from our GitHub releases.</p></li>
+<li><h3>Run</h3><p>No admin rights needed. If Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></li>
+<li><h3>Setup check</h3><p>Turns on the Stats API in one click (it backs up the file first). Restart Rocket League.</p></li>
+</ol>
+<div class="note"><span>Then play in <strong>Borderless</strong> or <strong>Windowed</strong> mode. In exclusive Fullscreen, Windows can't draw anything over the game. <a class="link-arrow" href="download.html">Full install guide</a></span></div>
+</div></section>
+
+<section class="alt" aria-labelledby="pr-h"><div class="wrap">
+<div class="sec-head c"><span class="kick">Pricing</span><h2 id="pr-h">Free on your PC. Pro for the extras.</h2><p>Everything on your PC is free, including your full local history. {{PRO_NAME}} adds Toxic mode and account features. {{PRO_NAME}} pricing announced at launch.</p></div>
+<p style="text-align:center"><a class="btn" href="pricing.html">Compare Free and Pro</a></p>
 </div></section>
 
 <section aria-labelledby="d-h"><div class="wrap"><div class="band" id="download">
-<div><h2 id="d-h">Start coaching your next match.</h2><p>Free for Windows 10 and 11. Free during the beta.</p></div>
-<div class="band-cta"><a class="btn accent" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for Windows</a><span class="beta-link"><a href="https://github.com/tobysword/InstinctRL/releases">All releases</a> · <a href="https://github.com/tobysword/InstinctRL/releases/tag/beta">Beta build</a></span><p class="smartscreen">If Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></div>
-</div></div></section>
-
-<section id="faq" class="alt" aria-labelledby="q-h"><div class="wrap">
-<div class="sec-head"><span class="kick">FAQ</span><h2 id="q-h">Questions, answered.</h2></div>
-<div class="faq">
-<details><summary>Can I get banned for using {{PRODUCT_NAME}}?</summary><p>{{PRODUCT_NAME}} only uses Rocket League's official local Stats API, optional capture of the game window and replay files you saved. It never reads game memory, injects code, hooks the game or presses keys for you. We can't speak for Psyonix or Epic, so please follow their terms and any tournament rules.</p></details>
-<details><summary>Is it really free?</summary><p>Yes. The core coach is free. {{PRO_NAME}} is free for everyone during the beta; after the beta it costs US $2.99/month, and we give at least 30 days' notice before any charge.</p></details>
-<details><summary>What platforms are supported?</summary><p>Windows 10 and 11, for Rocket League on Steam or Epic Games. The optional phone companion works in your phone's browser on the same Wi-Fi.</p></details>
-<details><summary>Does it slow down my game?</summary><p>The app is a lightweight native Windows app built with Tauri. It reads data the game already publishes locally, so the impact is minimal.</p></details>
-<details><summary>Do I need an account?</summary><p>No. Coaching works fully offline on your PC. An account is only needed for {{PRO_NAME}} cloud features like sync across PCs and teams.</p></details>
-<details><summary>What data do you collect?</summary><p>None by default. Match data stays on your PC. Data only leaves it if you create an account, opt in to crash reports or send feedback. No ads, no analytics, no selling data. Read the <a href="privacy.html">Privacy Policy</a>.</p></details>
-<details><summary>How do refunds work?</summary><p>Once paid plans launch, you can request a full refund within 14 days of your first payment, and cancel any time. See the <a href="terms.html#refunds">Terms</a>.</p></details>
-<details><summary>Is {{PRODUCT_NAME}} affiliated with Psyonix or Epic Games?</summary><p>No. It is an independent project and is not endorsed by Psyonix or Epic Games.</p></details>
-</div></div></section>
-
-<section id="contact" class="contact" aria-labelledby="c-h"><div class="wrap">
-<div class="sec-head"><span class="kick">Contact &amp; support</span><h2 id="c-h">We're here to help.</h2><p>Questions, bug reports, billing or privacy requests: reach out any time.</p></div>
-<div class="grid g3">
-<div class="card"><div class="ico v" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Discord</h3><p>The fastest way to get help and talk to the developer. <a href="https://discord.gg/B4bnmfWtzA">discord.gg/B4bnmfWtzA</a></p></div>
-<div class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div><h3>Bug reports</h3><p>Use <em>Send feedback</em> in the app, or post in the <a href="https://discord.gg/B4bnmfWtzA">Discord</a>.</p></div>
-<div class="card"><div class="ico b" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Billing &amp; privacy</h3><p>Refunds, account deletion or data requests: message us on Discord. We reply within 30 days, usually much sooner. See <a href="privacy.html">Privacy</a> and <a href="terms.html">Terms</a>.</p></div>
+<div><h2 id="d-h">Know what's actually happening.</h2><p>Free for Windows 10 and 11. Questions? We're on <a href="{{DISCORD}}">Discord</a>.</p></div>
+<div class="band-cta"><!--@include download-cta--><p class="smartscreen">Unsigned build: if Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></div>
 </div></div></section>
 </main>
-<footer><div class="wrap">
-<div><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>{{PRODUCT_BRAND_HTML}}</span></a>
-<p>Free live coaching for Rocket League on Windows. Made by Toby Sword.</p>
-<p>Rocket League is a trademark of Psyonix LLC / Epic Games, Inc. {{PRODUCT_NAME}} is an independent project, not affiliated with or endorsed by Psyonix or Epic Games.</p>
-<p>© 2026 {{PRODUCT_NAME}}</p></div>
-<nav aria-label="Footer"><a href="index.html#pricing">Pricing</a><a href="terms.html#refunds">Refund policy</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="index.html#contact">Support</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
-</div></footer>
+<!--@include footer-->
 </body></html>

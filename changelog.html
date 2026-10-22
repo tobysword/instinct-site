@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
+<title>Changelog · Instinct</title><meta name="description" content="What's new in Instinct. 1.0.0 rebuilds the overlay around short, honest reads.">
+<link rel="canonical" href="https://tobysword.github.io/instinct-site/changelog">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Changelog · Instinct"><meta property="og:description" content="What's new in Instinct. 1.0.0 rebuilds the overlay around short, honest reads."><meta property="og:url" content="https://tobysword.github.io/instinct-site/changelog"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
+
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
+<nav aria-label="Primary"><ul>
+<li><a href="features.html">Features</a></li>
+<li><a href="toxic.html">Toxic mode</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="download.html">Install</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="changelog.html" aria-current="page">Changelog</a></li>
+</ul></nav>
+<a class="btn accent sm nav-dl" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
+<details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
+<div class="menu-panel"><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">Changelog</span><h1>What's new.</h1><p>Release notes for every version are also on <a href="https://github.com/tobysword/InstinctRL/releases">GitHub releases</a>.</p>
+</div></section>
+<section aria-label="Releases"><div class="wrap">
+<!-- STUB: finalise the 1.0.0 date and notes at publish (target Mon 23 Nov 2026). Source: CHANGELOG.md in the app repo. -->
+<article class="release" id="v1.0.0">
+<div><div class="ver">1.0.0</div><div class="date">Stable · release date TBA</div></div>
+<div>
+<p class="summary">The overlay is rebuilt around short, honest reads instead of tips and sliders.</p>
+<h3>Added</h3>
+<ul>
+<li><strong>Reads card:</strong> after a goal, two short facts from this match against the lobby, your teammate or your usual. Never advice.</li>
+<li><strong>Left glance stats + minimap:</strong> up to 6 stat tiles per mode (pick from 18) with a lobby strip showing a rank pill per player, and our own minimap.</li>
+<li><strong>Rank estimates per player, per playlist.</strong> <code>~</code> marks a low-confidence estimate from scoreboard events only. Your own Playing like shows confidence (x/4), trend and the reasons up and down.</li>
+<li><strong>Post-match "Reads this game" and "vs your usual".</strong></li>
+<li><strong>Toxic mode</strong> <span class="pro-badge">PRO</span>: off by default, on your overlay only, never sent to the game. Swearing is a separate 18+ toggle.</li>
+<li><strong>Hide player names</strong> for streamers.</li>
+<li>Opt-in crash reports (off by default).</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Renamed to Instinct. Settings and history stay in <code>%APPDATA%\rl-companion</code>.</li>
+<li>Downloads are now <code>Instinct-Setup.exe</code> and <code>Instinct-portable.zip</code>. The old RL Coach Companion program is removed on install and your data is kept.</li>
+<li>One stable update channel.</li>
+<li>Local history is free.</li>
+</ul>
+<h3>Removed</h3>
+<ul><li>Text tips, playstyle sliders and the rotation arrow. The live data can't support them honestly: it has no passes, possession, boost pads or positions, and only events for opponents.</li></ul>
+</div></article>
+<article class="release" id="older">
+<div><div class="ver">0.x</div><div class="date">RL Coach Companion</div></div>
+<div><p class="summary">Earlier versions shipped as RL Coach Companion.</p><p style="color:var(--mute)">See <a href="https://github.com/tobysword/InstinctRL/releases" style="color:var(--ink)">all releases on GitHub</a>.</p></div>
+</article>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
+<p class="f-tag">Live, and honest. A live Rocket League overlay for Windows 10/11, made by Toby Sword.</p>
+<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC / Epic Games, Inc. Instinct is an independent project, not endorsed by them.</p>
+<p class="f-legal">© 2026 Toby Sword</p></div>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Download &amp; install</a><a href="changelog.html">Changelog</a></nav>
+<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="contact.html">Contact &amp; support</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a><a href="index.html#limits">What it can't see</a></nav>
+<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refund policy</a><a href="terms.html#toxic">Toxic mode terms</a></nav>
+</div></footer>
+
+</body></html>

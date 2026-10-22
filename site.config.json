@@ -1,5 +1,11 @@
 {
   "PRODUCT_NAME": "Instinct",
   "PRODUCT_BRAND_HTML": "Instinct",
-  "PRO_NAME": "Instinct Pro"
+  "PRO_NAME": "Instinct Pro",
+  "SITE_URL": "https://tobysword.github.io/instinct-site/",
+  "RELEASES": "https://github.com/tobysword/InstinctRL/releases",
+  "DL_SETUP": "https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe",
+  "DL_PORTABLE": "https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-portable.zip",
+  "DL_SUMS": "https://github.com/tobysword/InstinctRL/releases/latest/download/SHA256SUMS.txt",
+  "DISCORD": "https://discord.gg/B4bnmfWtzA"
 }

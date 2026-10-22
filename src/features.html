@@ -1,0 +1,134 @@
+<!--@set TITLE="Features · Instinct"-->
+<!--@set DESC="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; beta replay and screen analysis."-->
+<!--@set CANON="features"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+</head><body>
+<!--@include header-->
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">Features</span>
+<h1>Everything in {{PRODUCT_NAME}} 1.0.</h1>
+<p>A live overlay built on facts the game actually sends. Beta items are marked <span class="pill beta">Beta, off by default</span>. Everything runs on your PC.</p>
+</div></section>
+
+<section aria-label="Feature list"><div class="wrap">
+<div class="group" id="overlay">
+<div><span class="kick">In game</span><h2>Live overlay</h2><p class="gsub">Click-through, with hotkeys. It stays out of your way until you need it.</p></div>
+<div>
+<ul class="specs">
+<li><b>Coach panel with Playing like</b>The rank you're playing at in this playlist, with confidence (x/4), trend, the reason up and the reason down.</li>
+<li><b>Reads card at goal breaks</b>Two short facts from this match: you vs your usual, the lobby or your teammate. Never advice.</li>
+<li class="wide"><b>Left glance stats</b>Up to 6 tiles per mode, from 18. Each is compared with the lobby, your usual or your team.
+<div class="tiles" aria-label="The 18 tiles"><span>Goals</span><span>Shots</span><span>Saves</span><span>Assists</span><span>Score</span><span>Touches</span><span>Demos</span><span>Shot %</span><span>Hard hits</span><span>Aerial touches</span><span>50/50s ~</span><span class="you">Avg boost</span><span class="you">Empty boost</span><span class="you">Boost used</span><span class="you">Avg speed</span><span class="you">Supersonic</span><span class="you">Airtime</span><span class="you">Handbrake taps</span></div>
+<p class="legend"><code>50/50s ~</code> is an estimate from ball-touch timing. Tiles outlined in orange (boost and speed) are yours only: the game sends no car state for other players.</p></li>
+<li><b>Lobby strip</b>A rank pill for every player, per playlist. <code>~</code> marks an estimate from scoreboard events only (low confidence). Names show only in 1v1 / 2v2.</li>
+<li><b>Minimap</b>Our own: last ball hit, a shadow-defence spot, boost where the game sends it.</li>
+<li><b>Tilt warning</b>A heads-up you can dismiss with one key.</li>
+<li><b>End-of-match summary</b>The post-match view right on the overlay.</li>
+</ul>
+<div class="grid g2" style="margin-top:20px">
+<figure class="shot"><!-- SCREENSHOT: assets/shots/overlay-2v2-hero.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/overlay-2v2-hero.png</code><p class="ph-what">Overlay in a 2v2 match.</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
+<figure class="shot"><!-- MEDIA: assets/media/goal-break-reads.mp4 (optional) -->
+<div class="shot-ph" role="img" aria-label="Video placeholder"><span class="ph-tag">Recording needed</span><code class="ph-file">assets/media/goal-break-reads.mp4</code><p class="ph-what">Optional 20-40 s screen recording of a goal break showing Reads.</p><span class="ph-spec">1920×1080 · H.264 · muted · synthetic names</span></div></figure>
+</div>
+</div></div>
+
+<div class="group" id="post-match">
+<div><span class="kick">After the match</span><h2>Post-match</h2><p class="gsub">One screen that explains the match you just played.</p></div>
+<div><ul class="specs">
+<li><b>Played like</b>The tier you played at this match.</li>
+<li><b>Reads this game</b>Up to 6 reads from the match, newest first.</li>
+<li><b>vs your usual</b>This match against your usual in this playlist (builds after 3 matches).</li>
+<li><b>Rank reasons</b>Why your estimate moved.</li>
+<li><b>Best plays</b>And your team and opponents.</li>
+<li><b>Focus next match</b>One line to take into the next one.</li>
+<li class="wide"><b>Share card</b>A PNG saved to <code>Pictures\Instinct</code> and copied to the clipboard, in one key.</li>
+</ul>
+<div class="grid g2" style="margin-top:20px">
+<figure class="shot"><!-- SCREENSHOT: assets/shots/post-match-summary.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/post-match-summary.png</code><p class="ph-what">Post-match: Played like, Reads this game, vs your usual.</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/share-card.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/share-card.png</code><p class="ph-what">The share card PNG.</p><span class="ph-spec">As exported · synthetic names</span></div></figure>
+</div></div></div>
+
+<div class="group" id="control">
+<div><span class="kick">On your desktop</span><h2>Control window</h2><p class="gsub">Your history and settings, outside the game.</p></div>
+<div><ul class="specs">
+<li><b>History</b>Every match, today's session, weekly and monthly trends. Free.</li>
+<li><b>Players</b>People you've played with and against, from events and the scoreboard.</li>
+<li><b>You</b>Set your real rank per playlist.</li>
+<li><b>Team <span class="pro-badge">PRO</span></b>Shared metrics with teammates you invite (account).</li>
+<li><b>Setup check</b>Finds your install and turns on the Stats API in one click.</li>
+<li><b>Feedback</b>Send a report from the app, with optional scrubbed logs.</li>
+</ul>
+<div class="grid g2" style="margin-top:20px">
+<figure class="shot"><!-- SCREENSHOT: assets/shots/control-history.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/control-history.png</code><p class="ph-what">Control window: History page (session + weekly trend).</p><span class="ph-spec">1920×1080 · synthetic names</span></div></figure>
+<figure class="shot"><!-- SCREENSHOT: assets/shots/setup-check.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/setup-check.png</code><p class="ph-what">Setup check with all steps ticked.</p><span class="ph-spec">1920×1080</span></div></figure>
+</div></div></div>
+
+<div class="group" id="phone">
+<div><span class="kick">Second screen</span><h2>Phone companion</h2><p class="gsub">On your Wi-Fi, never through our servers.</p></div>
+<div><ul class="specs">
+<li class="wide"><b>Pair with a 6-character code</b>Same Wi-Fi as your PC. Live view, breakdown and history in your phone's browser.</li>
+</ul>
+<figure class="shot" style="margin-top:20px"><!-- SCREENSHOT: assets/shots/phone-companion.png -->
+<div class="shot-ph" role="img" aria-label="Screenshot placeholder"><span class="ph-tag">Screenshot needed</span><code class="ph-file">assets/shots/phone-companion.png</code><p class="ph-what">Phone companion: live view and history.</p><span class="ph-spec">1920×1080 canvas · synthetic names</span></div></figure>
+</div></div>
+
+<div class="group" id="streamer">
+<div><span class="kick">Streaming</span><h2>Streamer options</h2><p class="gsub">Show your overlay without showing other people's names.</p></div>
+<div><ul class="specs">
+<li><b>Hide player names</b>Lobby rows and post-match show Teammate 1/2 and Opponent 1/2/3 instead of names.</li>
+<li><b>Toxic mode warning</b>Toxic mode shows a one-time OBS warning: if you stream, you're responsible for what your overlay shows.</li>
+</ul></div></div>
+
+<div class="group" id="accessibility">
+<div><span class="kick">For everyone</span><h2>Accessibility</h2></div>
+<div><ul class="specs">
+<li><b>Colour-blind palette</b>And a contrast option.</li>
+<li><b>Text size</b>And reduced motion.</li>
+<li class="wide"><b>Overlay scale and opacity</b>Make it as big, small or see-through as you like.</li>
+</ul></div></div>
+
+<div class="group" id="beta">
+<div><span class="kick">Optional</span><h2>Beta, off by default, on your PC only</h2><p class="gsub">Nothing here is uploaded.</p></div>
+<div><ul class="specs">
+<li><b>Replay analysis <span class="pill beta">Beta</span></b>From replays you saved: heatmaps, rotation, boost, kickoffs, and a Deep dive with xG, possession and 50/50s.</li>
+<li><b>Screen analysis <span class="pill beta">Beta</span></b>Reads the game window in memory, never saved. Enables the minimap "last back" cue.</li>
+</ul></div></div>
+
+<div class="group" id="hotkeys">
+<div><span class="kick">Hotkeys</span><h2>Keyboard first</h2><p class="gsub">Global, so they work in game while the overlay is click-through. All remappable.</p></div>
+<div><div class="tbl"><table>
+<thead><tr><th>Hotkey</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd></td><td>Show / hide the overlay</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd></td><td>Edit layout</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td><td>Reset layout</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td><td>Pair phone</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd></td><td>Mark moment</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd> / <kbd>2</kbd></td><td>Coach panel / Match panel</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>0</kbd></td><td>All panels</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd></td><td>Summary</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>6</kbd></td><td>Share card</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd></td><td>Dismiss tilt warning</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd></td><td>Quit</td></tr>
+</tbody></table></div></div></div>
+
+<div class="group" id="limits">
+<div><span class="kick">Honest limits</span><h2>What it can't see</h2></div>
+<div><p style="color:#C4C4CC;margin-top:0">The live Stats API has no passes, possession, boost pads or boost steals, car positions or rotation, or whiffs, and no car state for opponents: opponents are events and scoreboard only. The live overlay never claims those. Possession, passes and positions appear only in the replay Deep dive <span class="pill beta">Beta</span>.</p>
+<div class="note"><span>No BakkesMod, no memory reading, no injection. {{PRODUCT_NAME}} <strong>never presses keys</strong> and sends nothing to game chat.</span></div></div></div>
+</div></section>
+
+<section aria-labelledby="d-h"><div class="wrap"><div class="band">
+<div><h2 id="d-h">Try it in your next match.</h2><p>Free for Windows 10 and 11.</p></div>
+<div class="band-cta"><!--@include download-cta--><p class="smartscreen">If Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></div>
+</div></div></section>
+</main>
+<!--@include footer-->
+</body></html>

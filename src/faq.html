@@ -1,0 +1,30 @@
+<!--@set TITLE="FAQ · Instinct"-->
+<!--@set DESC="Answers about Instinct: bans and anti-cheat, pricing, rotation coaching, what the ~ next to a rank means, data, streaming and refunds."-->
+<!--@set CANON="faq"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+</head><body>
+<!--@include header-->
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">FAQ</span><h1>Questions, answered.</h1><p>Something missing? Ask us on <a href="{{DISCORD}}">Discord</a>.</p>
+</div></section>
+<section aria-label="Questions"><div class="wrap">
+<div class="faq">
+<details open><summary>Can I get banned for using {{PRODUCT_NAME}}?</summary><p>{{PRODUCT_NAME}} only uses Rocket League's official local Stats API, optional capture of the game window and replay files you saved. It never reads game memory, injects code or hooks the game. It never presses keys, and nothing goes to chat. We can't speak for Psyonix or Epic, so please follow their terms and any tournament rules.</p></details>
+<details><summary>Is it free?</summary><p>Yes, everything on your PC is free, including local history. Pro adds Toxic mode and account features. Pricing at launch. See <a href="pricing.html">Pricing</a>.</p></details>
+<details><summary>Does it coach rotation?</summary><p>Not live. The Stats API doesn't send positions, so the live overlay shows facts it can see. Replay analysis (beta) adds positions from replays you saved. More in <a href="index.html#limits">What it can't see</a>.</p></details>
+<details><summary>What does <code>~</code> next to a rank mean?</summary><p>That estimate uses scoreboard events only (no car data), so it's low confidence.</p></details>
+<details><summary>What platforms are supported?</summary><p>Windows 10 and 11, for Rocket League on Steam or Epic Games. The optional phone companion works in your phone's browser on the same Wi-Fi.</p></details>
+<details><summary>Why can't I see the overlay?</summary><p>Play in Borderless or Windowed mode. In exclusive Fullscreen, Windows can't draw anything on top of the game. Then run the Setup check in the app to make sure the Stats API is on.</p></details>
+<details><summary>Does it slow down my game?</summary><p>The app is a lightweight native Windows app built with Tauri. It reads data the game already publishes locally, so the impact is minimal.</p></details>
+<details><summary>Do I need an account?</summary><p>No. Coaching works fully on your PC. An account is only needed for {{PRO_NAME}} cloud features like sync across PCs and Teams.</p></details>
+<details><summary>Can I stream with it?</summary><p>Yes. Turn on <strong>Hide player names</strong> in Settings and lobby rows and post-match show Teammate n / Opponent n. If you use Toxic mode on stream, you're responsible for what your overlay shows; {{PRODUCT_NAME}} warns you once.</p></details>
+<details><summary>What data do you collect?</summary><p>Game data stays on your PC; the Stats API is local-only. Phone traffic stays on your Wi-Fi. No ads, no analytics, no data selling. Data leaves your PC only if you choose: an account and cloud sync, opt-in crash reports (off by default; asked once) or feedback you send. Update checks go to GitHub. Read the <a href="privacy.html">Privacy Policy</a>.</p></details>
+<details><summary>How do refunds work?</summary><p>Once paid plans launch, you can request a full refund within 14 days of your first payment, and cancel any time. See the <a href="terms.html#refunds">Terms</a>.</p></details>
+<details><summary>Is {{PRODUCT_NAME}} affiliated with Psyonix or Epic Games?</summary><p>No. It is an independent project and is not endorsed by Psyonix or Epic Games.</p></details>
+</div>
+</div></section>
+</main>
+<!--@include footer-->
+</body></html>
