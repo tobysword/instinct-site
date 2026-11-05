@@ -1,0 +1,26 @@
+<!--@set TITLE="Instinct Pro checkout · Instinct"-->
+<!--@set DESC="Your Instinct Pro checkout. Head back to Instinct on your PC; Pro turns on by itself."-->
+<!--@set CANON="pro"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+<meta name="robots" content="noindex">
+<style>[data-show]{display:none}</style>
+</head><body>
+<!--@include header-->
+<main id="main">
+<section class="phero"><div class="wrap">
+<span class="kick">{{PRO_NAME}}</span>
+<div data-show="done"><h1>You're all set.</h1><p>Go back to {{PRODUCT_NAME}} on your PC. {{PRO_NAME}} turns on by itself within a few seconds; you don't need to restart or sign in again.</p>
+<p>Your receipt comes by email from Link, Stripe's checkout. To cancel or switch plans later, open {{PRODUCT_NAME}}, then Pro, then <strong>Manage subscription</strong>.</p></div>
+<div data-show="cancel"><h1>No charge made.</h1><p>You left checkout before finishing, so nothing was charged. You can start your free trial any time from the Pro page in {{PRODUCT_NAME}}.</p></div>
+<div data-show="manage"><h1>Back to {{PRODUCT_NAME}}.</h1><p>Any change you made to your subscription shows in {{PRODUCT_NAME}} within a minute. You can close this tab.</p></div>
+<p class="fine">Questions? <a href="contact.html">Contact us</a> · <a href="terms.html#refunds">Refund policy</a></p>
+</div></section>
+</main>
+<!--@include footer-->
+<script>
+// ?checkout=done | cancel comes from Stripe Checkout; anything else (the customer portal's return) shows "manage".
+var q = new URLSearchParams(location.search).get('checkout'), k = q === 'done' ? 'done' : q === 'cancel' ? 'cancel' : 'manage';
+document.querySelector('[data-show="' + k + '"]').style.display = 'block';
+</script>
+</body></html>
