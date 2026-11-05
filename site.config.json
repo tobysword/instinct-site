@@ -2,10 +2,18 @@
   "PRODUCT_NAME": "Instinct",
   "PRODUCT_BRAND_HTML": "Instinct",
   "PRO_NAME": "Instinct Pro",
+  "VERSION": "2.4.0",
   "SITE_URL": "https://tobysword.github.io/instinct-site/",
+  "BASE_PATH": "/instinct-site/",
   "RELEASES": "https://github.com/tobysword/InstinctRL/releases",
   "DL_SETUP": "https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe",
   "DL_PORTABLE": "https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-portable.zip",
   "DL_SUMS": "https://github.com/tobysword/InstinctRL/releases/latest/download/SHA256SUMS.txt",
-  "DISCORD": "https://discord.gg/B4bnmfWtzA"
+  "DISCORD": "https://discord.gg/B4bnmfWtzA",
+  "PRICE_MONTHLY": "$4.99",
+  "PRICE_YEARLY": "$35.88",
+  "PRICE_YEARLY_PER_MONTH": "$2.99",
+  "TRIAL_DAYS": "7",
+  "SUPABASE_URL": "https://npeirzkqkwkunbwwdcgo.supabase.co",
+  "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wZWlyemtxa3drdW5id3dkY2dvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNzY4MTcsImV4cCI6MjEwNzY1MjgxN30.tmFBku6TCwcA1x4h06QBelJxyjyraytDTR6ONq7kSEc"
 }

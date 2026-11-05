@@ -1,0 +1,103 @@
+<!--@set TITLE="Your account · Instinct"-->
+<!--@set DESC="Sign in to your Instinct account: start your Instinct Pro free trial, manage your subscription, reset your password or redeem a code."-->
+<!--@set CANON="account"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+<meta name="robots" content="noindex">
+</head><body>
+<!--@include header-->
+<main id="main">
+<div class="wrap"><div class="acct" id="acct" data-url="{{SUPABASE_URL}}" data-key="{{SUPABASE_ANON_KEY}}" data-pro="{{PRO_NAME}}">
+
+<noscript><div class="panel"><h1>Account</h1><p class="mute">The account page needs JavaScript. You can also sign in from Settings › Account in the app.</p></div></noscript>
+
+<div data-view="loading" hidden><div class="panel center"><p class="mute" style="margin:0">Loading your account…</p></div></div>
+
+<div data-view="signin" hidden><div class="panel">
+<h1>Sign in</h1><p class="mute">Use the same email and password as in the {{PRODUCT_NAME}} app.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="signin" novalidate>
+<div class="field"><label for="si-email">Email</label><input id="si-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="si-pw">Password</label><input id="si-pw" name="password" type="password" autocomplete="current-password" required></div>
+<button class="btn pri block lg" type="submit">Sign in</button>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="forgot">Forgot your password?</button><button class="linkbtn" data-go="signup">Create an account</button></div>
+</div></div>
+
+<div data-view="signup" hidden><div class="panel">
+<h1>Create your account</h1><p class="mute">You need an account for {{PRO_NAME}}, teams and cloud sync. The free app works without one.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="signup" novalidate>
+<div class="field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="su-pw">Password</label><input id="su-pw" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+<div class="field"><label for="su-pw2">Confirm password</label><input id="su-pw2" name="confirm" type="password" autocomplete="new-password" minlength="8" required></div>
+<button class="btn pri block lg" type="submit">Create account</button>
+<p class="fine" style="margin-top:12px">By creating an account you agree to the <a href="terms.html">terms</a> and <a href="privacy.html">privacy policy</a>.</p>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="signin">Already have an account? Sign in</button></div>
+</div></div>
+
+<div data-view="forgot" hidden><div class="panel">
+<h1>Reset your password</h1><p class="mute">Enter your account's email. We'll send a link that brings you back here to choose a new password.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="forgot" novalidate>
+<div class="field"><label for="fg-email">Email</label><input id="fg-email" name="email" type="email" autocomplete="email" required></div>
+<button class="btn pri block lg" type="submit">Send reset link</button>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="signin">Back to sign in</button></div>
+</div></div>
+
+<div data-view="reset" hidden><div class="panel">
+<h1>Choose a new password</h1><p class="mute">This becomes your password on this site and in the app.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="reset" novalidate>
+<div class="field"><label for="rs-pw">New password</label><input id="rs-pw" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+<div class="field"><label for="rs-pw2">Confirm new password</label><input id="rs-pw2" name="confirm" type="password" autocomplete="new-password" minlength="8" required></div>
+<button class="btn pri block lg" type="submit">Save new password</button>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="forgot">Link not working? Get a new one</button></div>
+</div></div>
+
+<div data-view="account" hidden>
+<div class="panel">
+<span class="kick">Your account</span>
+<h1 data-plan-label>Free</h1>
+<p class="mute" data-plan-note></p>
+<div class="msg" role="status" aria-live="polite"></div>
+<dl class="kv"><dt>Signed in as</dt><dd data-email></dd></dl>
+<div data-upgrade hidden>
+<form name="upgrade">
+<div class="plan-pick" role="radiogroup" aria-label="Billing period">
+<label><input type="radio" name="plan" value="yearly" checked><b>Yearly · {{PRICE_YEARLY_PER_MONTH}}/mo</b><span>{{PRICE_YEARLY}} a year, save 40%</span></label>
+<label><input type="radio" name="plan" value="monthly"><b>Monthly · {{PRICE_MONTHLY}}/mo</b><span>Billed every month</span></label>
+</div>
+<button class="btn gold block lg" type="submit" data-trial-btn>Start free trial</button>
+<p class="fine" data-trial-terms style="margin-top:10px">Free for {{TRIAL_DAYS}} days, then your plan's price plus any sales tax. Cancel before the trial ends and you pay nothing. Checkout is handled by Stripe.</p>
+</form>
+</div>
+<div class="btns" style="margin-top:12px"><button class="btn ghost" type="button" data-manage hidden>Manage subscription</button><a class="btn ghost" href="download.html">Download the app</a></div>
+</div>
+
+<div class="panel">
+<details><summary style="cursor:pointer;font-weight:650">Have a code?</summary>
+<p class="mute" style="margin-top:10px">Tester and creator codes unlock {{PRO_NAME}} on this account.</p>
+<form name="redeem" novalidate><div class="field"><label for="rd-code">Code</label><input id="rd-code" name="code" autocomplete="off" placeholder="ABC-XXXX-XXXX" required></div><button class="btn ghost" type="submit">Redeem</button></form>
+</details>
+</div>
+<div class="panel">
+<details><summary style="cursor:pointer;font-weight:650">Change password</summary>
+<form name="change" novalidate style="margin-top:14px">
+<div class="field"><label for="cp-pw">New password</label><input id="cp-pw" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+<div class="field"><label for="cp-pw2">Confirm new password</label><input id="cp-pw2" name="confirm" type="password" autocomplete="new-password" minlength="8" required></div>
+<button class="btn ghost" type="submit">Save password</button>
+</form>
+</details>
+</div>
+<div class="alt-links"><span class="fine">To delete your account or your cloud data, <a href="contact.html">contact us</a>.</span><button class="linkbtn" type="button" data-signout>Sign out</button></div>
+</div>
+
+</div></div>
+</main>
+<!--@include footer-->
+<script src="assets/account.js" defer></script>
+</body></html>

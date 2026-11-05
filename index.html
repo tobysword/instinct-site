@@ -1,145 +1,152 @@
+
+
+
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
-<title>Instinct: coaching that happens while you play. A live Rocket League overlay for Windows</title><meta name="description" content="Instinct is a live Rocket League overlay for Windows 10/11 that tells you what is actually happening in your match, from the game's official Stats API. No BakkesMod, never presses keys.">
+<script>/* Supabase email links (password reset, email confirmation) land on the Site URL; send them to the account page. */
+if ("index.html" !== "account.html" && /(access_token|error_code|error_description)=/.test(location.hash)) location.replace("account.html" + location.hash);</script>
+<title>Instinct · See what rank you're really playing like in Rocket League</title><meta name="description" content="Instinct reads your Rocket League game live and tells you which rank it looks like, what decided it and what to practise next. Free for Windows. Official Stats API only: no mods, never presses keys.">
 <link rel="canonical" href="https://tobysword.github.io/instinct-site/">
-<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Instinct: coaching that happens while you play. A live Rocket League overlay for Windows"><meta property="og:description" content="Instinct is a live Rocket League overlay for Windows 10/11 that tells you what is actually happening in your match, from the game's official Stats API. No BakkesMod, never presses keys."><meta property="og:url" content="https://tobysword.github.io/instinct-site/"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Instinct · See what rank you're really playing like in Rocket League"><meta property="og:description" content="Instinct reads your Rocket League game live and tells you which rank it looks like, what decided it and what to practise next. Free for Windows. Official Stats API only: no mods, never presses keys."><meta property="og:url" content="https://tobysword.github.io/instinct-site/"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
 <link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Instinct","operatingSystem":"Windows 10, Windows 11","applicationCategory":"GameApplication","softwareVersion":"1.0.0","downloadUrl":"https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe","url":"https://tobysword.github.io/instinct-site/","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD","description":"Live overlay (Reads, glance stats, minimap, Playing like, rank estimates), post-match Reads, local match history and sign-in"},{"@type":"Offer","name":"Instinct Pro","price":"4.99","priceCurrency":"USD","category":"subscription","description":"US$4.99/month or US$35.88/year, 7-day free trial: session tracker, teams, clips, layout editor, full history, Train next drills, replay deep dive, share cards, phone companion, growth trends and cloud sync"}]}</script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
-<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
+<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
 <nav aria-label="Primary"><ul>
 <li><a href="features.html">Features</a></li>
-<li><a href="toxic.html">Toxic mode</a></li>
 <li><a href="pricing.html">Pricing</a></li>
 <li><a href="download.html">Install</a></li>
 <li><a href="faq.html">FAQ</a></li>
-<li><a href="changelog.html">Changelog</a></li>
 </ul></nav>
-<a class="btn accent sm nav-dl" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
+<div class="nav-end">
+<a class="nav-acct" href="account.html" data-acct-link>Sign in</a>
+<a class="btn pri sm" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
 <details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
-<div class="menu-panel"><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a><a href="contact.html">Contact</a></div></details>
+<div class="menu-panel"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">What's new</a><a href="account.html">Account</a><a href="contact.html">Contact</a></div></details>
+</div>
 </div></header>
 
 <main id="main">
-<section class="hero" aria-labelledby="hero-h"><div class="wrap">
-<span class="eyebrow"><i aria-hidden="true"></i>Instinct 1.0 · Windows 10/11</span>
-<h1 id="hero-h">Coaching that happens<br><span class="hl">while you play.</span></h1>
-<p class="lead">A live Rocket League overlay that tells you what is actually happening in your match, from the game's official Stats API. Windows 10/11.</p>
-<div class="ctas">
-<a class="btn accent lg" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for Windows</a>
 
-<a class="btn ghost lg" href="#limits">See what it can't see</a>
+<section class="hero"><div class="wrap">
+<div>
+<span class="kick">For Rocket League on Windows</span>
+<h1>See what rank you're <em>really</em> playing like.</h1>
+<p class="lead">Instinct reads your match live and tells you which rank your game looks like. Between games it shows what decided it and what to practise next, so you stop guessing why you're stuck.</p>
+<div class="btns"><a class="btn pri lg" href="download.html?start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download free for Windows</a><a class="btn ghost lg" href="#how">How it works</a></div>
+<div class="hero-meta"><span>Free forever plan</span><span>No mods, no BakkesMod</span><span>Windows 10 and 11</span></div>
 </div>
-<p class="fineprint">Instinct-Setup.exe · No admin rights · <a href="download.html">Portable zip and checksums</a></p>
-<div class="hero-shot">
-<figure class="shot">
-<img src="assets/shots/overlay-2v2-hero.webp" alt="Instinct overlay in a 2v2 match: Coach panel with Playing like, left glance stats, lobby strip and minimap" width="1920" height="1080" fetchpriority="high">
-<figcaption>The overlay in a 2v2 match. Click-through, so it never gets in the way.</figcaption></figure>
+<div class="stage" role="img" aria-label="The Instinct overlay in a match: Playing like Diamond III, with gap bars against a Champion I target">
+<div class="score"><b>2</b><i>3:12</i><u>1</u></div>
+<div class="ov">
+<div class="ovc"><div class="row"><span class="lbl">COACH</span><span>● 2v2 · 1:48</span></div>
+<div style="font-weight:650;margin-top:6px;color:#fff">Doubles</div>
+<div class="pl"><div class="gem"></div><div><small>Playing like</small><strong>Diamond III</strong></div></div></div>
+<div class="ovc"><div class="row"><span style="color:#e4e4e7;font-weight:600">vs your Champion I target</span><span>live</span></div>
+<div class="gap"><span>Avg speed</span><div class="bar"><i class="up" style="width:18%"></i></div><em>58 km/h</em></div>
+<div class="gap"><span>Supersonic</span><div class="bar"><i class="dn" style="width:26%"></i></div><em>11%</em></div>
+<div class="gap"><span>Slow (&lt;50)</span><div class="bar"><i class="dn" style="width:32%"></i></div><em>49%</em></div>
+<div class="gap"><span>In the air</span><div class="bar"><i class="up" style="width:9%"></i></div><em>8%</em></div>
+<div class="gap"><span>Boost used</span><div class="bar"><i class="up" style="width:22%"></i></div><em>431/m</em></div>
+</div>
+</div>
+<div class="ball"></div><div class="car o"></div><div class="car b"></div>
+<span class="stage-cap">Illustration of the in-game overlay</span>
 </div>
 </div></section>
 
-<div class="trust" aria-label="Trust"><ul>
-<li>Official Stats API</li><li>No BakkesMod</li><li>Never presses keys</li><li>Free local match history</li><li>No ads, no analytics</li>
-</ul></div>
+<div class="trust"><div class="wrap"><ul>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Official Rocket League Stats API</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg>No mods, no memory reading</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg>Never presses keys, never types in chat</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Your data stays on your PC</li>
+</ul></div></div>
 
-<section id="features" aria-labelledby="f-h"><div class="wrap">
-<div class="sec-head"><span class="kick">What you see</span><h2 id="f-h">Facts from your match. Never advice.</h2><p>Everything the overlay shows comes from data the game actually sends. If it can't see it, it doesn't say it.</p></div>
-
-<div class="feat">
-<div class="feat-copy"><span class="num">01 · READS</span><h3>Two facts, every goal break.</h3><p>After a goal, two short facts from this match: you vs your usual, the lobby or your teammate. Never advice.</p><p class="sub">The Reads card sits on the right and clears when play restarts.</p></div>
-<figure class="shot">
-<img src="assets/shots/reads-card-goal-replay.webp" alt="The Reads card during a goal replay, showing two reads" width="1920" height="1080" loading="lazy" decoding="async">
-<figcaption>Reads card during a goal replay.</figcaption></figure>
+<section id="how"><div class="wrap">
+<div class="sec-head center"><span class="kick">How it works</span><h2>Two minutes to set up. Then just play.</h2></div>
+<div class="steps">
+<div class="step"><h3>Install and run the setup check</h3><p>One click turns on Rocket League's built-in Stats API, with a backup of your settings first. No admin rights needed.</p></div>
+<div class="step"><h3>Play like you always do</h3><p>About 75 seconds into a match, a small overlay shows which rank your game looks like and how your speed, boost and air compare.</p></div>
+<div class="step"><h3>Read it between games</h3><p>See what decided the game, how you're trending over your last ten, and the one thing worth practising before you queue again.</p></div>
 </div>
+</div></section>
 
+<section class="alt"><div class="wrap">
+<div class="feat wide">
+<div class="feat-text"><span class="kick">Live, in your match</span><h2>Playing like, not your MMR.</h2>
+<p>Your rank tells you where you've been. Playing like tells you how you're playing right now. It compares your game with tens of thousands of real ranked games and names the rank it looks like, live, in every playlist.</p>
+<ul class="ticks"><li>Gap bars show your speed, boost and air against your target rank's average.</li><li>Click-through overlay, Borderless or Windowed. Hide it with one hotkey.</li><li>Works in Duel, Doubles, Standard, Hoops, Rumble, Dropshot and Snow Day.</li></ul></div>
+<div><div class="shot"><img src="assets/shots/app-lastgame.webp" alt="Last game: 2-0 win, played like Grand Champion III, +2 vs your target, from your saved replay, with a goal timeline" width="2521" height="522" loading="lazy"></div>
+<p class="shot-cap">After the whistle: score, what you played like and how the game went.</p></div>
+</div>
 <div class="feat flip">
-<div class="feat-copy"><span class="num">02 · GLANCE STATS + MINIMAP</span><h3>The numbers you pick, in context.</h3><p>Up to 6 tiles you choose from 18, each compared with the lobby, your usual or your team. A lobby strip with a rank pill for every player.</p><p>Our own minimap: last ball hit, a shadow-defence spot, boost where the game sends it.</p></div>
-<figure class="shot">
-<img src="assets/shots/settings-overlay-tile-picker.webp" alt="Settings, Overlay: pick up to 6 glance-stat tiles" width="1920" height="1080" loading="lazy" decoding="async">
-<figcaption>Pick up to 6 of 18 tiles per mode.</figcaption></figure>
+<div class="feat-text"><span class="kick">Between games</span><h2>What actually decided it.</h2>
+<p>Every stat is compared with your target rank's average, in plain words: above, below, about average. Each one explains itself, so "time driving slow" means something.</p>
+<ul class="ticks"><li>The stats that separated you from the rank you want.</li><li>"Before your next game": what to practise, picked from your recent games.</li><li>Save a replay in Rocket League and that match gets a sharper read and your positioning, free.</li></ul></div>
+<div><div class="shot"><img src="assets/shots/app-match.webp" alt="The Match page: last game summary, What decided it with stat bars against a Grand Champion I average, Before your next game, and Positioning from a saved replay" width="2880" height="1800" loading="lazy"></div></div>
 </div>
-
-<div class="feat">
-<div class="feat-copy"><span class="num">03 · PLAYING LIKE</span><h3>The rank you're playing at. Right now.</h3><p>The rank you're playing at in this playlist, with confidence (x/4), trend and the reason up and the reason down.</p></div>
-<figure class="shot">
-<img src="assets/shots/playing-like-confidence.webp" alt="Playing like on the phone companion (Pro): confidence 2/4 with the reasons up and down" width="1920" height="1080" loading="lazy" decoding="async">
-<figcaption>Playing like on the phone companion (Instinct Pro): confidence and the reasons up and down.</figcaption></figure>
-</div>
-
-<div class="feat flip">
-<div class="feat-copy"><span class="num">04 · EVERY PLAYER, EVERY PLAYLIST</span><h3>A read on the whole lobby.</h3><p>A playing-like estimate for each player in the lobby for the current playlist. <code>~</code> means it's from scoreboard events only, so low confidence.</p><p class="sub">Names show only in 1v1 and 2v2. Streaming? Turn on <strong>Hide player names</strong>.</p></div>
-<figure class="shot">
-<img src="assets/shots/left-stats-events-only.webp" alt="Left stats close-up: events-only ~ rank pills and the 50/50s ~ tile" width="1920" height="1080" loading="lazy" decoding="async">
-<figcaption>Rank pills for every player in the lobby.</figcaption></figure>
-</div>
-
-<div class="feat">
-<div class="feat-copy"><span class="num">05 · POST-MATCH</span><h3>The match, in one screen.</h3><p>Played like, Reads this game (up to 6), vs your usual in this playlist (after 3 matches), why your estimate moved, best plays, one focus for next match.</p><p class="sub">Share card in one key: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>6</kbd>.</p></div>
-<figure class="shot">
-<img src="assets/shots/post-match-summary.webp" alt="Post-match summary: Played like, Reads this game and vs your usual" width="1920" height="1080" loading="lazy" decoding="async">
-<figcaption>Post-match: Reads this game and vs your usual.</figcaption></figure>
-</div>
-
-<div class="feat flip">
-<div class="feat-copy"><span class="num">06 · PHONE</span><h3>A second screen in your pocket. <span class="pro-badge">PRO</span></h3><p>Pair your phone on the same Wi-Fi with a 6-character code: live view, breakdown, history.</p><p class="sub">Part of Instinct Pro. Phone traffic stays on your Wi-Fi.</p></div>
-<figure class="shot">
-<img src="assets/shots/phone-companion.webp" alt="Phone companion (Pro): live view" width="1920" height="1080" loading="lazy" decoding="async">
-<figcaption>Phone companion (Instinct Pro): the live view.</figcaption></figure>
-</div>
-
-<div class="toxic-teaser" style="margin-top:40px">
-<div><span class="kick">07 · Toxic mode</span> <span class="pro-badge">PRO</span><h3>Roasts you, not chat.</h3><p>Optional roasts aimed at you, on your screen only. Off by default. 18+ for swearing.</p><a class="link-arrow" href="toxic.html">How Toxic mode works</a></div>
-<figure class="shot">
-<img src="assets/shots/toxic-line-overlay.webp" alt="A Toxic mode line on the overlay, under the Reads" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-</div>
-<p style="margin-top:28px"><a class="link-arrow" href="features.html">See every feature</a></p>
-</div></section>
-
-<section id="limits" class="alt" aria-labelledby="l-h"><div class="wrap">
-<div class="limits">
-<div><span class="kick">Honest limits</span><h2 id="l-h">What it can't see.</h2>
-<p>The live Stats API has no passes, possession, boost pads or boost steals, car positions or rotation, or whiffs, and no car state for opponents: <strong>opponents are events and scoreboard only</strong>.</p>
-<p>So the live overlay never claims those. It doesn't coach rotation, positioning or boost management. Possession, passes and positions appear only in the replay Deep dive <span class="pill exp">Experimental</span>, from replays you saved.</p></div>
-<ul class="nolist" aria-label="Not in the live data">
-<li>Passes and possession</li><li>Boost pads and boost steals</li><li>Car positions and rotation</li><li>Whiffs</li><li>Opponents' boost and speed (no car state for them)</li>
-</ul>
+<div class="feat wide">
+<div class="feat-text"><span class="kick">Over time</span><h2>Know where you really stand.</h2>
+<p>One game is noisy, so Instinct leads with your level lately: the last ten rated games. See yourself on the rank ladder next to your target, with your five areas (defence, air, boost, speed, shooting) placed on it.</p>
+<ul class="ticks"><li>A chart of every game with rank bands and your trend.</li><li>The one area to focus on this week.</li><li>Every match kept on your PC.</li></ul></div>
+<div><div class="shot"><img src="assets/shots/app-ladder.webp" alt="Progress: You're playing like Grand Champion II, level lately GC2, last 20 games 13 wins 7 losses, and the rank ladder with your five areas" width="2477" height="684" loading="lazy"></div></div>
 </div>
 </div></section>
 
-<section id="install" aria-labelledby="i-h"><div class="wrap">
-<div class="sec-head"><span class="kick">Install in 3 steps</span><h2 id="i-h">From download to your next match.</h2></div>
-<ol class="steps">
-<li><h3>Download</h3><p>Get <code>Instinct-Setup.exe</code> from our GitHub releases.</p></li>
-<li><h3>Run</h3><p>No admin rights needed. If Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></li>
-<li><h3>Setup check</h3><p>Turns on the Stats API in one click (it backs up the file first). Restart Rocket League.</p></li>
-</ol>
-<div class="note"><span>Then play in <strong>Borderless</strong> or <strong>Windowed</strong> mode. In exclusive Fullscreen, Windows can't draw anything over the game. <a class="link-arrow" href="download.html">Full install guide</a></span></div>
+<section><div class="wrap">
+<div class="sec-head center"><span class="kick">Honest numbers</span><h2>Built on real games, and clear about its limits.</h2>
+<p class="lead">We'd rather tell you what the read can and can't do than oversell it.</p></div>
+<div class="nums">
+<div class="num"><b>39,000</b><p>real ranked games taught the Duel, Doubles and Standard engine what each rank looks like.</p></div>
+<div class="num"><b>84–87<small>%</small></b><p>of the time, ten games average within one rank of a player's real rank, on players it never saw.</p></div>
+<div class="num"><b>~1.8 <small>tiers</small></b><p>is how much one game's read moves. So judge a change over several games, never one.</p></div>
+</div>
+<p class="fine center" style="margin-top:22px">The live Stats API doesn't send car positions, so the live overlay never claims to coach rotation. Positioning comes only from replays you save. <a href="faq.html#limits">What it can't see</a></p>
 </div></section>
 
-<section class="alt" aria-labelledby="pr-h"><div class="wrap">
-<div class="sec-head c"><span class="kick">Pricing</span><h2 id="pr-h">Free to play with. Pro to track it.</h2><p>The live overlay, Playing like, post-match Reads, local match history and sign-in are free. Instinct Pro ($4.99/month, or $35.88/year with 7 days free) adds the session tracker, teams, clips, the layout editor, full history, Train next drills, the replay deep dive, share cards, the phone companion, growth trends and cloud sync.</p></div>
-<p style="text-align:center"><a class="btn" href="pricing.html">Compare Free and Pro</a></p>
+<section class="alt pro-band"><div class="wrap">
+<div class="sec-head"><span class="kick gold">Instinct Pro</span><h2>Free gets you the read. Pro helps you act on it.</h2>
+<p class="lead">Everything in the overlay stays free. Instinct Pro adds the tools you use between games, from $2.99 a month. Try it free for 7 days.</p></div>
+<div class="grid">
+<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>Sessions</h3><p>Every session by mode, how you played in each against your usual, and a live session strip in game. Spot the game where it starts to slip.</p></div>
+<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></div><h3>Train next</h3><p>Free play drills picked from your recent games, with a timer, so practice time goes where it counts.</p></div>
+<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3>Full history and growth</h3><p>Every match and session, not just the last 30 days, plus "vs your usual" after each game and your trend.</p></div>
+<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M15.5 14.5c2.6 0 4.6 1.6 5.5 4.5"/></svg></div><h3>Teams</h3><p>Your duo or trio's shared record, sessions you played together, and how each of you plays together vs apart.</p></div>
+<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18M3 12h18"/></svg></div><h3>Replay deep dive</h3><p>From replays you save: heatmaps, rotation, kickoffs, expected goals and possession for that match.</p></div>
+<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div><h3>Clips, share cards and more</h3><p>Save the last 30 seconds with a hotkey, share cards, the layout editor, the phone companion and cloud sync across PCs.</p></div>
+</div>
+<div class="btns" style="margin-top:32px"><a class="btn gold lg" href="pricing.html">See plans and pricing</a><span class="fine">Cancel before day 7 and you pay nothing.</span></div>
 </div></section>
 
-<section aria-labelledby="d-h"><div class="wrap"><div class="band" id="download">
-<div><h2 id="d-h">Know what's actually happening.</h2><p>Free for Windows 10 and 11. Questions? We're on <a href="https://discord.gg/B4bnmfWtzA">Discord</a>.</p></div>
-<div class="band-cta"><a class="btn accent lg" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for Windows</a>
-<p class="smartscreen">Unsigned build: if Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></div>
-</div></div></section>
+<section><div class="wrap">
+<div class="sec-head center"><span class="kick">Questions</span><h2>The ones everyone asks first.</h2></div>
+<div class="faq">
+<details><summary>Can I get banned for using it?</summary><div><p>Instinct only reads the Stats API, a feature Psyonix built into Rocket League to send live match data to programs on your own PC. It doesn't use BakkesMod, read game memory or inject code, never presses keys and never types in chat. Your account is still your responsibility under the game's rules; see the <a href="terms.html#s5">terms</a>.</p></div></details>
+<details><summary>Is it really free?</summary><div><p>Yes. The live overlay, Playing like, gap bars, the post-game breakdown, positioning from saved replays and your last 30 days of history are free, with no account needed. Instinct Pro is optional.</p></div></details>
+<details><summary>Does it work on console?</summary><div><p>No. It needs Rocket League running on the same Windows 10 or 11 PC (Epic or Steam).</p></div></details>
+</div>
+<p class="center" style="margin-top:28px"><a href="faq.html">All questions →</a></p>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+<h2>Find out what you're really playing like.</h2>
+<p>Free for Windows 10 and 11. Set up in two minutes, read your next game live.</p>
+<div class="btns"><a class="btn pri lg" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download free</a><a class="btn ghost lg" href="pricing.html">See Instinct Pro</a></div>
+</div></section>
+
 </main>
-<footer><div class="wrap">
-<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
-<p class="f-tag">Coaching that happens while you play. A live Rocket League overlay for Windows 10/11, made by Toby Sword.</p>
-<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC / Epic Games, Inc. Instinct is an independent project, not endorsed by them.</p>
-<p class="f-legal">© 2026 Toby Sword</p></div>
-<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Download &amp; install</a><a href="changelog.html">Changelog</a></nav>
-<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="contact.html">Contact &amp; support</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a><a href="index.html#limits">What it can't see</a></nav>
-<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refund policy</a><a href="terms.html#toxic">Toxic mode terms</a></nav>
+<footer class="foot"><div class="wrap">
+<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
+<p>Coaching that happens while you play. A Rocket League companion for Windows 10 and 11.</p>
+<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC. Instinct is an independent project, not endorsed by them. © 2026 Toby Sword.</p></div>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Download</a><a href="changelog.html">What's new</a></nav>
+<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="account.html">Account</a><a href="contact.html">Contact</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
+<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refunds</a></nav>
 </div></footer>
+<script src="assets/site.js" defer></script>
 
 </body></html>

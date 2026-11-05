@@ -5,18 +5,19 @@
 <!--@include head-->
 </head><body>
 <!--@include header-->
-<main id="main" class="legal"><a class="back" href="index.html">← Back to {{PRODUCT_NAME}}</a>
+<main id="main"><div class="wrap"><div class="prose">
 <span class="kick">Privacy and data</span>
 <h1>Privacy Policy</h1>
 <div class="summary-box" id="summary"><h2>The short version</h2>
 <ul>
 <li><strong>Game data stays on your PC.</strong> The Stats API is local-only (<code>127.0.0.1</code>). Phone traffic stays on your Wi-Fi.</li>
 <li><strong>No ads, no analytics, no data selling.</strong></li>
-<li><strong>Leaves your PC only if you choose:</strong> an account and cloud sync (your match summaries and the lobby observations, rank sightings and names of players you met), opt-in crash reports (off by default; asked once; sent to Sentry, scrubbed of names, paths and IPs) and feedback you send. Update checks go to GitHub.</li>
+<li><strong>Leaves your PC only if you choose:</strong> an account and cloud sync ({{PRO_NAME}}: your match summaries, play sessions and target rank), opt-in crash reports (off by default; asked once; scrubbed of names, paths and IPs) and feedback you send. Update checks go to GitHub.</li>
+<li><strong>Other players are not tracked</strong> (since 2.2). Their in-match names and that game's scoreboard line stay in your match records on your PC; nothing about them goes to the cloud. Older lobby data was deleted from the cloud on 4 November 2026.</li>
+<li><strong>This website</strong> has no analytics, ads or tracking cookies. If you sign in here, your sign-in is kept in this browser's local storage until you sign out. Payments are handled by Stripe.</li>
 <li><strong>Your files:</strong> <code>%APPDATA%\rl-companion</code> (settings, profiles, history, diagnostics). Open it from Settings → Privacy → Open data folder; delete it any time.</li>
 <li><strong>Cloud data</strong> is kept until you delete your account or ask us to delete it. Deletion removes it from the live database right away; Supabase backups may hold it until they expire under Supabase's backup retention.</li>
-<li><strong>Delete my cloud lobby data:</strong> not in 1.0 yet. Until it ships, <a href="{{DISCORD}}">ask us on Discord</a>.</li>
-<li><strong>Toxic mode</strong> is never logged, synced or sent. Lines never contain anyone's name.</li>
+<li><strong>Deleting your data:</strong> to delete your account or cloud data, <a href="contact.html">contact us</a>.</li>
 </ul></div>
 <p class="meta">Full policy below.</p>
 <ul class="toc" aria-label="Contents"><li><a href="#s1">1. Who is responsible for your data</a></li><li><a href="#s2">2. What the app collects and where it goes</a></li><li><a href="#s3">3. Phone companion (local network)</a></li><li><a href="#s4">4. Third parties</a></li><li><a href="#s5">5. Account and cloud sync (optional)</a></li><li><a href="#s6">6. Feedback and bug reports</a></li><li><a href="#s7">7. Payments ({{PRO_NAME}} subscription)</a></li><li><a href="#s8">8. Changes to Rocket League config files</a></li><li><a href="#s9">9. Legal bases (EEA/UK users)</a></li><li><a href="#s10">10. Retention</a></li><li><a href="#s11">11. Your rights and controls</a></li><li><a href="#s12">12. Children</a></li><li><a href="#s12a">12a. Health data (Washington My Health My Data Act)</a></li><li><a href="#s13">13. Security</a></li><li><a href="#s14">14. International transfers</a></li><li><a href="#s15">15. Changes</a></li><li><a href="#s16">16. Contact</a></li></ul><p><strong>Effective date:</strong> with Instinct 1.0.0 · <strong>Last updated:</strong> 2026-10-22</p>
@@ -176,7 +177,7 @@ never contain anyone's name. Your Toxic settings (including the 18+ confirmation
 <ul>
 <li><strong>Delete local data:</strong> delete the folder <code>%APPDATA%\rl-companion</code> (Settings → Privacy → Open data folder). Uninstalling does not remove it automatically.</li>
 <li><strong>Account:</strong> sign out any time; to delete your account and all cloud data, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback from your signed-in account.</li>
-<li><strong>Delete my cloud lobby data:</strong> a "Delete my cloud lobby data" button is not in 1.0 yet. Until it ships, ask us on Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or via in-app Feedback, and we will delete the lobby observations, rank sightings, names and match summaries you uploaded.</li>
+<li><strong>Deleting your data:</strong> to delete your account or cloud data, <a href="contact.html">contact us</a>.</li>
 <li><strong>Crash reports:</strong> turn them off any time in Settings → Privacy.</li>
 <li><strong>GDPR (EEA/UK):</strong> rights to access, rectify, erase, restrict, object, data portability, withdraw consent, and complain to your supervisory authority.</li>
 <li><strong>CCPA/CPRA (California):</strong> rights to know, delete and correct, and to not be discriminated against. We do not sell or share personal information.</li>
@@ -195,6 +196,6 @@ never contain anyone's name. Your Toxic settings (including the 18+ confirmation
 <p>We post updates here and in the repository, update the date above, and tell you in the app about material changes.</p>
 <h2 id="s16">16. Contact</h2>
 <p><strong>Toby Sword</strong> (owner and operator, Washington State, USA). To reach us, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback.</p>
-</main>
+</div></div></main>
 <!--@include footer-->
 </body></html>

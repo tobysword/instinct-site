@@ -1,62 +1,88 @@
 <!--@set TITLE="Pricing · Instinct"-->
-<!--@set DESC="Instinct is free: live overlay, Playing like, post-match Reads, local match history. Instinct Pro is $4.99/month or $35.88/year with a 7-day free trial."-->
+<!--@set DESC="Instinct is free. Instinct Pro adds sessions, full history, Train next, teams, clips and more for $4.99 a month or $35.88 a year, with a 7-day free trial."-->
 <!--@set CANON="pricing"-->
 <!doctype html><html lang="en"><head>
 <!--@include head-->
-</head><body>
+</head><body class="show-yearly">
 <!--@include header-->
 <main id="main">
-<section class="phero"><div class="wrap">
+<section class="phero center"><div class="wrap">
 <span class="kick">Pricing</span>
-<h1>Free on your PC. Pro to go further.</h1>
-<p>The live overlay, Playing like, post-match Reads, local match history and sign-in are free. {{PRO_NAME}} ($4.99/month, or $35.88/year with 7 days free) adds the session tracker, teams, clips, the layout editor, full history, Train next drills, the replay deep dive, share cards, the phone companion, growth trends and cloud sync.</p>
+<h1 style="margin-left:auto;margin-right:auto">Free to play better. Pro to keep improving.</h1>
+<p class="lead">The overlay and your recent games are free, with no account. Upgrade when you want the tools you use between games.</p>
 </div></section>
 
-<section aria-label="Plans"><div class="wrap">
-<div class="plans">
-<div class="plan"><h3>Free</h3><div class="price">$0<span class="per">forever</span><small>No account needed to play.</small></div><p class="pnote">Free includes:</p>
-<ul><li>Live overlay: Coach, Playing like, gap bars and Reads</li><li>Post-match: Reads this game and what to work on</li><li>Match history on your PC (Free shows the last 30 days; nothing is deleted)</li><li>Saved replays: a sharper Playing like and your positioning</li><li>Account and sign-in</li></ul>
-<a class="btn accent" href="{{DL_SETUP}}">Download for Windows</a></div>
-<div class="plan pro"><h3>{{PRO_NAME}} <span class="pro-badge">PRO</span></h3><div class="price">$2.99<span class="per">/month</span><small>Billed $35.88 a year, or $4.99 monthly. Plus applicable taxes.</small></div><p class="pnote"><strong>7 days free</strong>, then your plan starts unless you cancel. Everything in Free, plus:</p>
-<ul><li>Session tracker: how you played in every session</li><li>Teams: shared record and sessions together</li><li>Clips: save the last 30 s with a hotkey</li><li>Layout editor and overlay customisation</li><li>Full history, every match and session</li><li>Train next: free play drills with a timer</li><li>Replay deep dive: heatmaps, rotation, kickoffs</li><li>Share cards</li><li>Phone companion on your Wi-Fi</li><li>Growth: vs your usual and your trend</li><li>Cloud sync across PCs and history export</li></ul>
-<p class="pnote">Start the trial from the Pro page in {{PRODUCT_NAME}}. Tester and promo codes unlock {{PRO_NAME}} too.</p>
-<a class="btn" href="{{DL_SETUP}}">Get {{PRODUCT_NAME}} and start your trial</a></div>
+<section style="padding-top:0"><div class="wrap center">
+<div class="billing-toggle" data-billing-toggle role="group" aria-label="Billing period"><button type="button" data-plan="yearly" aria-pressed="true">Yearly<span class="save">Save 40%</span></button><button type="button" data-plan="monthly" aria-pressed="false">Monthly</button></div>
+<div class="plans" style="text-align:left">
+<div class="plan">
+<h3>Free</h3><p class="mute">Everything you need to see how you're playing.</p>
+<div class="price">$0</div><div class="per">No account needed</div>
+<ul>
+<li>Live overlay: Playing like and gap bars</li>
+<li>Post-game: what decided it and what to work on</li>
+<li>Match and Progress pages, last 30 days</li>
+<li>Saved replays: sharper read and your positioning</li>
+<li>Every playlist, hotkeys, accessibility options</li>
+</ul>
+<a class="btn ghost block lg" href="download.html?start">Download free</a>
 </div>
+<div class="plan pro">
+<h3>{{PRO_NAME}}</h3><p class="mute">Everything in Free, plus the tools that build on it.</p>
+<div class="price"><span data-plan-show="yearly">{{PRICE_YEARLY_PER_MONTH}}</span><span data-plan-show="monthly">{{PRICE_MONTHLY}}</span><small> / month</small></div>
+<div class="per"><span data-plan-show="yearly">{{PRICE_YEARLY}} billed once a year</span><span data-plan-show="monthly">Billed every month</span></div>
+<ul>
+<li>Session tracker and the in-game session strip</li>
+<li>Full history: every match and session</li>
+<li>Train next drills with a timer</li>
+<li>Teams for your duo or trio</li>
+<li>Replay deep dive: heatmaps, rotation, kickoffs</li>
+<li>Clips, share cards, layout editor</li>
+<li>Phone companion, cloud sync and export</li>
+</ul>
+<a class="btn gold block lg" href="account.html?start=yearly" data-trial-link>Try it free for {{TRIAL_DAYS}} days</a>
+<p class="terms"><span data-plan-show="yearly">Free for {{TRIAL_DAYS}} days, then {{PRICE_YEARLY}} a year</span><span data-plan-show="monthly">Free for {{TRIAL_DAYS}} days, then {{PRICE_MONTHLY}} a month</span> plus any sales tax. Cancel any time before the trial ends and you pay nothing. One trial per account.</p>
+</div>
+</div>
+<p class="fine" style="margin-top:20px">Prices in US dollars. You can also start your trial from the Pro page inside the app.</p>
+</div></section>
 
-<div class="tbl cmp" style="margin-top:40px"><table>
-<thead><tr><th>Feature</th><th>Free</th><th>{{PRO_NAME}}</th></tr></thead>
+<section class="alt"><div class="wrap">
+<div class="sec-head"><span class="kick">Compare</span><h2>Free and Pro, side by side.</h2></div>
+<div class="tbl-wrap"><table class="tbl">
+<thead><tr><th>Feature</th><th class="c">Free</th><th class="c">Pro</th></tr></thead>
 <tbody>
-<tr><td>Live overlay: Coach, Playing like, gap bars and Reads</td><td class="y">✓</td><td class="p">✓</td></tr>
-<tr><td>Post-match: Reads this game and what to work on</td><td class="y">✓</td><td class="p">✓</td></tr>
-<tr><td>Match history on your PC (Free shows the last 30 days; nothing is deleted)</td><td class="y">✓</td><td class="p">✓</td></tr>
-<tr><td>Saved replays: a sharper Playing like and your positioning</td><td class="y">✓</td><td class="p">✓</td></tr>
-<tr><td>Account and sign-in</td><td class="y">✓</td><td class="p">✓</td></tr>
-<tr><td>Session tracker: how you played in every session</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Teams: shared record and sessions together</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Clips: save the last 30 s with a hotkey</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Layout editor and overlay customisation</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Full history, every match and session</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Train next: free play drills with a timer</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Replay deep dive: heatmaps, rotation, kickoffs</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Share cards</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Phone companion on your Wi-Fi</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Growth: vs your usual and your trend</td><td class="n">–</td><td class="p">✓</td></tr>
-<tr><td>Cloud sync across PCs and history export</td><td class="n">–</td><td class="p">✓</td></tr>
+<tr><td>Live overlay: Playing like, gap bars, post-game card</td><td class="c y">✓</td><td class="c y g">✓</td></tr>
+<tr><td>Post-game: what decided it and what to work on</td><td class="c y">✓</td><td class="c y g">✓</td></tr>
+<tr><td>Match history on this PC (Free shows the last 30 days; nothing is deleted)</td><td class="c y">✓</td><td class="c y g">✓</td></tr>
+<tr><td>Saved replays: a sharper Playing like and your positioning</td><td class="c y">✓</td><td class="c y g">✓</td></tr>
+<tr><td>Account and sign-in</td><td class="c y">✓</td><td class="c y g">✓</td></tr>
+<tr><td>Session tracker: sessions by mode, how you played in each, live strip in game</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Full history, every match and session</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Growth: post-game "vs your usual" and your trend</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Train next: free play drills with a timer</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Teams: shared record, sessions together</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Replay deep dive: heatmaps, rotation, kickoffs, xG</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Clips: save the last 30 seconds with a hotkey</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Share cards</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Layout editor and overlay customisation</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Phone companion on your Wi-Fi</td><td class="c n">–</td><td class="c y g">✓</td></tr>
+<tr><td>Cloud sync across PCs and history export</td><td class="c n">–</td><td class="c y g">✓</td></tr>
 </tbody></table></div>
-
-<p class="fine"><strong>About local history:</strong> every plan keeps 90 days of match detail (up to 2,000 matches) and 2 years of daily totals on your PC. Free shows the last 30 days; {{PRO_NAME}} shows all of it.</p>
-<p class="fine" id="refunds"><strong>Billing and refunds:</strong> payments are handled by Link, Stripe's checkout, as merchant of record; it collects any sales tax or VAT. The 7-day trial is free and you can cancel in the app before it ends. After that, subscriptions renew until you cancel, and you can cancel any time in the app (Pro, then Manage subscription). You can ask for a full refund within 14 days of your first payment; EU/UK consumers keep their statutory withdrawal rights. See the <a href="terms.html#refunds">Terms</a>.</p>
 </div></section>
 
-<section class="alt" aria-labelledby="pq"><div class="wrap">
-<div class="sec-head"><span class="kick">Questions</span><h2 id="pq">Pricing FAQ</h2></div>
+<section><div class="wrap">
+<div class="sec-head center"><span class="kick">Billing</span><h2>Straight answers about paying.</h2></div>
 <div class="faq">
-<details><summary>Is it free?</summary><p>The core is. The live overlay, Playing like, post-match Reads, local match history and sign-in are free. {{PRO_NAME}} ($4.99/month, or $35.88/year with 7 days free) adds the session tracker, teams, clips, the layout editor, full history, Train next drills, the replay deep dive, share cards, the phone companion, growth trends and cloud sync.</p></details>
-<details><summary>Do I need an account?</summary><p>Not to play. The live overlay, post-match Reads and local match history work without one. Sign-in is free and lets you buy or redeem {{PRO_NAME}}. Tester and promo codes unlock {{PRO_NAME}}.</p></details>
-<details><summary>How does the free trial work?</summary><p>Pick yearly or monthly and add a card. Nothing is charged for 7 days. Cancel in the app before the trial ends and you pay nothing; otherwise your plan starts. One trial per account.</p></details>
-<details><summary>How do refunds work?</summary><p>You can request a full refund within 14 days of your first payment, and cancel any time. See the <a href="terms.html#refunds">Terms</a>.</p></details>
+<details><summary>How does the free trial work?</summary><div><p>Start it on this site or from the Pro page in the app. You add a card at checkout, Pro turns on straight away, and you're charged only when the {{TRIAL_DAYS}} days end. Cancel before then and you pay nothing. Each account gets one trial.</p></div></details>
+<details><summary>How do I cancel or switch plans?</summary><div><p>Go to <a href="account.html">your account</a> on this site, or Pro in the app, and choose <strong>Manage subscription</strong>. You can cancel, switch between monthly and yearly, change your card and download invoices. If you cancel, Pro stays on until the end of the period you paid for.</p></div></details>
+<details><summary>Who handles the payment?</summary><div><p>Stripe. Checkout runs on Link, Stripe's payment service, which also adds and pays any sales tax or VAT and sends your receipts. We never see your card details.</p></div></details>
+<details><summary>Can I get a refund?</summary><div><p>See the <a href="terms.html#refunds">refund policy</a> in our terms, or <a href="contact.html">contact us</a>.</p></div></details>
+<details><summary>What happens to my data if I stop paying?</summary><div><p>Nothing is deleted. Your matches stay on your PC; the app goes back to showing the last 30 days, and everything shows again if you come back to Pro.</p></div></details>
+<details><summary>I have a code from a creator or tester program.</summary><div><p>Sign in to <a href="account.html">your account</a> and enter it under "Have a code?". It works in the app too.</p></div></details>
 </div>
 </div></section>
+<!--@include cta-->
 </main>
 <!--@include footer-->
 </body></html>

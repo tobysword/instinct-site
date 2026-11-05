@@ -1,0 +1,137 @@
+
+
+
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
+<script>/* Supabase email links (password reset, email confirmation) land on the Site URL; send them to the account page. */
+if ("account.html" !== "account.html" && /(access_token|error_code|error_description)=/.test(location.hash)) location.replace("account.html" + location.hash);</script>
+<title>Your account · Instinct</title><meta name="description" content="Sign in to your Instinct account: start your Instinct Pro free trial, manage your subscription, reset your password or redeem a code.">
+<link rel="canonical" href="https://tobysword.github.io/instinct-site/account">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Your account · Instinct"><meta property="og:description" content="Sign in to your Instinct account: start your Instinct Pro free trial, manage your subscription, reset your password or redeem a code."><meta property="og:url" content="https://tobysword.github.io/instinct-site/account"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
+
+<meta name="robots" content="noindex">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
+<nav aria-label="Primary"><ul>
+<li><a href="features.html">Features</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="download.html">Install</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul></nav>
+<div class="nav-end">
+<a class="nav-acct" href="account.html" aria-current="page" data-acct-link>Sign in</a>
+<a class="btn pri sm" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
+<details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
+<div class="menu-panel"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">What's new</a><a href="account.html">Account</a><a href="contact.html">Contact</a></div></details>
+</div>
+</div></header>
+
+<main id="main">
+<div class="wrap"><div class="acct" id="acct" data-url="https://npeirzkqkwkunbwwdcgo.supabase.co" data-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wZWlyemtxa3drdW5id3dkY2dvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNzY4MTcsImV4cCI6MjEwNzY1MjgxN30.tmFBku6TCwcA1x4h06QBelJxyjyraytDTR6ONq7kSEc" data-pro="Instinct Pro">
+
+<noscript><div class="panel"><h1>Account</h1><p class="mute">The account page needs JavaScript. You can also sign in from Settings › Account in the app.</p></div></noscript>
+
+<div data-view="loading" hidden><div class="panel center"><p class="mute" style="margin:0">Loading your account…</p></div></div>
+
+<div data-view="signin" hidden><div class="panel">
+<h1>Sign in</h1><p class="mute">Use the same email and password as in the Instinct app.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="signin" novalidate>
+<div class="field"><label for="si-email">Email</label><input id="si-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="si-pw">Password</label><input id="si-pw" name="password" type="password" autocomplete="current-password" required></div>
+<button class="btn pri block lg" type="submit">Sign in</button>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="forgot">Forgot your password?</button><button class="linkbtn" data-go="signup">Create an account</button></div>
+</div></div>
+
+<div data-view="signup" hidden><div class="panel">
+<h1>Create your account</h1><p class="mute">You need an account for Instinct Pro, teams and cloud sync. The free app works without one.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="signup" novalidate>
+<div class="field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="su-pw">Password</label><input id="su-pw" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+<div class="field"><label for="su-pw2">Confirm password</label><input id="su-pw2" name="confirm" type="password" autocomplete="new-password" minlength="8" required></div>
+<button class="btn pri block lg" type="submit">Create account</button>
+<p class="fine" style="margin-top:12px">By creating an account you agree to the <a href="terms.html">terms</a> and <a href="privacy.html">privacy policy</a>.</p>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="signin">Already have an account? Sign in</button></div>
+</div></div>
+
+<div data-view="forgot" hidden><div class="panel">
+<h1>Reset your password</h1><p class="mute">Enter your account's email. We'll send a link that brings you back here to choose a new password.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="forgot" novalidate>
+<div class="field"><label for="fg-email">Email</label><input id="fg-email" name="email" type="email" autocomplete="email" required></div>
+<button class="btn pri block lg" type="submit">Send reset link</button>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="signin">Back to sign in</button></div>
+</div></div>
+
+<div data-view="reset" hidden><div class="panel">
+<h1>Choose a new password</h1><p class="mute">This becomes your password on this site and in the app.</p>
+<div class="msg" role="status" aria-live="polite"></div>
+<form name="reset" novalidate>
+<div class="field"><label for="rs-pw">New password</label><input id="rs-pw" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+<div class="field"><label for="rs-pw2">Confirm new password</label><input id="rs-pw2" name="confirm" type="password" autocomplete="new-password" minlength="8" required></div>
+<button class="btn pri block lg" type="submit">Save new password</button>
+</form>
+<div class="alt-links"><button class="linkbtn" data-go="forgot">Link not working? Get a new one</button></div>
+</div></div>
+
+<div data-view="account" hidden>
+<div class="panel">
+<span class="kick">Your account</span>
+<h1 data-plan-label>Free</h1>
+<p class="mute" data-plan-note></p>
+<div class="msg" role="status" aria-live="polite"></div>
+<dl class="kv"><dt>Signed in as</dt><dd data-email></dd></dl>
+<div data-upgrade hidden>
+<form name="upgrade">
+<div class="plan-pick" role="radiogroup" aria-label="Billing period">
+<label><input type="radio" name="plan" value="yearly" checked><b>Yearly · $2.99/mo</b><span>$35.88 a year, save 40%</span></label>
+<label><input type="radio" name="plan" value="monthly"><b>Monthly · $4.99/mo</b><span>Billed every month</span></label>
+</div>
+<button class="btn gold block lg" type="submit" data-trial-btn>Start free trial</button>
+<p class="fine" data-trial-terms style="margin-top:10px">Free for 7 days, then your plan's price plus any sales tax. Cancel before the trial ends and you pay nothing. Checkout is handled by Stripe.</p>
+</form>
+</div>
+<div class="btns" style="margin-top:12px"><button class="btn ghost" type="button" data-manage hidden>Manage subscription</button><a class="btn ghost" href="download.html">Download the app</a></div>
+</div>
+
+<div class="panel">
+<details><summary style="cursor:pointer;font-weight:650">Have a code?</summary>
+<p class="mute" style="margin-top:10px">Tester and creator codes unlock Instinct Pro on this account.</p>
+<form name="redeem" novalidate><div class="field"><label for="rd-code">Code</label><input id="rd-code" name="code" autocomplete="off" placeholder="ABC-XXXX-XXXX" required></div><button class="btn ghost" type="submit">Redeem</button></form>
+</details>
+</div>
+<div class="panel">
+<details><summary style="cursor:pointer;font-weight:650">Change password</summary>
+<form name="change" novalidate style="margin-top:14px">
+<div class="field"><label for="cp-pw">New password</label><input id="cp-pw" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+<div class="field"><label for="cp-pw2">Confirm new password</label><input id="cp-pw2" name="confirm" type="password" autocomplete="new-password" minlength="8" required></div>
+<button class="btn ghost" type="submit">Save password</button>
+</form>
+</details>
+</div>
+<div class="alt-links"><span class="fine">To delete your account or your cloud data, <a href="contact.html">contact us</a>.</span><button class="linkbtn" type="button" data-signout>Sign out</button></div>
+</div>
+
+</div></div>
+</main>
+<footer class="foot"><div class="wrap">
+<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
+<p>Coaching that happens while you play. A Rocket League companion for Windows 10 and 11.</p>
+<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC. Instinct is an independent project, not endorsed by them. © 2026 Toby Sword.</p></div>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Download</a><a href="changelog.html">What's new</a></nav>
+<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="account.html">Account</a><a href="contact.html">Contact</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
+<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refunds</a></nav>
+</div></footer>
+<script src="assets/site.js" defer></script>
+
+<script src="assets/account.js" defer></script>
+</body></html>

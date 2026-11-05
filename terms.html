@@ -1,5 +1,10 @@
+
+
+
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
+<script>/* Supabase email links (password reset, email confirmation) land on the Site URL; send them to the account page. */
+if ("terms.html" !== "account.html" && /(access_token|error_code|error_description)=/.test(location.hash)) location.replace("account.html" + location.hash);</script>
 <title>Terms of Use · Instinct</title><meta name="description" content="Terms of Use for Instinct and Instinct Pro: licence, anti-cheat, Toxic mode, subscriptions, refunds and more.">
 <link rel="canonical" href="https://tobysword.github.io/instinct-site/terms">
 <meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Terms of Use · Instinct"><meta property="og:description" content="Terms of Use for Instinct and Instinct Pro: licence, anti-cheat, Toxic mode, subscriptions, refunds and more."><meta property="og:url" content="https://tobysword.github.io/instinct-site/terms"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
@@ -10,21 +15,22 @@
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
-<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
+<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
 <nav aria-label="Primary"><ul>
 <li><a href="features.html">Features</a></li>
-<li><a href="toxic.html">Toxic mode</a></li>
 <li><a href="pricing.html">Pricing</a></li>
 <li><a href="download.html">Install</a></li>
 <li><a href="faq.html">FAQ</a></li>
-<li><a href="changelog.html">Changelog</a></li>
 </ul></nav>
-<a class="btn accent sm nav-dl" href="https://github.com/tobysword/InstinctRL/releases/latest/download/Instinct-Setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
+<div class="nav-end">
+<a class="nav-acct" href="account.html" data-acct-link>Sign in</a>
+<a class="btn pri sm" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
 <details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
-<div class="menu-panel"><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a><a href="contact.html">Contact</a></div></details>
+<div class="menu-panel"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">What's new</a><a href="account.html">Account</a><a href="contact.html">Contact</a></div></details>
+</div>
 </div></header>
 
-<main id="main" class="legal"><a class="back" href="index.html">← Back to Instinct</a>
+<main id="main"><div class="wrap"><div class="prose">
 <span class="kick">Legal</span>
 <h1>Terms of Use</h1>
 <ul class="toc" aria-label="Contents"><li><a href="#s1">1. Licence</a></li><li><a href="#s2">2. Eligibility</a></li><li><a href="#s3">3. What the app does</a></li><li><a href="#s4">4. Not affiliated with Psyonix or Epic Games</a></li><li><a href="#s5">5. Game rules and anti-cheat: your responsibility</a></li><li><a href="#s6">6. Config file changes</a></li><li><a href="#toxic">6a. Toxic mode</a></li><li><a href="#s7">7. Experimental features and feedback</a></li><li><a href="#refunds">8. Instinct Pro subscription</a></li><li><a href="#s9">9. No guarantees about results</a></li><li><a href="#s10">10. Acceptable use</a></li><li><a href="#s11">11. Third-party services</a></li><li><a href="#s12">12. Disclaimer of warranties</a></li><li><a href="#s13">13. Limitation of liability</a></li><li><a href="#s14">14. Indemnity</a></li><li><a href="#s15">15. Ending use</a></li><li><a href="#s16">16. Governing law and disputes</a></li><li><a href="#s17">17. Changes</a></li><li><a href="#s18">18. Contact</a></li></ul><p><strong>Effective date:</strong> with Instinct 1.0.0 · <strong>Last updated:</strong> 2026-10-22</p>
@@ -78,15 +84,15 @@
 <p>We may update these terms. We post changes here, update the date and tell you in the app about material changes. Continued use after a change means you accept it; subscription changes apply from your next billing period.</p>
 <h2 id="s18">18. Contact</h2>
 <p><strong>Toby Sword</strong> (owner and operator, Washington State, USA). For support or questions, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback. We do not offer email support.</p>
-</main>
-<footer><div class="wrap">
-<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>Instinct</span></a>
-<p class="f-tag">Coaching that happens while you play. A live Rocket League overlay for Windows 10/11, made by Toby Sword.</p>
-<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC / Epic Games, Inc. Instinct is an independent project, not endorsed by them.</p>
-<p class="f-legal">© 2026 Toby Sword</p></div>
-<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="toxic.html">Toxic mode</a><a href="pricing.html">Pricing</a><a href="download.html">Download &amp; install</a><a href="changelog.html">Changelog</a></nav>
-<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="contact.html">Contact &amp; support</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a><a href="index.html#limits">What it can't see</a></nav>
-<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refund policy</a><a href="terms.html#toxic">Toxic mode terms</a></nav>
+</div></div></main>
+<footer class="foot"><div class="wrap">
+<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
+<p>Coaching that happens while you play. A Rocket League companion for Windows 10 and 11.</p>
+<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC. Instinct is an independent project, not endorsed by them. © 2026 Toby Sword.</p></div>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Download</a><a href="changelog.html">What's new</a></nav>
+<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="account.html">Account</a><a href="contact.html">Contact</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
+<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refunds</a></nav>
 </div></footer>
+<script src="assets/site.js" defer></script>
 
 </body></html>

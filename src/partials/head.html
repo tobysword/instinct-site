@@ -1,4 +1,6 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
+<script>/* Supabase email links (password reset, email confirmation) land on the Site URL; send them to the account page. */
+if ("{{PAGE_FILE}}" !== "account.html" && /(access_token|error_code|error_description)=/.test(location.hash)) location.replace("account.html" + location.hash);</script>
 <title>{{TITLE}}</title><meta name="description" content="{{DESC}}">
 <link rel="canonical" href="{{SITE_URL}}{{CANON}}">
 <meta property="og:site_name" content="{{PRODUCT_NAME}}"><meta property="og:type" content="website"><meta property="og:title" content="{{TITLE}}"><meta property="og:description" content="{{DESC}}"><meta property="og:url" content="{{SITE_URL}}{{CANON}}"><meta property="og:image" content="{{SITE_URL}}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{{SITE_URL}}assets/og.png">

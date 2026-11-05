@@ -1,5 +1,5 @@
 <!--@set TITLE="Features · Instinct"-->
-<!--@set DESC="Everything in Instinct 1.0: live overlay with Reads, glance stats, minimap and Playing like; post-match; control window; phone companion; streamer and accessibility options; experimental replay analysis."-->
+<!--@set DESC="Everything Instinct does: the live Playing like overlay, gap bars, what decided each game, progress over time, saved-replay positioning, sessions, teams, Train next and more."-->
 <!--@set CANON="features"-->
 <!doctype html><html lang="en"><head>
 <!--@include head-->
@@ -8,128 +8,81 @@
 <main id="main">
 <section class="phero"><div class="wrap">
 <span class="kick">Features</span>
-<h1>Everything in {{PRODUCT_NAME}} 1.0.</h1>
-<p>A live overlay built on facts the game actually sends. Experimental items are marked <span class="pill exp">Experimental, off by default</span>. Everything runs on your PC.</p>
+<h1>Everything {{PRODUCT_NAME}} does, and what it doesn't.</h1>
+<p class="lead">Three places: a small overlay in your match, the {{PRODUCT_NAME}} window on your PC between games, and (with Pro) your phone. Items marked <span class="chip pro">Pro</span> are part of {{PRO_NAME}}; everything else is free.</p>
 </div></section>
 
-<section aria-label="Feature list"><div class="wrap">
-<div class="group" id="overlay">
-<div><span class="kick">In game</span><h2>Live overlay</h2><p class="gsub">Click-through, with hotkeys. It stays out of your way until you need it.</p></div>
-<div>
-<ul class="specs">
-<li><b>Coach panel with Playing like</b>The rank you're playing at in this playlist, with confidence (x/4), trend, the reason up and the reason down.</li>
-<li><b>Reads card at goal breaks</b>Two short facts from this match: you vs your usual, the lobby or your teammate. Never advice.</li>
-<li class="wide"><b>Left glance stats</b>Up to 6 tiles per mode, from 18. Each is compared with the lobby, your usual or your team.
-<div class="tiles" aria-label="The 18 tiles"><span>Goals</span><span>Shots</span><span>Saves</span><span>Assists</span><span>Score</span><span>Touches</span><span>Demos</span><span>Shot %</span><span>Hard hits</span><span>Aerial touches</span><span>50/50s ~</span><span class="you">Avg boost</span><span class="you">Empty boost</span><span class="you">Boost used</span><span class="you">Avg speed</span><span class="you">Supersonic</span><span class="you">Airtime</span><span class="you">Handbrake taps</span></div>
-<p class="legend"><code>50/50s ~</code> is an estimate from ball-touch timing. Tiles outlined in orange (boost and speed) are yours only: the game sends no car state for other players.</p></li>
-<li><b>Lobby strip</b>A rank pill for every player, per playlist. <code>~</code> marks an estimate from scoreboard events only (low confidence). Names show only in 1v1 / 2v2.</li>
-<li><b>Minimap</b>Our own: last ball hit, a shadow-defence spot, boost where the game sends it.</li>
-<li><b>Tilt warning</b>A heads-up you can dismiss with one key.</li>
-<li><b>End-of-match summary</b>The post-match view right on the overlay.</li>
-</ul>
-<div class="grid g2" style="margin-top:20px">
-<figure class="shot">
-<img src="assets/shots/overlay-2v2-hero.webp" alt="Instinct overlay in a 2v2 match: Coach panel with Playing like, left glance stats, lobby strip and minimap" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-<figure class="shot"><img src="assets/shots/reads-card-goal-replay.webp" alt="The Reads card during a goal replay, showing two reads" width="1920" height="1080" loading="lazy" decoding="async"></figure>
+<section style="padding-top:24px"><div class="wrap">
+<div class="feat">
+<div class="feat-text"><span class="kick">In your match</span><h2>The overlay</h2>
+<ul class="ticks">
+<li><strong>Playing like.</strong> The rank your game looks like in this playlist, live. Shows about 75 seconds in and updates every few seconds. Your real rank is never an input, so a great game reads high and a rough one reads low.</li>
+<li><strong>Gap bars.</strong> Your speed, time supersonic and slow, time in the air and boost against your target rank's average.</li>
+<li><strong>Post-game card.</strong> What you played like and what decided it, until you leave the lobby.</li>
+<li><strong>Click-through and out of the way.</strong> Hotkeys to show, hide and move it. Hide player names for streaming. Colour-blind palette, text size, opacity.</li>
+<li><span class="chip pro">Pro</span> Session strip, the layout editor and rank accent colours.</li>
+</ul></div>
+<div class="stage" role="img" aria-label="Illustration of the overlay: Playing like Diamond III with gap bars">
+<div class="score"><b>2</b><i>3:12</i><u>1</u></div>
+<div class="ov"><div class="ovc"><div class="row"><span class="lbl">COACH</span><span>● 2v2 · 1:48</span></div><div class="pl"><div class="gem"></div><div><small>Playing like</small><strong>Diamond III</strong></div></div></div>
+<div class="ovc"><div class="row"><span style="color:#e4e4e7;font-weight:600">vs your Champion I target</span><span>live</span></div>
+<div class="gap"><span>Avg speed</span><div class="bar"><i class="up" style="width:18%"></i></div><em>58 km/h</em></div>
+<div class="gap"><span>Slow (&lt;50)</span><div class="bar"><i class="dn" style="width:32%"></i></div><em>49%</em></div>
+<div class="gap"><span>Boost used</span><div class="bar"><i class="up" style="width:22%"></i></div><em>431/m</em></div></div></div>
+<div class="ball"></div><div class="car o"></div><div class="car b"></div><span class="stage-cap">Illustration</span></div>
 </div>
-</div></div>
 
-<div class="group" id="post-match">
-<div><span class="kick">After the match</span><h2>Post-match</h2><p class="gsub">One screen that explains the match you just played.</p></div>
-<div><ul class="specs">
-<li><b>Played like</b>The tier you played at this match.</li>
-<li><b>Reads this game</b>Up to 6 reads from the match, newest first.</li>
-<li><b>vs your usual</b>This match against your usual in this playlist (builds after 3 matches).</li>
-<li><b>Rank reasons</b>Why your estimate moved.</li>
-<li><b>Best plays</b>And your team and opponents.</li>
-<li><b>Focus next match</b>One line to take into the next one.</li>
-<li class="wide"><b>Share card</b>A PNG saved to <code>Pictures\Instinct</code> and copied to the clipboard, in one key.</li>
-</ul>
-<div class="grid g2" style="margin-top:20px">
-<figure class="shot">
-<img src="assets/shots/post-match-summary.webp" alt="Post-match summary: Played like, Reads this game and vs your usual" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-<figure class="shot">
-<img src="assets/shots/share-card.webp" alt="The post-match share card" width="1200" height="675" loading="lazy" decoding="async"></figure>
-</div></div></div>
+<div class="feat flip">
+<div class="feat-text"><span class="kick">Between games</span><h2>The Match page</h2>
+<ul class="ticks">
+<li><strong>Your last game:</strong> score, Playing like against your target and a goal timeline.</li>
+<li><strong>What decided it:</strong> every stat next to your target rank's average, with a plain verdict and a one-line definition.</li>
+<li><strong>Before your next game:</strong> what to practise, picked from your recent games. <span class="chip pro">Pro</span> Train next drills with a timer.</li>
+<li><strong>In a match:</strong> scoreboard, live Playing like, live gaps and the match feed.</li>
+</ul></div>
+<div><div class="shot"><img src="assets/shots/app-match.webp" alt="The Instinct Match page between games" width="2880" height="1800" loading="lazy"></div></div>
+</div>
 
-<div class="group" id="control">
-<div><span class="kick">On your desktop</span><h2>Control window</h2><p class="gsub">Your history and settings, outside the game.</p></div>
-<div><ul class="specs">
-<li><b>Match history</b>Every match, on your PC. Free.</li>
-<li><b>Sessions <span class="pro-badge">PRO</span></b>Session tracking: today's session and how it's going.</li>
-<li><b>Growth <span class="pro-badge">PRO</span></b>Local growth tracking: weekly and monthly trends, on your PC.</li>
-<li><b>Players</b>People you've played with and against, from events and the scoreboard.</li>
-<li><b>You</b>Set your real rank per playlist.</li>
-<li><b>Team <span class="pro-badge">PRO</span></b>Team sharing: shared metrics with teammates you invite (account).</li>
-<li><b>Setup check</b>Finds your install and turns on the Stats API in one click.</li>
-<li><b>Feedback</b>Send a report from the app, with optional scrubbed logs.</li>
-</ul>
-<div class="grid g2" style="margin-top:20px">
-<figure class="shot">
-<img src="assets/shots/control-history-sessions.webp" alt="Control window history: today's session (Pro)" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-<figure class="shot"><img src="assets/shots/control-history.webp" alt="Control window history: weekly trends (Pro)" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-<figure class="shot">
-<img src="assets/shots/setup-check.webp" alt="Setup check: ready and live" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-</div></div></div>
-
-<div class="group" id="phone">
-<div><span class="kick">Second screen</span><h2>Phone companion <span class="pro-badge">PRO</span></h2><p class="gsub">On your Wi-Fi, never through our servers.</p></div>
-<div><ul class="specs">
-<li class="wide"><b>Pair with a 6-character code</b>Same Wi-Fi as your PC. Live view, breakdown and history in your phone's browser.</li>
-</ul>
-<figure class="shot" style="margin-top:20px">
-<img src="assets/shots/phone-companion.webp" alt="Phone companion (Pro): live view" width="1920" height="1080" loading="lazy" decoding="async"></figure>
-</div></div>
-
-<div class="group" id="streamer">
-<div><span class="kick">Streaming</span><h2>Streamer options</h2><p class="gsub">Show your overlay without showing other people's names.</p></div>
-<div><ul class="specs">
-<li><b>Hide player names</b>Lobby rows and post-match show Teammate 1/2 and Opponent 1/2/3 instead of names.</li>
-<li><b>Toxic mode warning</b>Toxic mode shows a one-time OBS warning: if you stream, you're responsible for what your overlay shows.</li>
-</ul></div></div>
-
-<div class="group" id="accessibility">
-<div><span class="kick">For everyone</span><h2>Accessibility</h2></div>
-<div><ul class="specs">
-<li><b>Colour-blind palette</b>And a contrast option.</li>
-<li><b>Text size</b>And reduced motion.</li>
-<li class="wide"><b>Overlay scale and opacity</b>Make it as big, small or see-through as you like.</li>
-</ul></div></div>
-
-<div class="group" id="experimental">
-<div><span class="kick">Optional</span><h2>Experimental, off by default, on your PC only</h2><p class="gsub">Nothing here is uploaded.</p></div>
-<div><ul class="specs">
-<li><b>Replay analysis <span class="pill exp">Experimental</span></b>From replays you saved: heatmaps, rotation, boost, kickoffs, and a Deep dive with xG, possession and 50/50s.</li>
-</ul></div></div>
-
-<div class="group" id="hotkeys">
-<div><span class="kick">Hotkeys</span><h2>Keyboard first</h2><p class="gsub">Global, so they work in game while the overlay is click-through. All remappable.</p></div>
-<div><div class="tbl"><table>
-<thead><tr><th>Hotkey</th><th>Action</th></tr></thead>
-<tbody>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd></td><td>Show / hide the overlay</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd></td><td>Edit layout</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td><td>Reset layout</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td><td>Pair phone (Pro)</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd></td><td>Mark moment</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd> / <kbd>2</kbd></td><td>Coach panel / Match panel</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>0</kbd></td><td>All panels</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd></td><td>Summary</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>6</kbd></td><td>Share card</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd></td><td>Dismiss tilt warning</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd></td><td>Quit</td></tr>
-</tbody></table></div></div></div>
-
-<div class="group" id="limits">
-<div><span class="kick">Honest limits</span><h2>What it can't see</h2></div>
-<div><p style="color:#C4C4CC;margin-top:0">The live Stats API has no passes, possession, boost pads or boost steals, car positions or rotation, or whiffs, and no car state for opponents: opponents are events and scoreboard only. The live overlay never claims those. Possession, passes and positions appear only in the replay Deep dive <span class="pill exp">Experimental</span>.</p>
-<div class="note"><span>No BakkesMod, no memory reading, no injection. {{PRODUCT_NAME}} <strong>never presses keys</strong> and sends nothing to game chat.</span></div></div></div>
+<div class="feat">
+<div class="feat-text"><span class="kick">Over time</span><h2>Progress</h2>
+<ul class="ticks">
+<li><strong>"You're playing like…"</strong> in words, from your level lately (the last ten rated games).</li>
+<li><strong>The rank ladder</strong> with you, your target and your five areas: defence, air, boost, speed and shooting.</li>
+<li><strong>Every game on a chart</strong> with rank bands, the area to focus on, your stats lately and the match list. Open any match for its full breakdown.</li>
+<li>The last 30 days on Free; older games are kept on your PC, never deleted. <span class="chip pro">Pro</span> shows all of it, plus "vs your usual" and your trend.</li>
+</ul></div>
+<div><div class="shot"><img src="assets/shots/app-progress.webp" alt="The Instinct Progress page: level lately, rank ladder and Playing like over time" width="2880" height="1800" loading="lazy"></div></div>
+</div>
 </div></section>
 
-<section aria-labelledby="d-h"><div class="wrap"><div class="band">
-<div><h2 id="d-h">Try it in your next match.</h2><p>Free for Windows 10 and 11.</p></div>
-<div class="band-cta"><!--@include download-cta--><p class="smartscreen">If Windows SmartScreen appears, click <strong>More info</strong>, then <strong>Run anyway</strong>.</p></div>
-</div></div></section>
+<section class="alt"><div class="wrap">
+<div class="sec-head"><span class="kick">Saved replays</span><h2>Save a replay, get a sharper read.</h2>
+<p class="lead">Saving a replay in Rocket League is always optional. When you do, {{PRODUCT_NAME}} reads it on your PC (nothing is uploaded) and adds to that match. Every screen is complete without them.</p></div>
+<div class="grid two">
+<div class="card"><span class="chip free">Free</span><h3 style="margin-top:14px">Sharper Playing like and positioning</h3><p>A more precise read for that match, plus where you were: behind the ball, closest to the ball, last back, thirds of the field, ground and air.</p></div>
+<div class="card pro"><span class="chip pro">Pro</span><h3 style="margin-top:14px">Replay deep dive</h3><p>Heatmaps, rotation, kickoffs, expected goals and possession for that match.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="kick gold">{{PRO_NAME}}</span><h2>Sessions, teams and the rest.</h2></div>
+<div class="grid">
+<div class="card pro"><h3>Session tracker</h3><p>A session is play in a row with no break over 15 minutes. See wins and losses by mode, how you played in each playlist against your usual, free play and training pack time, and a calendar of when you play.</p></div>
+<div class="card pro"><h3>Teams</h3><p>Create a team, invite your duo or trio, and see your shared record, sessions you played together, where each of you plays like on the ladder, and together vs apart.</p></div>
+<div class="card pro"><h3>Clips</h3><p>Save the last 30 seconds with a hotkey. Clips stay in your Videos folder.</p></div>
+<div class="card pro"><h3>Share cards</h3><p>One hotkey saves a picture of your game's best moment and copies it, ready to post.</p></div>
+<div class="card pro"><h3>Phone companion</h3><p>Pair your phone on the same Wi-Fi to see the live view, the breakdown and your history from the couch.</p></div>
+<div class="card pro"><h3>Cloud sync and export</h3><p>Sign in to keep your match summaries and sessions across PCs, and export your cloud history as JSON.</p></div>
+</div>
+</div></section>
+
+<section class="alt" id="limits"><div class="wrap">
+<div class="sec-head"><span class="kick">Limits</span><h2>What it can't see.</h2>
+<p class="lead">Rocket League's live Stats API doesn't send passes, possession, boost pads, car positions, rotation or whiffs, and it sends no car data for opponents. So the live overlay never claims those. Positions appear only from replays you save.</p>
+<p class="mute">Other players aren't rated or tracked. Their in-match names and that game's scoreboard line stay in your own match records on your PC, and nothing about them goes to the cloud.</p></div>
+</div></section>
+
+<!--@include cta-->
 </main>
 <!--@include footer-->
 </body></html>
