@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
+<script>/* Supabase email links (password reset, email confirmation) land on the Site URL; send them to the account page. */
+if ("how-it-works.html" !== "account.html" && /(access_token|error_code|error_description)=/.test(location.hash)) location.replace("account.html" + location.hash);</script>
+<title>How it works · Instinct</title><meta name="description" content="How Instinct tells which rank you're playing like: Rocket League's official Stats API, a model trained on 39,187 ranked games and tested on players it never saw, and what one game can and can't tell you.">
+<link rel="canonical" href="https://tobysword.github.io/instinct-site/how-it-works">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="How it works · Instinct"><meta property="og:description" content="How Instinct tells which rank you're playing like: Rocket League's official Stats API, a model trained on 39,187 ranked games and tested on players it never saw, and what one game can and can't tell you."><meta property="og:url" content="https://tobysword.github.io/instinct-site/how-it-works"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
+
+<link rel="stylesheet" href="assets/home.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
+<nav aria-label="Primary"><ul>
+<li><a href="how-it-works.html" aria-current="page">How it works</a></li>
+<li><a href="index.html#pricing">Pricing</a></li>
+<li><a href="download.html">Install</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul></nav>
+<div class="nav-end">
+<a class="nav-acct" href="account.html" data-acct-link>Sign in</a>
+<a class="btn pri sm" href="account.html?start=yearly">Try free<span class="nav-long"> for 7 days</span></a>
+<details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
+<div class="menu-panel"><a href="how-it-works.html">How it works</a><a href="index.html#pricing">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">What's new</a><a href="account.html">Account</a><a href="contact.html">Contact</a></div></details>
+</div>
+</div></header>
+
+<main id="main" class="hm">
+<div class="wrap"><article class="art">
+ <div class="cap">How it works</div>
+ <h1 class="h-d">How an app can tell which rank you're playing like</h1>
+ <p>Instinct is the first app that reads how you're playing Rocket League in real time and tells you which rank it looks like. Here's what happens between the kickoff and the number on your screen, and what that number can and can't tell you.</p>
+ <h2>The game shares the stats</h2>
+ <p>Rocket League has an official Stats API that shares live match data with apps running on your PC: your speed, boost, shots, saves and more. Instinct switches it on for you during setup. It doesn't install mods, read the game's memory or press any keys, so as far as the game is concerned it's only listening.</p>
+ <h2>A model trained on 39,187 ranked games</h2>
+ <p>We collected real ranked matches from Bronze I to Supersonic Legend across Duel, Doubles and Standard, and trained a model on what play at each of the 22 ranks tends to look like. It only uses stats that rise or fall steadily with rank, such as average speed, time spent supersonic and boost collected per minute, because those are the ones that actually separate one rank from the next.</p>
+ <div class="chart">
+  <div class="ch"><span class="cap">Ranked games in the training set</span><div class="tabs" data-chart="how"><button aria-pressed="true" data-k="d">Doubles</button><button aria-pressed="false" data-k="s">Standard</button><button aria-pressed="false" data-k="1">Duel</button></div></div>
+  <div class="tb" data-bars="how"></div>
+  <div class="axis"><span>Bronze</span><span>Silver</span><span>Gold</span><span>Plat</span><span>Diamond</span><span>Champ</span><span>GC</span><span>SSL</span></div>
+  <p class="fine" data-cap="how" style="margin:12px 0 0"></p>
+ </div>
+ <h2>Tested on players it had never seen</h2>
+ <p>Before training, the players were split into separate groups. The model learned from one group and was measured on another, so its accuracy describes how it reads someone new, which is exactly what you'll be.</p>
+ <h2>Your rank is never part of the answer</h2>
+ <p>The rank you set in the app is only a comparison line. The reading comes entirely from how you played in that game, so a good night shows up as a good night even before your MMR catches up.</p>
+ <h2>Trust the trend more than one game</h2>
+ <p>Five minutes of stats is a small sample, and one game's reading typically moves a couple of ranks either way. That's why Instinct also shows your level over your last ten games, and why the session tracker averages each night. Those are the numbers worth acting on.</p>
+ <h2>What the live data can't see</h2>
+ <p>The Stats API doesn't say where you are on the field, so Instinct makes no live claims about rotation or positioning. If you save a replay, Instinct reads it and adds positioning, rotation and heatmaps to that match. Replay analysis is free.</p>
+ <div class="end"><p>Try every feature free for 7 days, then $2.99 a month, billed yearly.</p><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try every feature free</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
+<p>Coaching that happens while you play. A Rocket League companion for Windows 10 and 11.</p>
+<p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC. Instinct is an independent project, not endorsed by them. © 2026 Toby Sword.</p></div>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="how-it-works.html">How it works</a><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="download.html">Download</a><a href="changelog.html">What's new</a></nav>
+<nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="account.html">Account</a><a href="contact.html">Contact</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
+<nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refunds</a></nav>
+</div></footer>
+<script src="assets/site.js" defer></script>
+
+<script src="assets/home.js" defer></script>
+</body></html>

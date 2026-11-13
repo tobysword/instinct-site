@@ -2,143 +2,192 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0B0B0C">
 <script>/* Supabase email links (password reset, email confirmation) land on the Site URL; send them to the account page. */
 if ("index.html" !== "account.html" && /(access_token|error_code|error_description)=/.test(location.hash)) location.replace("account.html" + location.hash);</script>
-<title>Instinct · See what rank you're really playing like in Rocket League</title><meta name="description" content="Instinct reads your Rocket League game live and tells you which rank it looks like, what decided it and what to practise next. Free for Windows. Official Stats API only: no mods, never presses keys.">
+<title>Instinct · See which rank you're really playing like in Rocket League</title><meta name="description" content="Instinct reads your Rocket League games live and shows which rank you're playing like, how each session went and what to practise next. Free for Windows, with Pro unlocking the whole app. Official Stats API only: no mods, never presses keys.">
 <link rel="canonical" href="https://tobysword.github.io/instinct-site/">
-<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Instinct · See what rank you're really playing like in Rocket League"><meta property="og:description" content="Instinct reads your Rocket League game live and tells you which rank it looks like, what decided it and what to practise next. Free for Windows. Official Stats API only: no mods, never presses keys."><meta property="og:url" content="https://tobysword.github.io/instinct-site/"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
+<meta property="og:site_name" content="Instinct"><meta property="og:type" content="website"><meta property="og:title" content="Instinct · See which rank you're really playing like in Rocket League"><meta property="og:description" content="Instinct reads your Rocket League games live and shows which rank you're playing like, how each session went and what to practise next. Free for Windows, with Pro unlocking the whole app. Official Stats API only: no mods, never presses keys."><meta property="og:url" content="https://tobysword.github.io/instinct-site/"><meta property="og:image" content="https://tobysword.github.io/instinct-site/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://tobysword.github.io/instinct-site/assets/og.png">
 <link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/mark.svg"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Unbounded.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css"><link rel="stylesheet" href="assets/site.css">
 
+<link rel="stylesheet" href="assets/home.css">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
 <a class="brand" href="index.html" aria-label="Instinct home"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
 <nav aria-label="Primary"><ul>
-<li><a href="features.html">Features</a></li>
-<li><a href="pricing.html">Pricing</a></li>
+<li><a href="how-it-works.html">How it works</a></li>
+<li><a href="index.html#pricing">Pricing</a></li>
 <li><a href="download.html">Install</a></li>
 <li><a href="faq.html">FAQ</a></li>
 </ul></nav>
 <div class="nav-end">
 <a class="nav-acct" href="account.html" data-acct-link>Sign in</a>
-<a class="btn pri sm" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download</a>
+<a class="btn pri sm" href="account.html?start=yearly">Try free<span class="nav-long"> for 7 days</span></a>
 <details class="menu"><summary aria-label="Menu"><span></span><span></span><span></span></summary>
-<div class="menu-panel"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">What's new</a><a href="account.html">Account</a><a href="contact.html">Contact</a></div></details>
+<div class="menu-panel"><a href="how-it-works.html">How it works</a><a href="index.html#pricing">Pricing</a><a href="download.html">Install</a><a href="faq.html">FAQ</a><a href="changelog.html">What's new</a><a href="account.html">Account</a><a href="contact.html">Contact</a></div></details>
 </div>
 </div></header>
 
-<main id="main">
+<main id="main" class="hm">
+<section class="hm-hero"><div class="wrap">
+  <div class="top">
+   <div><h1 class="h-d">See which rank you're playing like, while you're still playing.</h1>
+    <p class="lede">Instinct reads the stats Rocket League shares during every match and shows you, on screen, which rank your play looks like. After a few games you'll know where you really belong and what's keeping you there.</p></div>
+   <div class="cta"><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try every feature free</a><span class="fine">7 days free, then $2.99 a month, billed yearly.<br>Or <a href="download.html?start">download the free app</a>.</span></div>
+  </div>
+  <div class="hstage">
+   <div class="ladder" id="ladder" aria-label="Rank ladder: your rank and the rank you are playing like"></div>
+   <div id="hero-game"></div>
+  </div>
+ </div></section>
 
-<section class="hero"><div class="wrap">
-<div>
-<span class="kick">For Rocket League on Windows</span>
-<h1>See what rank you're <em>really</em> playing like.</h1>
-<p class="lead">Instinct reads your match live and tells you which rank your game looks like. Between games it shows what decided it and what to practise next, so you stop guessing why you're stuck.</p>
-<div class="btns"><a class="btn pri lg" href="download.html?start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download free for Windows</a><a class="btn ghost lg" href="#how">How it works</a></div>
-<div class="hero-meta"><span>Free forever plan</span><span>No mods, no BakkesMod</span><span>Windows 10 and 11</span></div>
-</div>
-<div class="stage" role="img" aria-label="The Instinct overlay in a match: Playing like Diamond III, with the coach shape against a Champion I target">
-<div class="score"><b>2</b><i>3:12</i><u>1</u></div>
-<div class="ov">
-<div class="ovc"><div class="row"><span class="lbl">COACH</span><span>● 2v2 · 1:48</span></div>
-<div style="font-weight:650;margin-top:6px;color:#fff">Doubles</div>
-<div class="pl"><div class="gem"></div><div><small>Playing like</small><strong>Diamond III</strong></div></div></div>
-<div class="ovc"><div class="row"><span style="color:#e4e4e7;font-weight:600">vs your Champion I target</span><span>Last 10 · D3</span></div>
-<div style="display:flex;justify-content:center;color:#FAFAFA;margin-top:4px"><svg class="shape" width="168" height="138" viewBox="0 0 238 196" role="img" aria-label="Supersonic 11%, below; Speed 55, above; Slow 51%, below; Shots 3, above; Saves 1, below; Boost used 3.6, below; Air 39%, below; Boost got 3.5, below; Touch height 2.7 m, below; Small pads 6.9, below C1"><line x1="119" y1="100" x2="119.0" y2="50.0" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="148.4" y2="59.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="166.6" y2="84.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="166.6" y2="115.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="148.4" y2="140.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="119.0" y2="150.0" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="89.6" y2="140.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="71.4" y2="115.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="71.4" y2="84.5" stroke="rgba(255,255,255,.07)"/><line x1="119" y1="100" x2="89.6" y2="59.5" stroke="rgba(255,255,255,.07)"/><polygon points="119.0,50.0 148.4,59.5 166.6,84.5 166.6,115.5 148.4,140.5 119.0,150.0 89.6,140.5 71.4,115.5 71.4,84.5 89.6,59.5" fill="none" stroke="rgba(255,255,255,.06)"/><polygon class="ref" points="119.0,63.1 140.7,70.2 154.1,88.6 154.1,111.4 140.7,129.8 119.0,136.9 97.3,129.8 83.9,111.4 83.9,88.6 97.3,70.2" fill="rgba(244,241,236,.07)" stroke="#F4F1EC" stroke-width="1.6" stroke-dasharray="4 3"/><polygon class="you" points="119.0,64.4 141.3,69.3 152.8,89.0 162.0,114.0 138.0,126.1 119.0,134.3 98.3,128.5 86.6,110.5 92.3,91.3 102.8,77.7" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.85)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="119.0" cy="64.4" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="141.3" cy="69.3" r="5" fill="#22C55E" stroke="#0E0E0F" stroke-width="2"/><circle cx="152.8" cy="89.0" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="162.0" cy="114.0" r="5" fill="#22C55E" stroke="#0E0E0F" stroke-width="2"/><circle cx="138.0" cy="126.1" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="119.0" cy="134.3" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="98.3" cy="128.5" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="86.6" cy="110.5" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="92.3" cy="91.3" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><circle cx="102.8" cy="77.7" r="5" fill="#FF8A3D" stroke="#0E0E0F" stroke-width="2"/><rect x="124.0" y="57.1" width="20.8" height="13" rx="3" fill="#F4F1EC"/><text x="128.0" y="67.1" font-size="9.5" font-weight="700" fill="#111">C1</text><text x="119.0" y="31.0" text-anchor="middle" font-size="10" font-weight="600" fill="currentColor">Supersonic</text><text x="119.0" y="43.0" text-anchor="middle" font-size="10" font-weight="700" fill="#FF8A3D">11% <tspan font-weight="400" fill="#8A8A93" font-size="8.5">of time</tspan></text><text x="153.7" y="42.3" text-anchor="start" font-size="10" font-weight="600" fill="currentColor">Speed</text><text x="153.7" y="54.3" text-anchor="start" font-size="10" font-weight="700" fill="#22C55E">55 <tspan font-weight="400" fill="#8A8A93" font-size="8.5">km/h avg</tspan></text><text x="175.1" y="79.8" text-anchor="start" font-size="10" font-weight="600" fill="currentColor">Slow</text><text x="175.1" y="91.8" text-anchor="start" font-size="10" font-weight="700" fill="#FF8A3D">51% <tspan font-weight="400" fill="#8A8A93" font-size="8.5">of time</tspan></text><text x="175.1" y="116.2" text-anchor="start" font-size="10" font-weight="600" fill="currentColor">Shots</text><text x="175.1" y="128.2" text-anchor="start" font-size="10" font-weight="700" fill="#22C55E">3 <tspan font-weight="400" fill="#8A8A93" font-size="8.5">so far</tspan></text><text x="153.7" y="151.7" text-anchor="start" font-size="10" font-weight="600" fill="currentColor">Saves</text><text x="153.7" y="163.7" text-anchor="start" font-size="10" font-weight="700" fill="#FF8A3D">1 <tspan font-weight="400" fill="#8A8A93" font-size="8.5">so far</tspan></text><text x="119.0" y="163.0" text-anchor="middle" font-size="10" font-weight="600" fill="currentColor">Boost used</text><text x="119.0" y="175.0" text-anchor="middle" font-size="10" font-weight="700" fill="#FF8A3D">3.6 <tspan font-weight="400" fill="#8A8A93" font-size="8.5">tanks/min</tspan></text><text x="84.3" y="151.7" text-anchor="end" font-size="10" font-weight="600" fill="currentColor">Air</text><text x="84.3" y="163.7" text-anchor="end" font-size="10" font-weight="700" fill="#FF8A3D">39% <tspan font-weight="400" fill="#8A8A93" font-size="8.5">of time</tspan></text><text x="62.9" y="116.2" text-anchor="end" font-size="10" font-weight="600" fill="currentColor">Boost got</text><text x="62.9" y="128.2" text-anchor="end" font-size="10" font-weight="700" fill="#FF8A3D">3.5 <tspan font-weight="400" fill="#8A8A93" font-size="8.5">tanks/min</tspan></text><text x="62.9" y="79.8" text-anchor="end" font-size="10" font-weight="600" fill="currentColor">Touch height</text><text x="62.9" y="91.8" text-anchor="end" font-size="10" font-weight="700" fill="#FF8A3D">2.7 m <tspan font-weight="400" fill="#8A8A93" font-size="8.5">avg</tspan></text><text x="84.3" y="42.3" text-anchor="end" font-size="10" font-weight="600" fill="currentColor">Small pads</text><text x="84.3" y="54.3" text-anchor="end" font-size="10" font-weight="700" fill="#FF8A3D">6.9 <tspan font-weight="400" fill="#8A8A93" font-size="8.5">per min</tspan></text></svg></div>
-<div class="row" style="justify-content:center;gap:14px;font-size:11px"><span>- - C1 average</span><span>▢ you</span></div></div>
-</div>
-<div class="ball"></div><div class="car o"></div><div class="car b"></div>
-<span class="stage-cap">Illustration of the in-game overlay</span>
-</div>
-</div></section>
+ <section class="band"><div class="wrap">
+  <div>
+   <span class="pro">PRO</span> <span class="cap" style="margin-left:6px">Session tracker</span>
+   <h2 class="h-d">Most bad nights have a pattern. The session tracker shows you yours.</h2>
+   <p>Every game you play in a sitting is lined up with how you played in it and how that compares with your usual. You can see when you're at your sharpest, when your level starts to slide, and whether the next queue is worth it.</p>
+   <p>The Session panel keeps the same picture on screen in game, so you don't have to alt-tab to notice the slide.</p>
+  </div>
+  <div class="night">
+   <div class="nh"><b>One evening of Doubles</b><span class="fine">Example session · target Platinum III</span></div>
+   <div class="bars" id="bars"></div>
+   <div class="glab" id="glab"></div>
+   <div class="sum"><div>Games 1 to 5<b>Diamond I</b></div><div>Games 6 to 8<b>Platinum II</b></div><div>Your usual<b>Platinum III</b></div></div>
+  </div>
+ </div></section>
 
-<div class="trust"><div class="wrap"><ul>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Official Rocket League Stats API</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg>No mods, no memory reading</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg>Never presses keys, never types in chat</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Your data stays on your PC</li>
-</ul></div></div>
+ <section class="ex" id="features"><div class="wrap">
+  <div class="hdr"><h2 class="h-d">Everything Instinct does</h2><span class="fine">Free features work forever. Pro unlocks the rest.</span></div>
+  <div class="exgrid">
+   <div class="list" role="tablist" aria-label="Features" id="flist">
+    <button role="tab" aria-selected="true" aria-controls="p0" data-p="0">Playing like <i class="free">FREE</i><span>The rank your play looks like in this game, next to your rank and your last ten games.</span></button>
+    <button role="tab" aria-selected="false" aria-controls="p1" data-p="1">Coach shape and reads <i class="free">FREE</i><span>Your stats drawn against your target rank, with one thing to keep and one to change at every goal.</span></button>
+    <button role="tab" aria-selected="false" aria-controls="p7" data-p="7">Session tracker <i class="pro">PRO</i><span>Every game of the night against your usual, by playlist, with a Session panel in game.</span></button>
+    <button role="tab" aria-selected="false" aria-controls="p2" data-p="2">Full history and trends <i class="pro">PRO</i><span>Every game since you installed, with weekly and monthly trends. Free keeps the last 30 days.</span></button>
+    <button role="tab" aria-selected="false" aria-controls="p3" data-p="3">Teams <i class="pro">PRO</i><span>A shared record for your duo or trio, and how you play in your sessions together.</span></button>
+    <button role="tab" aria-selected="false" aria-controls="p4" data-p="4">Train next drills <i class="pro">PRO</i><span>Your weakest area turned into a free-play drill, with a timer on the overlay.</span></button>
+    <button role="tab" aria-selected="false" aria-controls="p5" data-p="5">Clips, layout and sync <i class="pro">PRO</i><span>Hotkey clips, share cards, your own overlay layout, and your history on every PC.</span></button>
+    <hr>
+    <button role="tab" aria-selected="false" aria-controls="p6" data-p="6">How it knows<span>Rocket League's official Stats API, and a model trained on 39,187 ranked games.</span></button>
+   </div>
+   <div>
+    <div class="fpanel" role="tabpanel" id="p0">
+     <h3>Playing like</h3><p>The Coach panel's headline answer: which rank this game looks like so far, worked out from your stats alone. It's free, and it's on screen in every match.</p>
+     <div class="pl-grid">
+      <div class="ovp big" aria-label="The Coach panel's Playing like card">
+       <div class="hd"><span class="dot"></span><span class="pl">Doubles</span><span class="co">Coach</span><b class="nb">4</b></div>
+       <div class="k">Playing like</div>
+       <div class="ln"><div class="tier" data-tier>Diamond I</div><b class="nb">1</b></div>
+       <div class="ln"><div class="meta">Target <b>Platinum III</b></div><b class="nb">2</b></div>
+       <div class="ln"><div class="meta">Last 10 games <b>Platinum III</b></div><b class="nb">3</b></div>
+       <div class="ready"><i></i></div><div class="meta sm">Settled · 3:47 left in the match</div>
+      </div>
+      <ol class="anno">
+       <li><span class="nb">1</span><span><b>Playing like.</b> The rank whose average game looks most like yours so far. It updates as the match goes on and settles once you've played two minutes.</span></li>
+       <li><span class="nb">2</span><span><b>Your target.</b> The rank you set, usually the one you want to reach. It's only the comparison line and never changes the reading.</span></li>
+       <li><span class="nb">3</span><span><b>Last 10 games.</b> Your level across recent games in this playlist. One game can read a couple of ranks high or low, so this is the steadier number to watch.</span></li>
+       <li><span class="nb">4</span><span><b>The playlist.</b> Duel, Doubles and Standard are read by the model trained on 39,187 ranked games. The other modes are read against each rank's averages.</span></li>
+      </ol>
+     </div>
+     <div class="tsteps" aria-label="How the reading develops during a match">
+      <div><span class="t">0:00</span><b>Waiting</b>The card says how many seconds until it has enough to go on.</div>
+      <div><span class="t">~1:15</span><b>First reading</b>A rank appears and moves as you play.</div>
+      <div class="on"><span class="t">2:00 played</span><b>Settled</b>Enough of your own play for a reading that counts.</div>
+      <div><span class="t">Full time</span><b>Saved</b>The final reading goes on the post-game card and into Progress.</div>
+     </div>
+    </div>
+    <div class="fpanel" role="tabpanel" id="p1" hidden>
+     <h3>Coach shape and reads</h3>
+     <div class="two"><div id="bigshape"></div>
+      <div><p>Each spoke is a stat the reading uses in your playlist. The pale ring is the normal range for your target rank, and your shape dents in where you're below it and pushes out where you're above.</p>
+       <div class="reads"><div><em>Keep</em>Fast rotations<small>Supersonic 18% of the game, up from 14% at the last goal</small></div><div><em>Shift</em>Take more shots<small>1 so far, Platinum III averages 2 by now</small></div></div>
+       <div class="legend"><span class="a">Target range</span><span class="b">You</span><span class="c">Above</span><span class="d">Below</span></div></div></div>
+    </div>
+    <div class="fpanel" role="tabpanel" id="p7" hidden>
+     <h3>Session tracker</h3><p>Instinct groups your games into sessions on its own and keeps the whole night together, so you can see how you're really doing instead of remembering only the last loss.</p>
+     <div class="two" style="align-items:start">
+      <div class="ovp sess" aria-label="The in-game Session panel">
+       <div class="hd"><span class="dot"></span><span class="pl">Session</span><span class="pro">PRO</span></div>
+       <div class="tot">5 – 3<span>Doubles · 1 h 52 min</span></div>
+       <div class="gl">
+        <div class="g"><b class="w">W</b><span>Platinum III</span><i>0</i></div>
+        <div class="g"><b class="w">W</b><span>Diamond I</span><i class="up">+1</i></div>
+        <div class="g"><b class="x">L</b><span>Diamond I</span><i class="up">+1</i></div>
+        <div class="g"><b class="w">W</b><span>Diamond II</span><i class="up">+2</i></div>
+        <div class="g"><b class="w">W</b><span>Diamond I</span><i class="up">+1</i></div>
+        <div class="g"><b class="x">L</b><span>Platinum II</span><i class="dn">−1</i></div>
+       </div>
+       <div class="sum">Playing like <b>Diamond I</b> on average, one above your usual. Free play <b>12 min</b> · packs <b>8 min</b></div>
+      </div>
+      <ul class="plist">
+       <li><span><b>Wins and losses by playlist</b> for every session, so a good Doubles night isn't hidden by a bad hour of Standard.</span></li>
+       <li><span><b>How you played in each game</b> against your usual, the average of your earlier games in that playlist.</span></li>
+       <li><span><b>Free play and training pack time</b> counted alongside your matches.</span></li>
+       <li><span><b>A Session panel in game</b> that keeps all of this on screen while you queue.</span></li>
+       <li><span><b>Every past session</b> kept in the app, so you can look back at your best and worst nights.</span></li>
+      </ul>
+     </div>
+    </div>
+    <div class="fpanel" role="tabpanel" id="p2" hidden>
+     <h3>Full history and trends</h3><p>Every match keeps its breakdown and scoreboard, and Progress shows your level week by week. The free app keeps the last 30 days and hides older games without deleting them, so they all come back with Pro.</p>
+     <svg class="trend" viewBox="0 0 600 200" role="img" aria-label="Level over twelve weeks, rising from Platinum II to Diamond I">
+      <g stroke="#262626"><line x1="40" y1="30" x2="590" y2="30"/><line x1="40" y1="80" x2="590" y2="80"/><line x1="40" y1="130" x2="590" y2="130"/><line x1="40" y1="180" x2="590" y2="180"/></g>
+      <g fill="#8A8A93" font-size="11" font-family="Inter,sans-serif" text-anchor="end"><text x="34" y="34">Dia II</text><text x="34" y="84">Dia I</text><text x="34" y="134">Plat III</text><text x="34" y="184">Plat II</text></g>
+      <line x1="40" y1="130" x2="590" y2="130" stroke="#7FB2FF" stroke-dasharray="5 5" opacity=".7"/>
+      <path d="M40 172 L90 165 L140 168 L190 150 L240 155 L290 138 L340 130 L390 122 L440 112 L490 104 L540 92 L590 84 L590 180 L40 180Z" fill="rgba(255,92,0,.12)"/>
+      <polyline points="40,172 90,165 140,168 190,150 240,155 290,138 340,130 390,122 440,112 490,104 540,92 590,84" fill="none" stroke="#FF5C00" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="590" cy="84" r="4.5" fill="#FF5C00"/>
+      <g fill="#8A8A93" font-size="11" font-family="Inter,sans-serif" text-anchor="middle"><text x="40" y="198">Aug</text><text x="315" y="198">Sep</text><text x="580" y="198">Oct</text></g>
+     </svg>
+     <p class="fine" style="margin:6px 0 0">Example: weekly level in Doubles over twelve weeks. The dashed line is the target rank.</p>
+    </div>
+    <div class="fpanel" role="tabpanel" id="p3" hidden>
+     <h3>Teams</h3><p>If you queue with the same people, Teams keeps your shared record and lines up the sessions you played together, with how you played in each. Everyone on the team signs in with their own Instinct account.</p>
+     <div class="team"><div class="row"><span>Tuesday · 6 games together</span><span>4 – 2</span><b>Diamond I</b></div><div class="row"><span>Sunday · 9 games together</span><span>5 – 4</span><b>Platinum III</b></div><div class="row"><span>Friday · 4 games together</span><span>3 – 1</span><b>Diamond II</b></div></div>
+     <p class="fine" style="margin:10px 0 0">The last column is how you played in that session. Instinct never rates players outside your team.</p>
+    </div>
+    <div class="fpanel" role="tabpanel" id="p4" hidden>
+     <h3>Train next drills</h3><p>Before your next game, Instinct picks the stat furthest below your target rank and turns it into something to practise in free play, with a timer that runs on the overlay.</p>
+     <div class="drill"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#262626" stroke-width="9"/><circle cx="60" cy="60" r="50" fill="none" stroke="#FF5C00" stroke-width="9" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="110" transform="rotate(-90 60 60)"/><text x="60" y="66" fill="#FAFAFA" font-size="20" font-family="JetBrains Mono,monospace" text-anchor="middle">3:15</text></svg>
+      <div><span class="cap" style="color:var(--ember)">Shooting · 5 minutes</span><b>Hit the target from the wing</b><span class="fine">Picked because your shots sit below the Platinum III range across your last ten games.</span></div></div>
+    </div>
+    <div class="fpanel" role="tabpanel" id="p5" hidden>
+     <h3>Clips, layout and sync</h3><p>The extras that make Instinct yours.</p>
+     <div class="tiles"><div><b>Clips</b>Press your clip hotkey to save the last 30 seconds of play.</div><div><b>Layout editor</b>Move every overlay panel and choose the stats your coach shape shows.</div><div><b>Cloud sync</b>Sign in on another PC and your whole history is there.</div><div><b>Share cards</b>An end-of-match image, saved and copied with a hotkey.</div><div><b>Growth trends</b>Weekly and monthly views on Progress.</div><div><b>History export</b>Download every match you've played.</div></div>
+    </div>
+    <div class="fpanel chart" role="tabpanel" id="p6" hidden>
+     <h3>How it knows</h3><p>Rocket League shares live match stats through its official Stats API. Instinct compares yours with what real ranked play looks like at each of the 22 ranks, learned from these games:</p>
+     <div class="ch"><span class="cap">Ranked games in the training set</span><div class="tabs" data-chart="ex"><button aria-pressed="true" data-k="d">Doubles</button><button aria-pressed="false" data-k="s">Standard</button><button aria-pressed="false" data-k="1">Duel</button></div></div>
+     <div class="tb" data-bars="ex"></div>
+     <div class="axis"><span>Bronze</span><span>Silver</span><span>Gold</span><span>Plat</span><span>Diamond</span><span>Champ</span><span>GC</span><span>SSL</span></div>
+     <div class="facts"><div><b>Tested on strangers</b>Accuracy was measured on players kept out of training.</div><div><b>Your rank isn't an input</b>The reading comes only from how you played.</div><div><b>Nothing risky</b>No mods, no memory reading, and it never presses keys.</div></div>
+     <p style="margin:18px 0 0"><a class="lnk" href="how-it-works.html">Read the full explanation →</a></p>
+    </div>
+   </div>
+  </div>
+ </div></section>
 
-<section id="how"><div class="wrap">
-<div class="sec-head center"><span class="kick">How it works</span><h2>Two minutes to set up. Then just play.</h2></div>
-<div class="steps">
-<div class="step"><h3>Install and run the setup check</h3><p>One click turns on Rocket League's built-in Stats API, with a backup of your settings first. No admin rights needed.</p></div>
-<div class="step"><h3>Play like you always do</h3><p>About 75 seconds into a match, a small overlay shows which rank your game looks like and how each of your stats compares with your target.</p></div>
-<div class="step"><h3>Read it between games</h3><p>See what decided the game, how you're trending over your last ten, and the one thing worth practising before you queue again.</p></div>
-</div>
-</div></section>
-
-<section class="alt"><div class="wrap">
-<div class="feat wide">
-<div class="feat-text"><span class="kick">Live, in your match</span><h2>Playing like, not your MMR.</h2>
-<p>Your rank tells you where you've been. Playing like tells you how you're playing right now. It compares your game with tens of thousands of real ranked games and names the rank it looks like, live, in every playlist.</p>
-<ul class="ticks"><li>The coach shape shows every stat the rating reads against your target rank's average: inside the line is below, outside is above.</li><li>Click-through overlay, Borderless or Windowed. Hide it with one hotkey.</li><li>Works in Duel, Doubles, Standard, Hoops, Rumble, Dropshot and Snow Day.</li></ul></div>
-<div><div class="shot"><img src="assets/shots/app-lastgame.webp" alt="Last game: 2-0 win, played like Grand Champion III, +2 vs your target, from your saved replay, with a goal timeline" width="2521" height="522" loading="lazy"></div>
-<p class="shot-cap">After the whistle: score, what you played like and how the game went.</p></div>
-</div>
-<div class="feat flip">
-<div class="feat-text"><span class="kick">Between games</span><h2>What actually decided it.</h2>
-<p>Every stat is compared with your target rank's average, in plain words: above, below, about average. Each one explains itself, so "time driving slow" means something.</p>
-<ul class="ticks"><li>The stats that separated you from the rank you want.</li><li>"Before your next game": what to practise, picked from your recent games.</li><li>Save a replay in Rocket League and that match gets a sharper read and the full replay analysis: rotation, touches, shots, recoveries and mechanics, free.</li></ul></div>
-<div><div class="shot"><img src="assets/shots/app-match.webp" alt="The Match page: last game summary, What decided it with stat bars against a Grand Champion I average, Before your next game, and Positioning from a saved replay" width="2880" height="1800" loading="lazy"></div></div>
-</div>
-<div class="feat wide">
-<div class="feat-text"><span class="kick">Over time</span><h2>Know where you really stand.</h2>
-<p>One game is noisy, so Instinct leads with your level lately: the last ten rated games. See yourself on the rank ladder next to your target, with the shape of your last ten games placed on it.</p>
-<ul class="ticks"><li>A chart of every game with rank bands and your trend.</li><li>The one area to focus on this week.</li><li>Every match kept on your PC.</li></ul></div>
-<div><div class="shot"><img src="assets/shots/app-ladder.webp" alt="Progress: You're playing like Grand Champion II, level lately GC2, last 20 games 13 wins 7 losses, and the rank ladder" width="2477" height="684" loading="lazy"></div></div>
-</div>
-</div></section>
-
-<section><div class="wrap">
-<div class="sec-head center"><span class="kick">Honest numbers</span><h2>Built on real games, and clear about its limits.</h2>
-<p class="lead">We'd rather tell you what the read can and can't do than oversell it.</p></div>
-<div class="nums">
-<div class="num"><b>39,000</b><p>real ranked games taught the Duel, Doubles and Standard engine what each rank looks like.</p></div>
-<div class="num"><b>84–87<small>%</small></b><p>of the time, ten games average within one rank of a player's real rank, on players it never saw.</p></div>
-<div class="num"><b>~1.8 <small>tiers</small></b><p>is how much one game's read moves. So judge a change over several games, never one.</p></div>
-</div>
-<p class="fine center" style="margin-top:22px">The live Stats API doesn't send car positions, so the live overlay never claims to coach rotation. Positioning comes only from replays you save. <a href="faq.html#limits">What it can't see</a></p>
-</div></section>
-
-<section class="alt pro-band"><div class="wrap">
-<div class="sec-head"><span class="kick gold">Instinct Pro</span><h2>Free gets you the read. Pro helps you act on it.</h2>
-<p class="lead">Everything in the overlay stays free. Instinct Pro adds the tools you use between games, from $2.99 a month. Try it free for 7 days.</p></div>
-<div class="grid">
-<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>Sessions</h3><p>Every session by mode, how you played in each against your usual, and a live session strip in game. Spot the game where it starts to slip.</p></div>
-<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></div><h3>Train next</h3><p>Free play drills picked from your recent games, with a timer, so practice time goes where it counts.</p></div>
-<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3>Full history and growth</h3><p>Every match and session, not just the last 30 days, plus "vs your usual" after each game and your trend.</p></div>
-<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M15.5 14.5c2.6 0 4.6 1.6 5.5 4.5"/></svg></div><h3>Teams</h3><p>Your duo or trio's shared record, sessions you played together, and how each of you plays together vs apart.</p></div>
-<div class="card pro"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg></div><h3>Clips, share cards and more</h3><p>Save the last 30 seconds with a hotkey, share cards, the layout editor, the phone companion and cloud sync across PCs.</p></div>
-</div>
-<div class="btns" style="margin-top:32px"><a class="btn gold lg" href="pricing.html">See plans and pricing</a><span class="fine">Cancel before day 7 and you pay nothing.</span></div>
-</div></section>
-
-<section><div class="wrap">
-<div class="sec-head center"><span class="kick">Questions</span><h2>The ones everyone asks first.</h2></div>
-<div class="faq">
-<details><summary>Can I get banned for using it?</summary><div><p>Instinct only reads the Stats API, a feature Psyonix built into Rocket League to send live match data to programs on your own PC. It doesn't use BakkesMod, read game memory or inject code, never presses keys and never types in chat. Your account is still your responsibility under the game's rules; see the <a href="terms.html#s5">terms</a>.</p></div></details>
-<details><summary>Is it really free?</summary><div><p>Yes. The live overlay, Playing like, the coach shape, the post-game breakdown, the full analysis of saved replays and your last 30 days of history are free, with no account needed. Instinct Pro is optional.</p></div></details>
-<details><summary>Does it work on console?</summary><div><p>No. It needs Rocket League running on the same Windows 10 or 11 PC (Epic or Steam).</p></div></details>
-</div>
-<p class="center" style="margin-top:28px"><a href="faq.html">All questions →</a></p>
-</div></section>
-
-<section class="cta-band"><div class="wrap">
-<h2>Find out what you're really playing like.</h2>
-<p>Free for Windows 10 and 11. Set up in two minutes, read your next game live.</p>
-<div class="btns"><a class="btn pri lg" href="download.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download free</a><a class="btn ghost lg" href="pricing.html">See Instinct Pro</a></div>
-</div></section>
-
+ <section class="price" id="pricing"><div class="wrap">
+  <div class="mem">
+   <div class="l"><h2 class="h-d">Instinct is free. Pro unlocks the whole app.</h2><p>Your trial opens every feature for 7 days. If you don't continue, you keep the free app and your last 30 days of games.</p>
+    <div class="toggle" data-billing-toggle role="group" aria-label="Billing"><button type="button" data-plan="yearly" aria-pressed="true">Yearly</button><button type="button" data-plan="monthly" aria-pressed="false">Monthly</button></div>
+    <div class="p"><span class="yo">$2.99<small> a month, billed yearly ($35.88)</small></span><span class="mo">$4.99<small> a month, billed monthly</small></span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px"><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try every feature free</a><span class="fine">One trial per account. Or <a href="download.html?start">download the free app</a>.</span></div></div>
+   <div class="r"><div class="cap">Free</div><div>Playing like, live</div><div>Coach shape and reads</div><div>Post-game card</div><div>Replay analysis</div><div>Last 30 days of history</div>
+    <div class="cap" style="color:var(--goldtx)">Pro</div><div class="p2">Session tracker</div><div class="p2">Full history and trends</div><div class="p2">Teams</div><div class="p2">Train next drills</div><div class="p2">Clips and share cards</div><div class="p2">Layout editor and cloud sync</div></div>
+  </div>
+  <div class="trow"><span>Official Stats API only</span><span>No mods or memory reading</span><span>Never presses keys</span><span>Windows · Steam and Epic</span></div>
+ </div></section>
 </main>
 <footer class="foot"><div class="wrap">
 <div class="f-brand"><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="28" height="28"><span>Instinct</span></a>
 <p>Coaching that happens while you play. A Rocket League companion for Windows 10 and 11.</p>
 <p class="f-legal">Not affiliated with Psyonix or Epic Games. Rocket League is a trademark of Psyonix LLC. Instinct is an independent project, not endorsed by them. © 2026 Toby Sword.</p></div>
-<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Download</a><a href="changelog.html">What's new</a></nav>
+<nav aria-label="Product" class="f-col"><h2>Product</h2><a href="how-it-works.html">How it works</a><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="download.html">Download</a><a href="changelog.html">What's new</a></nav>
 <nav aria-label="Help" class="f-col"><h2>Help</h2><a href="faq.html">FAQ</a><a href="account.html">Account</a><a href="contact.html">Contact</a><a href="https://discord.gg/B4bnmfWtzA">Discord</a></nav>
 <nav aria-label="Legal" class="f-col"><h2>Legal</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="terms.html#refunds">Refunds</a></nav>
 </div></footer>
 <script src="assets/site.js" defer></script>
 
+<script src="assets/home.js" defer></script>
 </body></html>

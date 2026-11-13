@@ -6,8 +6,8 @@ Live: https://tobysword.github.io/instinct-site/ · Downloads: [InstinctRL relea
 The plan this site follows (audience, free → Pro funnel, channels) is `docs/MARKETING.md` in the app repo.
 
 ## Pages
-`index` (Home) · `features` · `pricing` · `download` · `faq` · `account` (sign in, create account, reset password, start the
-Pro trial, manage subscription, redeem a code) · `pro` (Stripe return page) · `changelog` · `contact` · `privacy` · `terms` · `404`.
+`index` (Home: hero with the live overlay and rank ladder, session tracker, feature explorer `#features`, membership `#pricing`) · `how-it-works` · `download` · `faq` · `account` (sign in, create account, reset password, start the
+Pro trial, manage subscription, redeem a code) · `pro` (Stripe return page) · `features` and `pricing` (redirects into Home, kept for old links) · `changelog` · `contact` · `privacy` · `terms` · `404`.
 
 ## Build
 Plain HTML, CSS and a little JS; no dependencies. Pages are templates in `src/`; run `node build.js` to write the final
@@ -16,6 +16,7 @@ HTML to the site root, then commit both.
 - Per-page variables: `<!--@set TITLE="..."-->`, `DESC`, `CANON` (path after the site URL).
 - Site-wide values (prices, version, download URLs, Discord, Supabase URL and public key) are in `site.config.json`.
 - Nav links carry `data-nav="file.html"`; the build turns that into `aria-current="page"`.
+- `assets/home.css`, `assets/home.js`: Home and How it works only (the drawn match and overlay, ladder, charts, explorer).
 - `assets/site.js`: pricing toggle, download autostart (`download.html?start`), header "Account" label.
 - `assets/account.js`: the web account. Same Supabase project and account as the app; only the public (anon) key; RLS
   limits every request to the signed-in user. Billing calls the `billing` edge function (checkout / portal).

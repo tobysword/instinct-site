@@ -253,3 +253,6 @@ pre{background:#0a0a0b;border:1px solid var(--line);border-radius:12px;padding:1
 @media (max-width:820px){.foot .wrap{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:640px){.stage{aspect-ratio:4/5}.stage::after{top:58%}.stage{background:radial-gradient(120% 70% at 50% 0%,rgba(80,100,200,.25),transparent 60%),linear-gradient(180deg,#141a33 0%,#0d1124 58%,#0c2a1a 58.2%,#0f3a22 100%)}.ov{top:18%;width:78%}.ball{top:68%}.car.o{top:66%}.car.b{top:84%}}
+
+/* header button: shorter label on phones (2026-11 redesign) */
+@media (max-width:560px){.nav-long{display:none}}

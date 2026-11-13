@@ -1,0 +1,37 @@
+<!--@set TITLE="How it works · Instinct"-->
+<!--@set DESC="How Instinct tells which rank you're playing like: Rocket League's official Stats API, a model trained on 39,187 ranked games and tested on players it never saw, and what one game can and can't tell you."-->
+<!--@set CANON="how-it-works"-->
+<!doctype html><html lang="en"><head>
+<!--@include head-->
+<link rel="stylesheet" href="assets/home.css">
+</head><body>
+<!--@include header-->
+<main id="main" class="hm">
+<div class="wrap"><article class="art">
+ <div class="cap">How it works</div>
+ <h1 class="h-d">How an app can tell which rank you're playing like</h1>
+ <p>Instinct is the first app that reads how you're playing Rocket League in real time and tells you which rank it looks like. Here's what happens between the kickoff and the number on your screen, and what that number can and can't tell you.</p>
+ <h2>The game shares the stats</h2>
+ <p>Rocket League has an official Stats API that shares live match data with apps running on your PC: your speed, boost, shots, saves and more. Instinct switches it on for you during setup. It doesn't install mods, read the game's memory or press any keys, so as far as the game is concerned it's only listening.</p>
+ <h2>A model trained on 39,187 ranked games</h2>
+ <p>We collected real ranked matches from Bronze I to Supersonic Legend across Duel, Doubles and Standard, and trained a model on what play at each of the 22 ranks tends to look like. It only uses stats that rise or fall steadily with rank, such as average speed, time spent supersonic and boost collected per minute, because those are the ones that actually separate one rank from the next.</p>
+ <div class="chart">
+  <div class="ch"><span class="cap">Ranked games in the training set</span><div class="tabs" data-chart="how"><button aria-pressed="true" data-k="d">Doubles</button><button aria-pressed="false" data-k="s">Standard</button><button aria-pressed="false" data-k="1">Duel</button></div></div>
+  <div class="tb" data-bars="how"></div>
+  <div class="axis"><span>Bronze</span><span>Silver</span><span>Gold</span><span>Plat</span><span>Diamond</span><span>Champ</span><span>GC</span><span>SSL</span></div>
+  <p class="fine" data-cap="how" style="margin:12px 0 0"></p>
+ </div>
+ <h2>Tested on players it had never seen</h2>
+ <p>Before training, the players were split into separate groups. The model learned from one group and was measured on another, so its accuracy describes how it reads someone new, which is exactly what you'll be.</p>
+ <h2>Your rank is never part of the answer</h2>
+ <p>The rank you set in the app is only a comparison line. The reading comes entirely from how you played in that game, so a good night shows up as a good night even before your MMR catches up.</p>
+ <h2>Trust the trend more than one game</h2>
+ <p>Five minutes of stats is a small sample, and one game's reading typically moves a couple of ranks either way. That's why Instinct also shows your level over your last ten games, and why the session tracker averages each night. Those are the numbers worth acting on.</p>
+ <h2>What the live data can't see</h2>
+ <p>The Stats API doesn't say where you are on the field, so Instinct makes no live claims about rotation or positioning. If you save a replay, Instinct reads it and adds positioning, rotation and heatmaps to that match. Replay analysis is free.</p>
+ <div class="end"><p>Try every feature free for {{TRIAL_DAYS}} days, then {{PRICE_YEARLY_PER_MONTH}} a month, billed yearly.</p><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try every feature free</a></div>
+</article></div>
+</main>
+<!--@include footer-->
+<script src="assets/home.js" defer></script>
+</body></html>
