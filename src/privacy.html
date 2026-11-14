@@ -10,7 +10,7 @@
 <h1>Privacy Policy</h1>
 <div class="summary-box" id="summary"><h2>The short version</h2>
 <ul>
-<li><strong>Game data stays on your PC.</strong> The Stats API is local-only (<code>127.0.0.1</code>). Saved replays are read on your PC and never uploaded. Phone traffic stays on your Wi-Fi.</li>
+<li><strong>Game data stays on your PC.</strong> The Stats API is local-only (<code>127.0.0.1</code>). Saved replays are read on your PC and never uploaded. The app does not listen on your network.</li>
 <li><strong>No ads, no analytics, no data selling.</strong></li>
 <li><strong>Leaves your PC only if you choose:</strong> an account and cloud sync ({{PRO_NAME}}: your own match summaries, play sessions and target rank), opt-in crash reports (off by default; asked once; scrubbed of names, paths and IPs) and feedback you send. Update checks go to GitHub.</li>
 <li><strong>Other players are not tracked</strong> (since 2.2). Their in-match names and that game's scoreboard line stay in your match records on your PC; nothing about them goes to the cloud. Older lobby data was deleted from the cloud on 4 November 2026.</li>
@@ -20,7 +20,7 @@
 <li><strong>Deleting your data:</strong> to delete your account or cloud data, <a href="contact.html">contact us</a>.</li>
 </ul></div>
 <p class="meta">Full policy below.</p>
-<ul class="toc" aria-label="Contents"><li><a href="#s1">1. Who is responsible for your data</a></li><li><a href="#s2">2. What the app collects and where it goes</a></li><li><a href="#s3">3. Phone companion (local network)</a></li><li><a href="#s4">4. Third parties</a></li><li><a href="#s5">5. Account and cloud sync (optional)</a></li><li><a href="#s6">6. Feedback and bug reports</a></li><li><a href="#s7">7. Payments ({{PRO_NAME}} subscription)</a></li><li><a href="#s8">8. Changes to Rocket League config files</a></li><li><a href="#s9">9. Legal bases (EEA/UK users)</a></li><li><a href="#s10">10. Retention</a></li><li><a href="#s11">11. Your rights and controls</a></li><li><a href="#s12">12. Children</a></li><li><a href="#s12a">12a. Health data (Washington My Health My Data Act)</a></li><li><a href="#s13">13. Security</a></li><li><a href="#s14">14. International transfers</a></li><li><a href="#s15">15. Changes</a></li><li><a href="#s16">16. Contact</a></li></ul><p><strong>Effective date:</strong> with Instinct 1.0.0 · <strong>Last updated:</strong> 2026-11-05</p>
+<ul class="toc" aria-label="Contents"><li><a href="#s1">1. Who is responsible for your data</a></li><li><a href="#s2">2. What the app collects and where it goes</a></li><li><a href="#s3">3. Local network</a></li><li><a href="#s4">4. Third parties</a></li><li><a href="#s5">5. Account and cloud sync (optional)</a></li><li><a href="#s6">6. Feedback and bug reports</a></li><li><a href="#s7">7. Payments ({{PRO_NAME}} subscription)</a></li><li><a href="#s8">8. Changes to Rocket League config files</a></li><li><a href="#s9">9. Legal bases (EEA/UK users)</a></li><li><a href="#s10">10. Retention</a></li><li><a href="#s11">11. Your rights and controls</a></li><li><a href="#s12">12. Children</a></li><li><a href="#s12a">12a. Health data (Washington My Health My Data Act)</a></li><li><a href="#s13">13. Security</a></li><li><a href="#s14">14. International transfers</a></li><li><a href="#s15">15. Changes</a></li><li><a href="#s16">16. Contact</a></li></ul><p><strong>Effective date:</strong> with Instinct 1.0.0 · <strong>Last updated:</strong> 2026-11-05</p>
 <p>Instinct (formerly RL Coach Companion; "the app", "we", "us") is a proprietary Windows desktop app for Rocket League coaching, licensed not sold, free to use with an optional paid tier, {{PRO_NAME}} (US$4.99/month or US$35.88/year). Website: <a href="https://tobysword.github.io/instinct-site/">https://tobysword.github.io/instinct-site/</a>. It is made and operated by Toby Sword, an individual developer in Washington State, United States. Downloads: <a href="https://github.com/tobysword/InstinctRL">https://github.com/tobysword/InstinctRL</a></p>
 <p><strong>Short version:</strong> Coaching runs on your PC. Without an account, your match data stays on your computer. Other players are not tracked. There are no ads, no analytics and no selling of data. Data leaves your PC only when you choose to: an optional account (cloud sync, teams, {{PRO_NAME}}), opt-in crash reports, or a feedback report you send.</p>
 <h2 id="s1">1. Who is responsible for your data</h2>
@@ -153,8 +153,8 @@
 <li>No reading of game memory, no code injection, no hooks into the game process, no automated key presses, and no BakkesMod.</li>
 <li>The app never uploads replays and never contacts replay sites such as ballchasing.com.</li>
 </ul>
-<h2 id="s3">3. Phone companion (local network)</h2>
-<p>The app can serve a companion page to your phone over your <strong>local network</strong> ({{PRO_NAME}}). All data routes need the 6-character pairing code; repeated wrong codes from one device are blocked. Traffic is plain HTTP on your LAN and does not pass through our servers, so someone already on your Wi-Fi with packet-capture tools could read it: pair on networks you trust. The pairing code stays the same until you reset it (delete <code>token</code> from <code>config.json</code> and restart). The phone never holds your account sign-in: team and account requests from the phone are passed through the app on your PC, with email addresses removed from the replies.</p>
+<h2 id="s3">3. Local network</h2>
+<p>The app does not listen on your network. The phone companion and the small web server it used were removed in 2.7.</p>
 <h2 id="s4">4. Third parties</h2>
 <ul>
 <li><strong>GitHub</strong>: update checks and downloads, and hosting of this website (GitHub Pages). GitHub sees your IP address and basic request info.</li>
@@ -167,7 +167,7 @@
 <li><strong>Psyonix / Epic Games</strong>: the app reads data the game exposes locally and replay files you saved. We are not affiliated with them and send them nothing.</li>
 </ul>
 <h2 id="s5">5. Account and cloud sync (optional)</h2>
-<p>Coaching works without an account. If you create one (in the app or on this website's <a href="account.html">Account</a> page): we store your email, a hashed password (we never see your password), a display name and your plan.</p>
+<p>An account is required to use the app (since 2.7); cloud sync is optional. When you create your account (in the app or on this website's <a href="account.html">Account</a> page): we store your email, a hashed password (we never see your password), a display name and your plan.</p>
 <p><strong>Website Account page.</strong> You can sign in on this website to see your plan, start a free trial or subscription, manage it, reset your password or redeem a code. Your sign-in token, account ID and email are kept in that browser's local storage until you sign out; the page talks directly to Supabase (and, for billing, to Stripe through our server). This website sets no cookies and has no analytics.</p>
 <p><strong>Cloud sync</strong> (automatic with {{PRO_NAME}} or a tester code while you are signed in in the app) uploads, for <strong>you only</strong>:</p>
 <ul>
