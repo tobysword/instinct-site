@@ -1,162 +1,80 @@
-<!--@set TITLE="Instinct · See which rank you're really playing like in Rocket League"-->
-<!--@set DESC="Instinct reads your Rocket League games live and shows which rank you're playing like, how each session went and what to practise next. Free for Windows, with Pro unlocking the whole app. Official Stats API only: no mods, never presses keys."-->
+<!--@set TITLE="Instinct · See the rank you're playing like in Rocket League, live"-->
+<!--@set DESC="Instinct reads your Rocket League games live and shows the rank your play looks like, with in-game stat overlays, a Session Tracker, Teams, and a 3D interactive stat map. Free for Windows, with a 7-day Pro trial. Official Stats API only."-->
 <!--@set CANON=""-->
 <!doctype html><html lang="en"><head>
 <!--@include head-->
-<link rel="stylesheet" href="assets/home.css">
+<link rel="stylesheet" href="assets/tour.css">
 </head><body>
 <!--@include header-->
-<main id="main" class="hm">
-<section class="hm-hero"><div class="wrap">
-  <div class="top">
-   <div><h1 class="h-d">See which rank you're playing like, while you're still playing.</h1>
-    <p class="lede">Instinct reads the stats Rocket League shares during every match and shows you, on screen, which rank your play looks like. After a few games you'll know where you really belong and what's keeping you there.</p></div>
-   <div class="cta"><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try every feature free</a><span class="fine">{{TRIAL_DAYS}} days free, then {{PRICE_YEARLY_PER_MONTH}} a month, billed yearly.<br>Or <a href="download.html?start">download the free app</a>.</span></div>
-  </div>
-  <div class="hstage">
-   <div class="ladder" id="ladder" aria-label="Rank ladder: your rank and the rank you are playing like"></div>
-   <div id="hero-game"></div>
-  </div>
- </div></section>
+<main id="main" class="hm2">
+<div class="bleed" role="img" aria-label="Instinct's overlay over a Rocket League match"><div class="wrap"><div class="copy">
+ <span class="label">Rocket League companion for Windows</span>
+ <h1 style="margin-top:14px">See the rank you're playing like, live</h1>
+ <p style="margin-top:18px">Instinct reads the stats Rocket League shares during every match, and a couple of minutes in it shows you which rank your play looks like.</p>
+ <div class="ctas"><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try Pro free for {{TRIAL_DAYS}} days</a><a class="btn ghost" href="download.html?start">Download the free app</a></div>
+ <p class="small">You'll add a card to start the trial, but nothing is charged if you cancel during the {{TRIAL_DAYS}} days.</p>
+ <div class="safe"><b>✓</b><span>Instinct only listens to Rocket League's official Stats API, so there's nothing injected into the game and it never presses a key. It works the same on Steam and Epic.</span></div>
+</div></div></div>
 
- <section class="band"><div class="wrap">
-  <div>
-   <span class="pro">PRO</span> <span class="cap" style="margin-left:6px">Session tracker</span>
-   <h2 class="h-d">Most bad nights have a pattern. The session tracker shows you yours.</h2>
-   <p>Every game you play in a sitting is lined up with how you played in it and how that compares with your usual. You can see when you're at your sharpest, when your level starts to slide, and whether the next queue is worth it.</p>
-   <p>The Session panel keeps the same picture on screen in game, so you don't have to alt-tab to notice the slide.</p>
-  </div>
-  <div class="night">
-   <div class="nh"><b>One evening of Doubles</b><span class="fine">Example session · target Platinum III</span></div>
-   <div class="bars" id="bars"></div>
-   <div class="glab" id="glab"></div>
-   <div class="sum"><div>Games 1 to 5<b>Diamond I</b></div><div>Games 6 to 8<b>Platinum II</b></div><div>Your usual<b>Platinum III</b></div></div>
-  </div>
- </div></section>
+<div class="band"><div class="wrap"><p>Your rank only moves when you win or lose. Instinct reads how you actually played, so a great game in a loss still shows up as a great game, and you can see yourself improving before your rank catches up.</p></div></div>
 
- <section class="ex" id="features"><div class="wrap">
-  <div class="hdr"><h2 class="h-d">Everything Instinct does</h2><span class="fine">Free features work forever. Pro unlocks the rest.</span></div>
-  <div class="exgrid">
-   <div class="list" role="tablist" aria-label="Features" id="flist">
-    <button role="tab" aria-selected="true" aria-controls="p0" data-p="0">Playing like <i class="free">FREE</i><span>The rank your play looks like in this game, next to your rank and your last ten games.</span></button>
-    <button role="tab" aria-selected="false" aria-controls="p1" data-p="1">Coach shape and reads <i class="free">FREE</i><span>Your stats drawn against your target rank, with one thing to keep and one to change at every goal.</span></button>
-    <button role="tab" aria-selected="false" aria-controls="p7" data-p="7">Session tracker <i class="pro">PRO</i><span>Every game of the night against your usual, by playlist, with a Session panel in game.</span></button>
-    <button role="tab" aria-selected="false" aria-controls="p2" data-p="2">Full history and trends <i class="pro">PRO</i><span>Every game since you installed, with weekly and monthly trends. Free keeps the last 30 days.</span></button>
-    <button role="tab" aria-selected="false" aria-controls="p3" data-p="3">Teams <i class="pro">PRO</i><span>A shared record for your duo or trio, and how you play in your sessions together.</span></button>
-    <button role="tab" aria-selected="false" aria-controls="p4" data-p="4">Train next drills <i class="pro">PRO</i><span>Your weakest area turned into a free-play drill, with a timer on the overlay.</span></button>
-    <button role="tab" aria-selected="false" aria-controls="p5" data-p="5">Clips, layout and sync <i class="pro">PRO</i><span>Hotkey clips, your own overlay layout, and your history on every PC.</span></button>
-    <hr>
-    <button role="tab" aria-selected="false" aria-controls="p6" data-p="6">How it knows<span>Rocket League's official Stats API, and a model trained on 39,187 ranked games.</span></button>
-   </div>
-   <div>
-    <div class="fpanel" role="tabpanel" id="p0">
-     <h3>Playing like</h3><p>The Coach panel's headline answer: which rank this game looks like so far, worked out from your stats alone. It's free, and it's on screen in every match.</p>
-     <div class="pl-grid">
-      <div class="ovp big" aria-label="The Coach panel's Playing like card">
-       <div class="hd"><span class="dot"></span><span class="pl">Doubles</span><span class="co">Coach</span><b class="nb">4</b></div>
-       <div class="k">Playing like</div>
-       <div class="ln"><div class="tier" data-tier>Diamond I</div><b class="nb">1</b></div>
-       <div class="ln"><div class="meta">Target <b>Platinum III</b></div><b class="nb">2</b></div>
-       <div class="ln"><div class="meta">Last 10 games <b>Platinum III</b></div><b class="nb">3</b></div>
-       <div class="ready"><i></i></div><div class="meta sm">Settled · 3:47 left in the match</div>
-      </div>
-      <ol class="anno">
-       <li><span class="nb">1</span><span><b>Playing like.</b> The rank whose average game looks most like yours so far. It updates as the match goes on and settles once you've played two minutes.</span></li>
-       <li><span class="nb">2</span><span><b>Your target.</b> The rank you set, usually the one you want to reach. It's only the comparison line and never changes the reading.</span></li>
-       <li><span class="nb">3</span><span><b>Last 10 games.</b> Your level across recent games in this playlist. One game can read a couple of ranks high or low, so this is the steadier number to watch.</span></li>
-       <li><span class="nb">4</span><span><b>The playlist.</b> Duel, Doubles and Standard are read by the model trained on 39,187 ranked games. The other modes are read against each rank's averages.</span></li>
-      </ol>
-     </div>
-     <div class="tsteps" aria-label="How the reading develops during a match">
-      <div><span class="t">0:00</span><b>Waiting</b>The card says how many seconds until it has enough to go on.</div>
-      <div><span class="t">~1:15</span><b>First reading</b>A rank appears and moves as you play.</div>
-      <div class="on"><span class="t">2:00 played</span><b>Settled</b>Enough of your own play for a reading that counts.</div>
-      <div><span class="t">Full time</span><b>Saved</b>The final reading goes on the post-game card and into Progress.</div>
-     </div>
-    </div>
-    <div class="fpanel" role="tabpanel" id="p1" hidden>
-     <h3>Coach shape and reads</h3>
-     <div class="two"><div id="bigshape"></div>
-      <div><p>Each spoke is a stat the reading uses in your playlist. The pale ring is the normal range for your target rank, and your shape dents in where you're below it and pushes out where you're above.</p>
-       <div class="reads"><div><em>Keep</em>Fast rotations<small>Supersonic 18% of the game, up from 14% at the last goal</small></div><div><em>Shift</em>Take more shots<small>1 so far, Platinum III averages 2 by now</small></div></div>
-       <div class="legend"><span class="a">Target range</span><span class="b">You</span><span class="c">Above</span><span class="d">Below</span></div></div></div>
-    </div>
-    <div class="fpanel" role="tabpanel" id="p7" hidden>
-     <h3>Session tracker</h3><p>Instinct groups your games into sessions on its own and keeps the whole night together, so you can see how you're really doing instead of remembering only the last loss.</p>
-     <div class="two" style="align-items:start">
-      <div class="ovp sess" aria-label="The in-game Session panel">
-       <div class="hd"><span class="dot"></span><span class="pl">Session</span><span class="pro">PRO</span></div>
-       <div class="tot">5 – 3<span>Doubles · 1 h 52 min</span></div>
-       <div class="gl">
-        <div class="g"><b class="w">W</b><span>Platinum III</span><i>0</i></div>
-        <div class="g"><b class="w">W</b><span>Diamond I</span><i class="up">+1</i></div>
-        <div class="g"><b class="x">L</b><span>Diamond I</span><i class="up">+1</i></div>
-        <div class="g"><b class="w">W</b><span>Diamond II</span><i class="up">+2</i></div>
-        <div class="g"><b class="w">W</b><span>Diamond I</span><i class="up">+1</i></div>
-        <div class="g"><b class="x">L</b><span>Platinum II</span><i class="dn">−1</i></div>
-       </div>
-       <div class="sum">Playing like <b>Diamond I</b> on average, one above your usual. Free play <b>12 min</b> · packs <b>8 min</b></div>
-      </div>
-      <ul class="plist">
-       <li><span><b>Wins and losses by playlist</b> for every session, so a good Doubles night isn't hidden by a bad hour of Standard.</span></li>
-       <li><span><b>How you played in each game</b> against your usual, the average of your earlier games in that playlist.</span></li>
-       <li><span><b>Free play and training pack time</b> counted alongside your matches.</span></li>
-       <li><span><b>A Session panel in game</b> that keeps all of this on screen while you queue.</span></li>
-       <li><span><b>Every past session</b> kept in the app, so you can look back at your best and worst nights.</span></li>
-      </ul>
-     </div>
-    </div>
-    <div class="fpanel" role="tabpanel" id="p2" hidden>
-     <h3>Full history and trends</h3><p>Every match keeps its breakdown and scoreboard, and Progress shows your level week by week. The free app keeps the last 30 days and hides older games without deleting them, so they all come back with Pro.</p>
-     <svg class="trend" viewBox="0 0 600 200" role="img" aria-label="Level over twelve weeks, rising from Platinum II to Diamond I">
-      <g stroke="#262626"><line x1="40" y1="30" x2="590" y2="30"/><line x1="40" y1="80" x2="590" y2="80"/><line x1="40" y1="130" x2="590" y2="130"/><line x1="40" y1="180" x2="590" y2="180"/></g>
-      <g fill="#8A8A93" font-size="11" font-family="Inter,sans-serif" text-anchor="end"><text x="34" y="34">Dia II</text><text x="34" y="84">Dia I</text><text x="34" y="134">Plat III</text><text x="34" y="184">Plat II</text></g>
-      <line x1="40" y1="130" x2="590" y2="130" stroke="#7FB2FF" stroke-dasharray="5 5" opacity=".7"/>
-      <path d="M40 172 L90 165 L140 168 L190 150 L240 155 L290 138 L340 130 L390 122 L440 112 L490 104 L540 92 L590 84 L590 180 L40 180Z" fill="rgba(255,92,0,.12)"/>
-      <polyline points="40,172 90,165 140,168 190,150 240,155 290,138 340,130 390,122 440,112 490,104 540,92 590,84" fill="none" stroke="#FF5C00" stroke-width="2.5" stroke-linejoin="round"/>
-      <circle cx="590" cy="84" r="4.5" fill="#FF5C00"/>
-      <g fill="#8A8A93" font-size="11" font-family="Inter,sans-serif" text-anchor="middle"><text x="40" y="198">Aug</text><text x="315" y="198">Sep</text><text x="580" y="198">Oct</text></g>
-     </svg>
-     <p class="fine" style="margin:6px 0 0">Example: weekly level in Doubles over twelve weeks. The dashed line is the target rank.</p>
-    </div>
-    <div class="fpanel" role="tabpanel" id="p3" hidden>
-     <h3>Teams</h3><p>If you queue with the same people, Teams keeps your shared record and lines up the sessions you played together, with how you played in each. Everyone on the team signs in with their own Instinct account.</p>
-     <div class="team"><div class="row"><span>Tuesday · 6 games together</span><span>4 – 2</span><b>Diamond I</b></div><div class="row"><span>Sunday · 9 games together</span><span>5 – 4</span><b>Platinum III</b></div><div class="row"><span>Friday · 4 games together</span><span>3 – 1</span><b>Diamond II</b></div></div>
-     <p class="fine" style="margin:10px 0 0">The last column is how you played in that session. Instinct never rates players outside your team.</p>
-    </div>
-    <div class="fpanel" role="tabpanel" id="p4" hidden>
-     <h3>Train next drills</h3><p>Before your next game, Instinct picks the stat furthest below your target rank and turns it into something to practise in free play, with a timer that runs on the overlay.</p>
-     <div class="drill"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#262626" stroke-width="9"/><circle cx="60" cy="60" r="50" fill="none" stroke="#FF5C00" stroke-width="9" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="110" transform="rotate(-90 60 60)"/><text x="60" y="66" fill="#FAFAFA" font-size="20" font-family="JetBrains Mono,monospace" text-anchor="middle">3:15</text></svg>
-      <div><span class="cap" style="color:var(--ember)">Shooting · 5 minutes</span><b>Hit the target from the wing</b><span class="fine">Picked because your shots sit below the Platinum III range across your last ten games.</span></div></div>
-    </div>
-    <div class="fpanel" role="tabpanel" id="p5" hidden>
-     <h3>Clips, layout and sync</h3><p>The extras that make Instinct yours.</p>
-     <div class="tiles"><div><b>Clips</b>Press your clip hotkey to save the last 30 seconds of play.</div><div><b>Layout editor</b>Move every overlay panel and choose the stats your coach shape shows.</div><div><b>Cloud sync</b>Sign in on another PC and your whole history is there.</div><div><b>Share cards</b>An end-of-match image, saved and copied with a hotkey.</div><div><b>Growth trends</b>Weekly and monthly views on Progress.</div><div><b>History export</b>Download every match you've played.</div></div>
-    </div>
-    <div class="fpanel chart" role="tabpanel" id="p6" hidden>
-     <h3>How it knows</h3><p>Rocket League shares live match stats through its official Stats API. Instinct compares yours with what real ranked play looks like at each of the 22 ranks, learned from these games:</p>
-     <div class="ch"><span class="cap">Ranked games in the training set</span><div class="tabs" data-chart="ex"><button aria-pressed="true" data-k="d">Doubles</button><button aria-pressed="false" data-k="s">Standard</button><button aria-pressed="false" data-k="1">Duel</button></div></div>
-     <div class="tb" data-bars="ex"></div>
-     <div class="axis"><span>Bronze</span><span>Silver</span><span>Gold</span><span>Plat</span><span>Diamond</span><span>Champ</span><span>GC</span><span>SSL</span></div>
-     <div class="facts"><div><b>Tested on strangers</b>Accuracy was measured on players kept out of training.</div><div><b>Your rank isn't an input</b>The reading comes only from how you played.</div><div><b>Nothing risky</b>No mods, no memory reading, and it never presses keys.</div></div>
-     <p style="margin:18px 0 0"><a class="lnk" href="how-it-works.html">Read the full explanation →</a></p>
-    </div>
-   </div>
-  </div>
- </div></section>
+<section id="features"><div class="wrap tour">
+ <div class="tsteps">
+  <div class="s on" data-v="0"><span class="label">During the match <span class="pill free">Free</span></span><h2>Your rank while you play</h2>
+   <p>About a minute and a quarter in, the Coach panel shows which rank your game looks like, next to your target and your last ten games. It settles once you've played two minutes.</p>
+   <img class="mimg tshot" src="assets/shots/home-coach.png" width="620" height="412" loading="lazy" alt="The Coach panel in game: this game reads Diamond III, the last ten games Champion III, with the coach shape below"></div>
+  <div class="s" data-v="1"><span class="label">In the game and after it <span class="pill free">Free</span></span><h2>See your stats at a glance, in the game and after it</h2>
+   <p>The in-game overlay draws your stats against your target rank as you play, and the shot panel tracks every shot you take and how it ended. When the match is over, the post-game card sums up the whole game before you queue again.</p>
+   <img class="mimg tshot" src="assets/shots/home-shot.png" width="400" height="290" loading="lazy" alt="The shot panel in game"></div>
+  <div class="s" data-v="2"><span class="label">Session Tracker <span class="pill pro">Pro</span></span><h2>See your wins, losses, and playstyle across your session</h2>
+   <p>For Pro users, Instinct automatically starts a “Session” every time you play, tracking your wins, losses, training time, and playstyle, grouped by games played in a row.</p>
+   <img class="mimg tshot" src="assets/shots/home-sessions.png" width="720" height="656" loading="lazy" alt="The Sessions page"></div>
+  <div class="s" data-v="3"><span class="label">Teams <span class="pill pro">Pro</span></span><h2>Learn how you play as a Team</h2>
+   <p>Create a Team with your friends to see how you play together, with everyone's stats in one place. Each teammate's games are shared with the whole Team, so you can all see what's working and improve faster.</p>
+   <img class="mimg tshot" src="assets/shots/home-team.png" width="720" height="316" loading="lazy" alt="The Team overview"></div>
+ </div>
+ <div class="tstage" aria-hidden="true">
+  <div class="v on"><img class="tshot" src="assets/shots/home-coach.png" width="620" height="412" alt=""></div>
+  <div class="v"><div class="pair"><img class="tshot" src="assets/shots/home-shot.png" width="400" height="290" loading="lazy" alt=""><img class="tshot" src="assets/shots/home-endsum.png" width="300" height="445" loading="lazy" alt=""></div></div>
+  <div class="v"><img class="tshot" src="assets/shots/home-sessions.png" width="720" height="656" loading="lazy" alt=""></div>
+  <div class="v"><img class="tshot" src="assets/shots/home-team.png" width="720" height="316" loading="lazy" alt=""></div>
+ </div>
+</div></section>
 
- <section class="price" id="pricing"><div class="wrap">
-  <div class="mem">
-   <div class="l"><h2 class="h-d">Instinct is free. Pro unlocks the whole app.</h2><p>Your trial opens every feature for {{TRIAL_DAYS}} days. If you don't continue, you keep the free app and your last 30 days of games.</p>
-    <div class="toggle" data-billing-toggle role="group" aria-label="Billing"><button type="button" data-plan="yearly" aria-pressed="true">Yearly</button><button type="button" data-plan="monthly" aria-pressed="false">Monthly</button></div>
-    <div class="p"><span class="yo">{{PRICE_YEARLY_PER_MONTH}}<small> a month, billed yearly ({{PRICE_YEARLY}})</small></span><span class="mo">{{PRICE_MONTHLY}}<small> a month, billed monthly</small></span></div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px"><a class="btn pri" href="account.html?start=yearly" data-trial-link>Try every feature free</a><span class="fine">One trial per account. Or <a href="download.html?start">download the free app</a>.</span></div></div>
-   <div class="r"><div class="cap">Free</div><div>Playing like, live</div><div>Coach shape and reads</div><div>Post-game card</div><div>Replay analysis</div><div>Share cards</div><div>Join a team</div><div>Last 30 days of history</div>
-    <div class="cap" style="color:var(--goldtx)">Pro</div><div class="p2">Session tracker</div><div class="p2">Full history and trends</div><div class="p2">Create a team, teammates' games</div><div class="p2">Train next drills</div><div class="p2">Clips</div><div class="p2">Layout editor and cloud sync</div></div>
-  </div>
-  <div class="trow"><span>Official Stats API only</span><span>No mods or memory reading</span><span>Never presses keys</span><span>Windows · Steam and Epic</span></div>
- </div></section>
+<section class="tfield"><div class="wrap">
+ <span class="label">3D map <span class="pill free">Free</span></span>
+ <h2 style="margin-top:12px;max-width:860px">See where you play best on the pitch with a 3D interactive stat map</h2>
+ <p style="margin-top:16px;max-width:860px">The 3D map lets you rise above seas of numbers by seeing the most important moments of your games in a 3D interactive map. See where you shot from, where you win 50-50s, how you rotate, and more.</p>
+ <div class="try">Try it below. Drag the field to turn it, switch tabs, and click anything beside it to filter.</div>
+ <div class="demo"><iframe id="fdemo" src="demo/field.html" title="Interactive 3D map with sample games" loading="lazy"></iframe></div>
+</div></section>
+
+<section style="padding-top:72px"><div class="wrap"><div class="extras">
+ <div class="tcard"><div class="vis"><img src="assets/shots/home-clips.png" width="420" height="190" loading="lazy" alt="The Clips page"></div>
+  <div class="txt"><span class="pill pro">Pro</span><h3>Clips</h3><p>Press a hotkey and Instinct keeps the last 15, 30 or 60 seconds of play.</p></div></div>
+ <div class="tcard"><div class="vis"><img src="assets/shots/home-custom.png" width="420" height="497" loading="lazy" alt="Overlay settings"></div>
+  <div class="txt"><span class="pill pro">Pro</span><h3>Customization</h3><p>Put each overlay panel where you want it and choose which stats your coach shape shows.</p></div></div>
+ <div class="tcard"><div class="vis"><div class="sync" aria-hidden="true"><div class="pc"><i style="top:12px"></i><i style="top:24px;right:30px"></i><i style="top:36px;right:20px"></i></div><div class="cl">⇄</div><div class="pc"><i style="top:12px"></i><i style="top:24px;right:30px"></i><i style="top:36px;right:20px"></i></div></div></div>
+  <div class="txt"><span class="pill pro">Pro</span><h3>Cloud Sync</h3><p>Sign in on another PC and all of your data is already there.</p></div></div>
+</div></div></section>
+
+<section class="tprice" id="pricing"><div class="wrap">
+ <span class="label">Pricing</span><h2 style="margin-top:12px;max-width:760px">Pro keeps the whole story of how you're improving</h2>
+ <p style="margin-top:16px;max-width:760px">The free app covers every match you play and keeps your last 30 days. Pro adds the Session Tracker and Teams, and it keeps every game you've played so you can see how your level moves over months. If you stop after the trial, nothing gets deleted, and your older games are there again whenever you come back.</p>
+ <div class="toggle" data-billing-toggle role="group" aria-label="Billing"><button type="button" data-plan="yearly" aria-pressed="true">Yearly</button><button type="button" data-plan="monthly" aria-pressed="false">Monthly</button></div>
+ <div class="tplans">
+  <div class="tplan"><span class="label" style="color:var(--dim)">Free</span><div class="amt">$0</div><div class="small">For as long as you like</div><ul>
+   <li>“Playing Like” rank estimate based on stat averages from 39,000 replays</li><li>Live, in-game coaching overlays to hone each match while it's happening</li><li>Full, detailed analysis of saved game replays</li><li>3D interactive map to explore match details</li></ul>
+   <a class="btn ghost" href="download.html?start">Download the free app</a></div>
+  <div class="tplan pro"><span class="label" style="color:var(--in-pro-gold-text)">Instinct Pro</span>
+   <div class="amt"><span class="yo">{{PRICE_YEARLY_PER_MONTH}} a month</span><span class="mo">{{PRICE_MONTHLY}} a month</span></div>
+   <div class="small"><span class="yo">Billed yearly at {{PRICE_YEARLY}}</span><span class="mo">Billed monthly, cancel whenever you like</span></div><ul>
+   <li>Everything in Free</li><li>The Session Tracker, with a Session panel in game</li><li>Share stats with friends using Teams</li><li>Built-in highlight Clipper</li><li>Cloud sync of all data</li></ul>
+   <a class="btn pri" href="account.html?start=yearly" data-trial-link>Start my free week</a>
+   <p class="small" style="margin-top:12px">You'll add a card to start, and you won't pay anything if you cancel during the {{TRIAL_DAYS}} days. After that it's <span class="yo">{{PRICE_YEARLY}} for the year</span><span class="mo">{{PRICE_MONTHLY}} a month</span>, and you can cancel from your account page whenever you like.</p></div>
+ </div>
+</div></section>
 </main>
 <!--@include footer-->
-<script src="assets/home.js" defer></script>
+<script src="assets/tour.js" defer></script>
 </body></html>

@@ -6,7 +6,7 @@ Live: https://tobysword.github.io/instinct-site/ · Downloads: [InstinctRL relea
 The plan this site follows (audience, free → Pro funnel, channels) is `docs/MARKETING.md` in the app repo.
 
 ## Pages
-`index` (Home: hero with the live overlay and rank ladder, session tracker, feature explorer `#features`, membership `#pricing`) · `how-it-works` · `download` · `faq` · `account` (sign in, create account, reset password, start the
+`index` (Home: hero over the overlay, guided tour `#features` (live read, stats in game and after, Session Tracker, Teams), the interactive 3D map, Pro extras, pricing `#pricing`) · `how-it-works` · `download` · `faq` · `account` (sign in, create account, reset password, start the
 Pro trial, manage subscription, redeem a code) · `pro` (Stripe return page) · `features` and `pricing` (redirects into Home, kept for old links) · `changelog` · `contact` · `privacy` · `terms` · `404`.
 
 ## Build
@@ -16,7 +16,8 @@ HTML to the site root, then commit both.
 - Per-page variables: `<!--@set TITLE="..."-->`, `DESC`, `CANON` (path after the site URL).
 - Site-wide values (prices, version, download URLs, Discord, Supabase URL and public key) are in `site.config.json`.
 - Nav links carry `data-nav="file.html"`; the build turns that into `aria-current="page"`.
-- `assets/home.css`, `assets/home.js`: Home and How it works only (the drawn match and overlay, ladder, charts, explorer).
+- `assets/tour.css`, `assets/tour.js`: Home (four-size type scale, guided tour, 3D map frame). `assets/home.css`, `assets/home.js`: How it works (training-set chart).
+- `demo/`: the 3D map demo on Home. `demo/field.html` is kept here; `demo/ui/` (the app's field code and CSS) and `demo/games.json` (ten sample games) are copied from the app repo by `node tools/site_field_demo.mjs`. Re-run it after the field changes.
 - `assets/site.js`: pricing toggle, download autostart (`download.html?start`), header "Account" label.
 - `assets/account.js`: the web account. Same Supabase project and account as the app; only the public (anon) key; RLS
   limits every request to the signed-in user. Billing calls the `billing` edge function (checkout / portal).
@@ -28,9 +29,10 @@ Set `VERSION` in `site.config.json`, add the release to `src/changelog.html`, up
 `node build.js`, commit and push.
 
 ## Screenshots
-`assets/shots/*.webp` are captured from the app's mock preview (`ui/main.html?mock&page=match&snap=idle.json`,
-`&page=progress`) with headless Edge at 1440×900, scale 2, and converted to WebP. The in-game overlay on Home and Features
-is drawn in HTML (`.stage` in `site.css`), not a screenshot. Never show real player names or Rocket League logos and art.
+Home's pictures are real app screens, never drawings: `assets/shots/home-*.png`, captured from the app's browser mock
+(`main.html?mock&pro`, overlay `?mock=…&scene`) by `node tools/site_shots.mjs` in the app repo (headless Edge, 2×; needs the
+`ui-mock` server on port 8765). The crops are defined in the app repo's `tools/site_capture/capture.html`. Older
+`assets/shots/app-*.webp` are no longer used. Never show real player names or Rocket League logos and art.
 
 ## Password reset and email links
 Supabase sends reset and confirmation links that end on this site with `#access_token=…&type=recovery` (or `#error_code=…`

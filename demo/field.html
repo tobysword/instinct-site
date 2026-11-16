@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D map demo · Instinct</title><meta name="robots" content="noindex">
+<link rel="stylesheet" href="ui/app/tokens.css"><link rel="stylesheet" href="ui/app/ds.css"><link rel="stylesheet" href="ui/app/main.css">
+<style>html,body{background:transparent!important;margin:0;padding:0;overflow:hidden}#f{padding:4px}
+.f3d [data-f3v]:not([data-f3v=pos]):not([data-f3v=shot]):not([data-f3v=fifty]){display:none}</style></head>
+<body><div id="f"></div>
+<script type="module">
+// The home page's 3D map demo: the app's own field (ui/app/field3d.js) with ten sample games (games.json), limited to three views.
+// ui/ and games.json are copied from the app repo by its tools/site_field_demo.mjs; this page is the only file kept here.
+import { field3dHTML, watchField3d } from './ui/app/field3d.js';
+const recs = await (await fetch('games.json')).json();
+const box = document.getElementById('f');
+box.innerHTML = field3dHTML(recs, { key: 'site-demo', team: recs[0]?.teamSize || 2 });
+watchField3d(box);
+setTimeout(() => box.querySelector('[data-f3v="shot"]')?.click(), 300);
+// Tell the home page how tall the demo is, so its frame never needs a scrollbar.
+new ResizeObserver(() => parent.postMessage({ fieldDemoHeight: document.documentElement.scrollHeight }, location.origin)).observe(box);
+</script></body></html>

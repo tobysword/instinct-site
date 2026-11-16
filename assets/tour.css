@@ -1,0 +1,78 @@
+/* Home page (2026-11 redesign). Everything is inside .hm2 so site.css keeps the rest of the site as it was; class names
+   here avoid the ones site.css already uses (steps, stage, plan, price …), hence the t- prefixes.
+   Type scale: four sizes, nothing else.
+     --t1  hero headline only           --t3  body, card titles, page buttons
+     --t2  section and step headings    --t4  labels, captions, fine print, pills, small buttons
+   Hierarchy: size first, then font (Unbounded for headings) and weight, then color.
+   Every picture of the app is a real screen (assets/shots/home-*.png, captured by the app repo's tools/site_shots.mjs). */
+.hm2{--t1:44px;--t2:28px;--t3:18px;--t4:14px;font-size:var(--t3);line-height:1.6;color:#C9C9CF;overflow-x:clip}
+@media (max-width:700px){.hm2{--t1:32px;--t2:24px;--t3:17px;--t4:13px}}
+.hm2 h1,.hm2 h2,.hm2 h3{font-family:var(--disp);color:var(--ink);font-weight:700;letter-spacing:-.015em;margin:0}
+.hm2 h1{font-size:var(--t1);line-height:1.1}.hm2 h2{font-size:var(--t2);line-height:1.2}.hm2 h3{font-size:var(--t3);line-height:1.35}
+.hm2 p{margin:0 0 14px}
+.hm2 .small{font-size:var(--t4);line-height:1.5;color:var(--dim)}
+.hm2 .label{font:600 var(--t4)/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);display:inline-flex;align-items:center;gap:8px}
+.hm2 .pill{font:700 var(--t4)/1 var(--body);padding:3px 7px;border-radius:5px;text-transform:none;letter-spacing:.02em}
+.hm2 .pill.pro{background:var(--in-pro-gold-bg);color:var(--in-pro-gold-text)}.hm2 .pill.free{background:rgba(34,197,94,.12);color:#3DDC84}
+.hm2 .btn{font-size:var(--t3)}.hm2 .btn.sm{font-size:var(--t4)}
+.hm2 section{padding:96px 0}
+.hm2 .tshot{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #2a2a2e;box-shadow:0 30px 80px rgba(0,0,0,.55);background:#0E0E10}
+
+/* hero: the overlay over a match fills the first screen */
+.hm2 .bleed{position:relative;min-height:calc(100vh - 64px);display:flex;align-items:flex-end;overflow:hidden;
+  background:#0B0B0C url(shots/home-scene.png) center/cover no-repeat}
+.hm2 .bleed:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.96) 0%,rgba(11,11,12,.82) 36%,rgba(11,11,12,.1) 70%),linear-gradient(0deg,#0B0B0C 0%,transparent 30%)}
+.hm2 .bleed .wrap{position:relative;z-index:2;padding-bottom:64px;padding-top:120px;width:100%}.hm2 .bleed .copy{max-width:520px}
+.hm2 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 12px}
+.hm2 .safe{display:flex;gap:10px;font-size:var(--t4);max-width:540px;margin-top:20px}.hm2 .safe b{color:#3DDC84}
+.hm2 .band{border-top:1px solid #1d1d20;border-bottom:1px solid #1d1d20;background:#111113}
+.hm2 .band .wrap{padding-top:30px;padding-bottom:30px;max-width:900px;text-align:center}.hm2 .band p{margin:0;color:var(--ink)}
+
+/* guided tour: steps scroll on the left, the matching screen stays in view on the right */
+.hm2 .tour{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.hm2 .tsteps .s{min-height:80vh;display:flex;flex-direction:column;justify-content:center;opacity:.3;transition:opacity .3s}.hm2 .tsteps .s.on{opacity:1}
+.hm2 .tsteps h2{margin:12px 0 16px}
+.hm2 .tsteps .mimg{display:none}
+.hm2 .tstage{position:sticky;top:96px;height:calc(100vh - 130px);display:flex;align-items:center}
+.hm2 .tstage .v{width:100%;display:none}.hm2 .tstage .v.on{display:block}
+.hm2 .tstage .v .tshot{max-height:calc(100vh - 150px);width:auto;max-width:100%;margin:0 auto}
+.hm2 .pair{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:start}.hm2 .pair .tshot{max-height:none;width:100%}
+
+/* 3D map demo */
+.hm2 .tfield{background:radial-gradient(ellipse at 50% 0%,#1d130c,#0B0B0C 70%)}
+.hm2 .try{display:flex;align-items:center;gap:12px;margin:30px 0 14px;color:var(--ink);font-weight:600}
+.hm2 .try:before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px rgba(255,92,0,.18)}
+.hm2 .demo{background:#0E0E10;border:1px solid #2a2a2e;border-radius:14px;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.hm2 .demo iframe{display:block;width:100%;border:0;height:640px}
+
+/* Pro extras */
+.hm2 .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hm2 .extras .tcard{background:#151517;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.hm2 .extras .vis{height:200px;border-bottom:1px solid var(--line);background:#0E0E10;overflow:hidden}
+.hm2 .extras .vis img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.hm2 .extras .txt{padding:20px 22px}.hm2 .extras h3{margin:10px 0 8px}.hm2 .extras p{margin:0}
+.hm2 .sync{display:flex;align-items:center;justify-content:center;gap:18px;height:100%}
+.hm2 .sync .pc{width:92px;height:62px;border:2px solid #3a3a40;border-radius:8px;position:relative;background:#141416}
+.hm2 .sync .pc:after{content:"";position:absolute;left:30px;right:30px;bottom:-12px;height:8px;border-radius:2px;background:#3a3a40}
+.hm2 .sync .pc i{position:absolute;left:10px;right:10px;height:6px;border-radius:3px;background:var(--acc);opacity:.75}
+.hm2 .sync .cl{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--in-pro-gold-bg);color:var(--in-pro-gold-text);font:700 var(--t2) var(--disp)}
+
+/* pricing (yearly / monthly switched by site.js: body.show-yearly / body.show-monthly) */
+.hm2 .tprice{background:linear-gradient(180deg,#0B0B0C,#130d09)}
+.hm2 .toggle{display:inline-flex;background:#1a1a1d;border-radius:9px;padding:3px;margin-top:18px}
+.hm2 .toggle button{border:0;background:none;color:var(--dim);font:600 var(--t4) var(--body);padding:7px 14px;border-radius:7px;cursor:pointer}
+.hm2 .toggle button[aria-pressed=true]{background:#2a2a2f;color:var(--ink)}
+.hm2 .tplans{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.hm2 .tplan{background:#151517;border:1px solid var(--line);border-radius:16px;padding:28px}
+.hm2 .tplan.pro{border-color:rgba(255,92,0,.55);box-shadow:0 20px 60px rgba(255,92,0,.08)}
+.hm2 .tplan .amt{font:700 var(--t2) var(--disp);color:var(--ink);margin:12px 0 4px}
+.hm2 .tplan ul{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:10px}
+.hm2 .tplan li{padding-left:24px;position:relative}.hm2 .tplan li:before{content:"✓";position:absolute;left:0;color:#3DDC84}.hm2 .tplan.pro li:before{color:var(--acc)}
+.hm2 .mo{display:none}body.show-monthly .hm2 .mo{display:inline}body.show-monthly .hm2 .yo{display:none}
+
+@media (max-width:900px){
+  .hm2 section{padding:64px 0}
+  .hm2 .tour,.hm2 .extras,.hm2 .tplans,.hm2 .pair{grid-template-columns:1fr}
+  .hm2 .tstage{display:none}.hm2 .tsteps .s{min-height:auto;opacity:1;padding:28px 0}.hm2 .tsteps .mimg{display:block;margin-top:18px}
+  .hm2 .bleed .copy{max-width:none}
+}
