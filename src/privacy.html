@@ -1,5 +1,5 @@
 <!--@set TITLE="Privacy and data · Instinct"-->
-<!--@set DESC="How Instinct handles your data: game data stays on your PC, no ads, no analytics, no data selling. Data leaves your PC only if you choose."-->
+<!--@set DESC="How Instinct handles your data: coaching runs on your PC, no ads, no analytics, no data selling, and other players are not tracked."-->
 <!--@set CANON="privacy"-->
 <!doctype html><html lang="en"><head>
 <!--@include head-->
@@ -8,229 +8,73 @@
 <main id="main"><div class="wrap"><div class="prose">
 <span class="kick">Privacy and data</span>
 <h1>Privacy Policy</h1>
-<div class="summary-box" id="summary"><h2>The short version</h2>
+<p class="meta"><strong>Last updated:</strong> November 24, 2026</p>
+<p>Instinct ("the app", "we", "us") is a Windows app for Rocket League coaching, made and operated by Toby Sword, an individual developer in Washington State, United States. This policy covers the app, its online services (accounts, cloud sync, teams and feedback) and this website.</p>
+<div class="summary-box" id="summary"><h2>In short</h2>
+<p>Coaching runs on your PC. We keep your account details and, with {{PRO_NAME}}, a summary of your own matches. There are no ads, no analytics and no selling of data, and we don't track other players.</p></div>
+<ul class="toc" aria-label="Contents"><li><a href="#s1">1. What stays on your PC</a></li><li><a href="#s2">2. What we collect</a></li><li><a href="#s3">3. Who handles data for us</a></li><li><a href="#s4">4. What we don't do</a></li><li><a href="#s5">5. How long we keep data</a></li><li><a href="#s6">6. Your choices and rights</a></li><li><a href="#s7">7. Children</a></li><li><a href="#s8">8. Security</a></li><li><a href="#s9">9. Changes</a></li><li><a href="#s10">10. Contact</a></li></ul>
+<h2 id="s1">1. What stays on your PC</h2>
 <ul>
-<li><strong>Game data stays on your PC.</strong> The Stats API is local-only (<code>127.0.0.1</code>). Saved replays are read on your PC and never uploaded. The app does not listen on your network.</li>
-<li><strong>No ads, no analytics, no data selling.</strong></li>
-<li><strong>Leaves your PC only if you choose:</strong> an account and cloud sync ({{PRO_NAME}}: your own match summaries, play sessions and target rank), opt-in crash reports (off by default; asked once; scrubbed of names, paths and IPs) and feedback you send. Update checks go to GitHub.</li>
-<li><strong>Other players are not tracked</strong> (since 2.2). Their in-match names and that game's scoreboard line stay in your match records on your PC; nothing about them goes to the cloud. Older lobby data was deleted from the cloud on 4 November 2026.</li>
-<li><strong>This website</strong> has no analytics, ads or cookies. If you sign in here, your sign-in is kept in this browser's local storage until you sign out. Payments are handled by Stripe, with Link as the merchant of record.</li>
-<li><strong>Your files:</strong> <code>%APPDATA%\rl-companion</code> (settings, match history, sessions, diagnostics). Open it from Settings → Privacy → Open data folder; delete it any time.</li>
-<li><strong>Cloud data</strong> is kept until you delete your account or ask us to delete it. Deletion removes it from the live database right away; Supabase backups may hold it until they expire under Supabase's backup retention.</li>
-<li><strong>Deleting your data:</strong> to delete your account or cloud data, <a href="contact.html">contact us</a>.</li>
-</ul></div>
-<p class="meta">Full policy below.</p>
-<ul class="toc" aria-label="Contents"><li><a href="#s1">1. Who is responsible for your data</a></li><li><a href="#s2">2. What the app collects and where it goes</a></li><li><a href="#s3">3. Local network</a></li><li><a href="#s4">4. Third parties</a></li><li><a href="#s5">5. Account and cloud sync (optional)</a></li><li><a href="#s6">6. Feedback and bug reports</a></li><li><a href="#s7">7. Payments ({{PRO_NAME}} subscription)</a></li><li><a href="#s8">8. Changes to Rocket League config files</a></li><li><a href="#s9">9. Legal bases (EEA/UK users)</a></li><li><a href="#s10">10. Retention</a></li><li><a href="#s11">11. Your rights and controls</a></li><li><a href="#s12">12. Children</a></li><li><a href="#s12a">12a. Health data (Washington My Health My Data Act)</a></li><li><a href="#s13">13. Security</a></li><li><a href="#s14">14. International transfers</a></li><li><a href="#s15">15. Changes</a></li><li><a href="#s16">16. Contact</a></li></ul><p><strong>Effective date:</strong> with Instinct 1.0.0 · <strong>Last updated:</strong> 2026-11-05</p>
-<p>Instinct (formerly RL Coach Companion; "the app", "we", "us") is a proprietary Windows desktop app for Rocket League coaching, licensed not sold, free to use with an optional paid tier, {{PRO_NAME}} (US$4.99/month or US$35.88/year). Website: <a href="https://tobysword.github.io/instinct-site/">https://tobysword.github.io/instinct-site/</a>. It is made and operated by Toby Sword, an individual developer in Washington State, United States. Downloads: <a href="https://github.com/tobysword/InstinctRL">https://github.com/tobysword/InstinctRL</a></p>
-<p><strong>Short version:</strong> Coaching runs on your PC. Without an account, your match data stays on your computer. Other players are not tracked. There are no ads, no analytics and no selling of data. Data leaves your PC only when you choose to: an optional account (cloud sync, teams, {{PRO_NAME}}), opt-in crash reports, or a feedback report you send.</p>
-<h2 id="s1">1. Who is responsible for your data</h2>
-<ul>
-<li>Controller / owner and operator: <strong>Toby Sword</strong>, Washington State, United States</li>
-<li>Contact: contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback. We do not offer email support.</li>
-<li>EU/UK representative (GDPR Art. 27): <span class="pill tbc">To be confirmed</span> Not appointed yet; we will publish it here once decided.</li>
+<li>Live match data from Rocket League's local Stats API, including other players' in-game names and stats during the match.</li>
+<li>Your match history, sessions, profile and settings, in <code>%APPDATA%\rl-companion</code>. Each match record keeps that game's scoreboard, including the other players' in-game names.</li>
+<li>Replays you save in Rocket League. The app reads them on your PC and never uploads them.</li>
+<li>Clips ({{PRO_NAME}}, off by default): clips stay local, are never uploaded, and the buffer is RAM only. A clip is video of the Rocket League window with no sound, saved to <code>Videos\Instinct</code> only when you ask. It can show anything on screen, such as names, chat or other overlays.</li>
+<li>Diagnostics logs, deleted after 14 days.</li>
 </ul>
-<h2 id="s2">2. What the app collects and where it goes</h2>
+<p>The app does not read game memory, inject code or press keys, and it does not open a network port.</p>
+<h2 id="s2">2. What we collect</h2>
 <div class="tbl"><table>
-<thead>
-<tr>
-<th>Data</th>
-<th>Source</th>
-<th>Where it's stored</th>
-<th>Leaves your PC?</th>
-</tr>
-</thead>
+<thead><tr><th>Data</th><th>When</th><th>Where</th></tr></thead>
 <tbody>
-<tr>
-<td>Live match data (scores, events, ball hits, in-game names, teams and stats, including <strong>other players</strong>)</td>
-<td>Rocket League's official local Stats API</td>
-<td>In memory during the match</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Match history (one record per match: result, your stats, Playing like and its breakdown, goal times, the other players' in-match names and that game's scoreboard line; since 2.2 no platform IDs, ratings or play styles of other players)</td>
-<td>Generated by the app</td>
-<td>Locally, <code>%APPDATA%\rl-companion\instinct.db</code>, kept until you delete it</td>
-<td>A summary of <strong>your own</strong> result and stats, only with cloud sync (see §5)</td>
-</tr>
-<tr>
-<td>Session rollups and daily totals for the dashboard</td>
-<td>Generated by the app</td>
-<td>Locally: per-match rollups <strong>90 days</strong>, daily totals <strong>2 years</strong></td>
-<td>No</td>
-</tr>
-<tr>
-<td>Your profile (your own usual and your target rank per playlist)</td>
-<td>Derived from your match data and what you set</td>
-<td>Locally</td>
-<td>Your target rank only, with cloud sync (see §5)</td>
-</tr>
-<tr>
-<td>Sessions (time played in a row: results by mode, free play and training pack time, teammates' in-match names)</td>
-<td>Generated by the app</td>
-<td>Locally (<code>session.json</code>)</td>
-<td>Only with cloud sync (see §5), without teammates' names</td>
-</tr>
-<tr>
-<td>Saved replays you choose to save in Rocket League</td>
-<td>Your Rocket League Demos folder</td>
-<td>Read on your PC; the newest 20 analyses and a list of replay file names read are kept locally</td>
-<td>No (see below)</td>
-</tr>
-<tr>
-<td><strong>Other players</strong></td>
-<td>Not tracked since 2.2: no profiles, rank estimates or platform IDs are kept. Earlier versions' lobby observations were deleted from the cloud on 4 November 2026 and are removed from your PC when you update</td>
-<td>—</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Diagnostics logs</td>
-<td>The app</td>
-<td>Locally, one folder per app session; sessions older than <strong>14 days</strong> are deleted, and the folder is capped at <strong>3 GB</strong></td>
-<td>Only if you attach them to a feedback report (§6)</td>
-</tr>
-<tr>
-<td>Share-card images</td>
-<td>Generated when you ask</td>
-<td>Where you save them</td>
-<td>Only if you share them</td>
-</tr>
-<tr>
-<td>Account (email, password hash, display name, plan)</td>
-<td>You, if you create an account</td>
-<td>Supabase (our database provider), US region</td>
-<td>Yes, to provide the account</td>
-</tr>
-<tr>
-<td>Website sign-in</td>
-<td>You, if you sign in on this website's Account page</td>
-<td>Your browser's local storage (sign-in token, account ID and email) until you sign out</td>
-<td>Requests go straight to Supabase (§5)</td>
-</tr>
-<tr>
-<td>Feedback reports</td>
-<td>You, when you press Send</td>
-<td>Supabase, mirrored to our private issue tracker (Airtable)</td>
-<td>Yes, only when you send one</td>
-</tr>
-<tr>
-<td>Beta tester records</td>
-<td>When you redeem a tester code</td>
-<td>Supabase: which code (stored only as a hash) your account redeemed and when, plus a log of redeem attempts (account ID and time) used for rate limiting</td>
-<td>Yes, only if you redeem a code</td>
-</tr>
-<tr>
-<td>Crash reports (<strong>opt-in, off by default</strong>)</td>
-<td>The app</td>
-<td>Sentry (crash-reporting provider)</td>
-<td>Only if you said yes on the first-run consent screen or in Settings → Privacy, and the build has a destination configured</td>
-</tr>
-<tr>
-<td>IP address during update checks and website visits</td>
-<td>Your connection</td>
-<td>Visible to GitHub</td>
-<td>GitHub (see §4)</td>
-</tr>
-<tr>
-<td>Payment details ({{PRO_NAME}})</td>
-<td>You, at checkout</td>
-<td>Held by Stripe / Link, not us</td>
-<td>Stripe / Link (see §7)</td>
-</tr>
-</tbody>
-</table></div>
-<h3>Features processed only on your PC</h3>
+<tr><td>Account: email, password (stored hashed), display name and plan</td><td>When you create an account (required to use the app)</td><td>Supabase</td></tr>
+<tr><td>Cloud sync: a summary of each of your matches (your own result and stats), your play sessions, your target rank per playlist with your platform ID, and weekly totals</td><td>Automatically while you have {{PRO_NAME}} and are signed in</td><td>Supabase</td></tr>
+<tr><td>Teams: your display name, totals, recent results, the sessions you played together, and your own match records from the last 60 days, without other players' names or IDs. Your team members can see these</td><td>While you are in a team</td><td>Supabase</td></tr>
+<tr><td>Feedback: what you write, the app version, a short system summary (Windows version, screen size, game setup) and your email so we can reply. Logs only if you tick the box, with names, paths, IP addresses and tokens removed</td><td>When you send feedback</td><td>Supabase and Airtable</td></tr>
+<tr><td>Tester codes: which code you redeemed and when, and redeem attempts (to limit guessing)</td><td>When you redeem a code</td><td>Supabase</td></tr>
+<tr><td>Billing: your Stripe customer and subscription IDs, plan, status, renewal and trial dates, and whether you have used the free trial</td><td>When you subscribe</td><td>Supabase. Payment details stay with Stripe and Link</td></tr>
+<tr><td>Crash reports, with names, paths, IP addresses and platform IDs removed</td><td>Only if you turn them on (off by default)</td><td>Sentry</td></tr>
+<tr><td>IP address and basic request details</td><td>Update checks, downloads and website visits</td><td>GitHub</td></tr>
+</tbody></table></div>
+<p>Cloud sync never uploads other players' names, IDs or stats, your teammates' names, replays or clips.</p>
+<h2 id="s3">3. Who handles data for us</h2>
 <ul>
-<li><strong>Saved replays</strong> (always on since 2.3): Rocket League only saves a replay when you choose to. The app reads the replays in your Rocket League Demos folder, on this PC only, and adds that match's positioning and a sharper Playing like to its record. It keeps the newest 20 analyses and a list of replay file names it has read. Nothing is uploaded, and replay files are never sent anywhere. Replays contain every player's in-game name; the app keeps only what is described in the match history row above.</li>
-<li><strong>Clips</strong> ({{PRO_NAME}}, off by default): clips stay local, are never uploaded, and the buffer is RAM only. While Clips is on, the last 15 to 60 seconds of the Rocket League window (video only, no sound or microphone) are kept in memory and written to disk only when you press the save hotkey or button, as an MP4 in your Videos\Instinct folder named by date and time. Clips can show on-screen names, chat and in-game overlays (such as Discord or Steam). Turning Clips off frees the memory; delete clips from the Clips page or the folder any time.</li>
-<li><strong>Screen analysis</strong> (not offered since 1.0: no setting, and a 0.13 opt-in is switched off on update). Older versions could read the Rocket League window in memory and, with a separate switch, save small training frames to <code>%APPDATA%\rl-companion\training</code>. Nothing was ever uploaded; you can delete that folder if it exists.</li>
+<li><strong>Supabase:</strong> database, sign-in and account emails.</li>
+<li><strong>Stripe and Link:</strong> payments. Link is the merchant of record and handles your payment details, tax and receipts under its own privacy policy. We send Stripe your email and account ID so the subscription matches your account. We never see your card.</li>
+<li><strong>Airtable:</strong> our feedback tracker.</li>
+<li><strong>Sentry:</strong> crash reports, only if you turn them on.</li>
+<li><strong>GitHub:</strong> downloads, updates and website hosting.</li>
 </ul>
-<h3>Toxic mode (hidden since 2.2)</h3>
-<p>Toxic mode is not offered in the app at the moment (there is no setting for it). If it returns it will be {{PRO_NAME}} and off by default, and work as before: lines are picked and shown on your PC only, never sent to game chat, never read aloud, and never included in logs, diagnostics, feedback reports, match summaries or cloud sync; only anonymous line ids are kept locally (last 400 or 14 days) so lines don't repeat. Lines never contain anyone's name. Toxic settings (including the 18+ confirmation) are stored only in your local settings.</p>
-<h3>What we don't do</h3>
+<p>These services process data in the United States under their own terms.</p>
+<h2 id="s4">4. What we don't do</h2>
+<p>No ads, no analytics in the app or on the website, no cookies on the website, and no selling or sharing of personal information. If you sign in on the website, your sign-in is kept in your browser's local storage until you sign out.</p>
+<h2 id="s5">5. How long we keep data</h2>
 <ul>
-<li>No analytics or usage tracking (in the app or on this website), no advertising, no tracking cookies, no selling or "sharing" of personal information (as defined by CCPA/CPRA).</li>
-<li>No tracking or rating of other players, and nothing about them in the cloud.</li>
-<li>No reading of game memory, no code injection, no hooks into the game process, no automated key presses, and no BakkesMod.</li>
-<li>The app never uploads replays and never contacts replay sites such as ballchasing.com.</li>
+<li>Data on your PC: until you delete it.</li>
+<li>Account and cloud data: until you delete your account or ask us to. Backups may hold deleted data until they expire.</li>
+<li>Match records shared with a team: 60 days.</li>
+<li>Feedback and attached logs: 30 days.</li>
+<li>Redeem attempts: 30 days.</li>
+<li>Crash reports: up to 90 days.</li>
+<li>Billing records at Stripe and Link: as long as tax law requires.</li>
 </ul>
-<h2 id="s3">3. Local network</h2>
-<p>The app does not listen on your network. The phone companion and the small web server it used were removed in 2.7.</p>
-<h2 id="s4">4. Third parties</h2>
+<h2 id="s6">6. Your choices and rights</h2>
 <ul>
-<li><strong>GitHub</strong>: update checks and downloads, and hosting of this website (GitHub Pages). GitHub sees your IP address and basic request info.</li>
-<li><strong>Supabase</strong> (database and authentication, region <strong>us-east-1</strong>): only if you create an account, sign in on this website or send feedback.</li>
-<li><strong>Stripe</strong> (Stripe Managed Payments, with <strong>Link</strong> as merchant of record): only if you start an {{PRO_NAME}} checkout or manage your subscription (see §7). Checkout and the billing portal open in your web browser on Stripe's and Link's pages.</li>
-<li><strong>Airtable</strong>: our private issue tracker. Feedback reports are copied there so we can triage them (your account email is included so we can reply).</li>
-<li><strong>Sentry</strong>: crash reporting is <strong>opt-in and off by default</strong>: the first-run consent screen asks once, and you can change it any time in Settings → Privacy. Nothing is sent unless you said yes (and the build has a destination configured). Before sending, every report and breadcrumb is scrubbed of tokens and codes, the Windows user name in file paths, IP addresses, platform ids (Steam, Epic, PlayStation, Xbox, Switch) and player names: the name set in Settings and any value stored in a player-name field are replaced before anything leaves your PC (covered by automated tests; default PII sending is off). A name typed in free text that the app cannot recognise as a name may remain. Reports include the app version, OS version and stack traces. Sentry stores them in the US for up to 90 days.</li>
-<li><strong>Email</strong>: account emails (confirmation, password reset) are sent by Supabase today; a dedicated email delivery provider (e.g. Resend) is planned.</li>
-<li><strong>Rocket League Tracker and other links</strong>: opened only when you click them; their own policies apply.</li>
-<li><strong>Psyonix / Epic Games</strong>: the app reads data the game exposes locally and replay files you saved. We are not affiliated with them and send them nothing.</li>
+<li><strong>Delete data on your PC:</strong> delete the <code>%APPDATA%\rl-companion</code> folder (Settings › Account &amp; data › Open data folder).</li>
+<li><strong>Delete a match:</strong> from its breakdown on Progress. This also removes it from the cloud.</li>
+<li><strong>Stop cloud sync:</strong> sign out.</li>
+<li><strong>Crash reports:</strong> turn them on or off in Settings › Account &amp; data.</li>
+<li><strong>Delete your account and cloud data:</strong> ask us on Discord or through in-app Feedback. We do it within 30 days. Cancel your subscription first, or ask us to cancel it.</li>
 </ul>
-<h2 id="s5">5. Account and cloud sync (optional)</h2>
-<p>An account is required to use the app (since 2.7); cloud sync is optional. When you create your account (in the app or on this website's <a href="account.html">Account</a> page): we store your email, a hashed password (we never see your password), a display name and your plan.</p>
-<p><strong>Website Account page.</strong> You can sign in on this website to see your plan, start a free trial or subscription, manage it, reset your password or redeem a code. Your sign-in token, account ID and email are kept in that browser's local storage until you sign out; the page talks directly to Supabase (and, for billing, to Stripe through our server). This website sets no cookies and has no analytics.</p>
-<p><strong>Cloud sync</strong> (automatic with {{PRO_NAME}} or a tester code while you are signed in in the app) uploads, for <strong>you only</strong>:</p>
-<ul>
-<li>one match summary per match: playlist, time, result, score, mode, your own goals, shots, saves, assists, demos and touches, your Playing like and the ids of that game's coaching reads (never their text);</li>
-<li>one row per play session: start and end, number of games, wins and losses by mode, free play and training pack time;</li>
-<li>your target rank per playlist, with your own platform ID (for example your Steam or Epic ID);</li>
-<li>weekly growth snapshots built from your synced matches.</li>
-</ul>
-<p>Cloud sync <strong>never</strong> sends other players' names, IDs, stats or ranks, teammates' names, the raw stat feed, replays, clips or screen frames. Since 2.2 the server also refuses any other player's data, and the lobby observations earlier versions uploaded (other players' platform IDs, names, rank estimates and rank sightings) were deleted from the cloud on 4 November 2026.</p>
-<p><strong>Teams</strong> (joining is free; creating a team needs {{PRO_NAME}}): while you are in a team, the app shares your match records from the last 60 days with it: your stats, results and how you played, never other players' names or ids. Every member sees your display name and the team record built from those games; members with {{PRO_NAME}} also see your shared games and which sessions you played together (matched by match id). After you leave, your teammates can no longer see them. Row-level security means each account can only read its own data and the team views of teams it belongs to.</p>
-<h2 id="s6">6. Feedback and bug reports</h2>
-<p>The in-app <strong>Send feedback</strong> form sends what you type, the kind of report, the game mode you choose, the app version and update channel, and a one-line platform summary (Windows version, screen resolution, Stats API setting, Steam/Epic). Logs are attached <strong>only if you tick the box</strong>: the event and performance logs from your last two app sessions, with your player name, Windows user name, IP addresses and tokens removed. Raw match streams, replays and screenshots are never attached, and you can preview exactly what is attached before sending. Reports and log files are deleted <strong>30 days</strong> after they are sent: the report itself and attached logs are deleted from Supabase, and the copy in our tracker has its text, your email and the log link removed (only the report type, status and app version are kept for triage history). You can also save a report to a file instead and share it however you like.</p>
-<h2 id="s7">7. Payments ({{PRO_NAME}} subscription)</h2>
-<p>{{PRO_NAME}} costs US$4.99/month or US$35.88/year (plus applicable taxes), with one 7-day free trial per account; the price is shown at checkout before you pay. Payments are handled by Stripe Managed Payments, with <strong>Link</strong> (Stripe's checkout) as the merchant of record. Link processes your payment details, billing address and tax information under its own privacy policy, and handles receipts, tax and billing support. When you start checkout we send Stripe your account email and an internal account ID so the subscription is tied to your {{PRODUCT_NAME}} account. We receive and keep your Stripe customer and subscription IDs, the plan and price, the subscription status, the renewal or trial end date, whether you cancelled, and whether you have used your free trial. We never see or store your card number. Beta tester access is granted with a code and involves no payment. When you redeem a code we record which code (as a one-way hash) your account used and when, and we log redeem attempts (account ID and time) to stop code guessing.</p>
-<h2 id="s8">8. Changes to Rocket League config files</h2>
-<p>At your request, the app edits Rocket League's <code>DefaultStatsAPI.ini</code> to enable the Stats API. It makes a backup first and changes nothing else. The app only reads your Demos folder; it does not change or delete your replays.</p>
-<h2 id="s9">9. Legal bases (EEA/UK users)</h2>
-<ul>
-<li><strong>Legitimate interests</strong>: local processing of match data and saved replays (including other players' in-game names and that game's scoreboard line) to provide coaching; update checks; handling feedback you send.</li>
-<li><strong>Contract</strong>: your account, cloud sync, teams and {{PRO_NAME}}.</li>
-<li><strong>Consent</strong>: crash reports and attaching logs to feedback.</li>
-</ul>
-<p>Data that never leaves your device is under your own control, and purely personal use may fall outside GDPR.</p>
-<h2 id="s10">10. Retention</h2>
-<ul>
-<li>Local match history (<code>instinct.db</code>): kept until you delete it (Settings › Privacy › Open data folder). Nothing is trimmed automatically. Free accounts see the last 30 days; older matches stay on your PC.</li>
-<li>Local session rollups for the dashboard: 90 days; daily totals: 2 years (deleted automatically).</li>
-<li>Local replay analyses: the newest 20.</li>
-<li>Local diagnostics: 14 days per session folder, 3 GB cap.</li>
-<li>Local self profile and sessions: until you delete them or the app's data folder.</li>
-<li><strong>Cloud data</strong> (account data, synced match summaries, play sessions, growth snapshots, your target rank, team membership): kept until you delete your account or ask us to delete it. There is no automatic expiry. An account-deletion request is completed within 30 days.</li>
-<li>Deleting data removes it from our live database right away. Backups follow Supabase's backup retention: they may still hold deleted data until they expire.</li>
-<li>Website sign-in: in your browser until you sign out (or clear site data).</li>
-<li>Feedback reports and attached logs: 30 days (report rows and log files deleted automatically; the tracker copy is anonymised at the same time).</li>
-<li>Beta tester redemption records: while your account exists (needed to keep or end your tester access); deleted with your account.</li>
-<li>Redeem-attempt logs: used only for rate limiting; deleted automatically after 30 days.</li>
-<li>Subscription records (Stripe IDs, plan, status, dates, trial used): while your account exists. Whether you have used your free trial may be kept after deletion to stop repeat trials.</li>
-<li>Crash reports at Sentry: up to 90 days.</li>
-<li>Billing records held by Stripe / Link: as the merchant of record and tax law require.</li>
-</ul>
-<h2 id="s11">11. Your rights and controls</h2>
-<ul>
-<li><strong>Delete local data:</strong> delete the folder <code>%APPDATA%\rl-companion</code> (Settings → Privacy → Open data folder). Uninstalling does not remove it automatically.</li>
-<li><strong>Account:</strong> sign out any time (in the app, or on this website's <a href="account.html">Account</a> page); to delete your account and all cloud data, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback from your signed-in account. Cancel any subscription first (Pro → Manage subscription), or tell us and we will cancel it.</li>
-<li><strong>Cloud sync:</strong> runs automatically while you have {{PRO_NAME}} and are signed in in the app; sign out to stop it. Already-synced data stays until you ask us to delete it.</li>
-<li><strong>Crash reports:</strong> turn them off any time in Settings → Privacy.</li>
-<li><strong>GDPR (EEA/UK):</strong> rights to access, rectify, erase, restrict, object, data portability, withdraw consent, and complain to your supervisory authority.</li>
-<li><strong>CCPA/CPRA (California):</strong> rights to know, delete and correct, and to not be discriminated against. We do not sell or share personal information.</li>
-</ul>
-<p>To exercise your rights, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback. We reply within <strong>30 days</strong>. We may need to verify that you own the account.</p>
-<p><strong>Other players:</strong> since 2.2 the app keeps no profiles of other players. Their in-match names and that game's scoreboard line stay in the match records on the PC of the person who played the match, and are never uploaded. Data that earlier versions uploaded about other players was deleted from our cloud database on 4 November 2026. If you have questions about this, contact us and we will help.</p>
-<h2 id="s12">12. Children</h2>
-<p>The app is not directed to children under 13, and we do not knowingly collect personal information from children under 13 (16 in the EEA/UK, or the applicable age in your country). Accounts and purchases require the minimum ages in the Terms. If you believe a child created an account or sent us data, contact us and we will delete it.</p>
-<h2 id="s12a">12a. Health data (Washington My Health My Data Act)</h2>
-<p>The app does not collect, process or share consumer health data as defined by Washington's My Health My Data Act (RCW 19.373). Gameplay statistics, coaching reads and Playing like readings are not health data, so that Act does not apply. If this ever changes, we will publish a separate Consumer Health Data Privacy Policy first.</p>
-<h2 id="s13">13. Security</h2>
-<p>Local data is stored unencrypted in your Windows user profile and protected by your PC's account security. Cloud data is encrypted in transit (HTTPS) and at rest by Supabase, and protected by row-level security. The app and this website only ever hold the public (anonymous) database key; your plan can only be changed by our server and Stripe's signed webhooks. No system is perfectly secure; keep your PC and network protected.</p>
-<h2 id="s14">14. International transfers</h2>
-<p>Account, feedback, billing and crash data are processed in the United States (Supabase us-east-1, Stripe / Link, Airtable, Sentry). Transfers from the EEA/UK rely on the providers' Standard Contractual Clauses.</p>
-<h2 id="s15">15. Changes</h2>
-<p>We post updates here and on the website, update the date above, and tell you in the app about material changes.</p>
-<h2 id="s16">16. Contact</h2>
-<p><strong>Toby Sword</strong> (owner and operator, Washington State, USA). To reach us, contact us via Discord (<a href="https://discord.gg/B4bnmfWtzA">https://discord.gg/B4bnmfWtzA</a>) or in-app Feedback.</p>
+<p>Depending on where you live (for example the EEA, the UK or California), you may have the right to access, correct, delete or export your data, to object to or restrict how we use it, and to complain to a data protection authority. <a href="contact.html">Contact us</a> to use these rights; we reply within 30 days.</p>
+<p>For users in the EEA and UK, we rely on contract (your account, cloud sync, teams and {{PRO_NAME}}), legitimate interests (handling feedback, security and preventing abuse) and consent (crash reports and attaching logs to feedback).</p>
+<h2 id="s7">7. Children</h2>
+<p>Instinct is not for children under 13 (16 in the EEA and UK). If you think a child has given us data, contact us and we will delete it.</p>
+<h2 id="s8">8. Security</h2>
+<p>Data sent to our services is encrypted in transit and at rest, and each account can only read its own data and its teams' data. Data on your PC is protected by your Windows account.</p>
+<h2 id="s9">9. Changes</h2>
+<p>When this policy changes, we update this page and the date above. We tell you in the app about important changes.</p>
+<h2 id="s10">10. Contact</h2>
+<p>Toby Sword, Washington State, USA. Reach us on Discord (<a href="{{DISCORD}}">{{DISCORD}}</a>) or through in-app Feedback.</p>
 </div></div></main>
 <!--@include footer-->
 </body></html>
