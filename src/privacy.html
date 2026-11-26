@@ -8,7 +8,7 @@
 <main id="main"><div class="wrap"><div class="prose">
 <span class="kick">Privacy and data</span>
 <h1>Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> November 24, 2026</p>
+<p class="meta"><strong>Last updated:</strong> November 25, 2026</p>
 <p>Instinct ("the app", "we", "us") is a Windows app for Rocket League coaching, made and operated by Toby Sword, an individual developer in Washington State, United States. This policy covers the app, its online services (accounts, cloud sync, teams and feedback) and this website.</p>
 <div class="summary-box" id="summary"><h2>In short</h2>
 <p>Coaching runs on your PC. We keep your account details and, with {{PRO_NAME}}, a summary of your own matches. There are no ads, no analytics and no selling of data, and we don't track other players.</p></div>
@@ -30,12 +30,13 @@
 <tr><td>Cloud sync: a summary of each of your matches (your own result and stats), your play sessions, your target rank per playlist with your platform ID, and weekly totals</td><td>Automatically while you have {{PRO_NAME}} and are signed in</td><td>Supabase</td></tr>
 <tr><td>Teams: your display name, totals, recent results, the sessions you played together, and your own match records from the last 60 days, without other players' names or IDs. Your team members can see these</td><td>While you are in a team</td><td>Supabase</td></tr>
 <tr><td>Feedback: what you write, the app version, a short system summary (Windows version, screen size, game setup) and your email so we can reply. Logs only if you tick the box, with names, paths, IP addresses and tokens removed</td><td>When you send feedback</td><td>Supabase and Airtable</td></tr>
+<tr><td>Film Room challenges: the few seconds of play you challenged (where every car and the ball were, without names or IDs), the reasons you picked, your note, and that game's playlist, map, your target rank and the app version. Used to improve the coaching</td><td>When you challenge a call</td><td>Supabase</td></tr>
 <tr><td>Tester codes: which code you redeemed and when, and redeem attempts (to limit guessing)</td><td>When you redeem a code</td><td>Supabase</td></tr>
 <tr><td>Billing: your Stripe customer and subscription IDs, plan, status, renewal and trial dates, and whether you have used the free trial</td><td>When you subscribe</td><td>Supabase. Payment details stay with Stripe and Link</td></tr>
 <tr><td>Crash reports, with names, paths, IP addresses and platform IDs removed</td><td>Only if you turn them on (off by default)</td><td>Sentry</td></tr>
 <tr><td>IP address and basic request details</td><td>Update checks, downloads and website visits</td><td>GitHub</td></tr>
 </tbody></table></div>
-<p>Cloud sync never uploads other players' names, IDs or stats, your teammates' names, replays or clips.</p>
+<p>Cloud sync never uploads other players' names, IDs or stats, your teammates' names, replays or clips. A Film Room challenge sends where the cars were in that moment, without names or IDs.</p>
 <h2 id="s3">3. Who handles data for us</h2>
 <ul>
 <li><strong>Supabase:</strong> database, sign-in and account emails.</li>
